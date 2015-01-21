@@ -1,1 +1,22 @@
+El punto 6 se refiere al siguiente cálculo,
+nuevos tramos al impuesto al salario que van del 01-10-2014 al 30-09-2015 
 se sacan sobre el salario bruto mensual, esta fórmula se calcula en la última planilla y se rebaja lo correspondiente al impuesto en esta misma.
+los tramos son hasta 793.000 no sujeto a impuesto
+de 793000 hasta 1.190.000 se aplica el 10% 
+sobre el exceso de 1.190.000 se aplica 15%
+una vez realizado ese cálculo se procede a reducir los créditos familiares:
+por cada hijo menor de edad o aquellos estudiantes hasta los 25años de edad será de 1.490,00
+por el conyugue  2.230,00
+
+Para el punto 8 el aguinaldo se calcula de la siguiente forma:
+ 
+Se suman todos los salarios brutos del 01-12 del año anterior al 30-11 del año posterior.
+
+
+—————————————————
+
+LA GENERAL ES LA QUE ME BRINDA RECURSOS HUMANOS, LA DE  CUADRILLA ES OTRA PLANILLA ADICIONAL QUE SE PUEDE TENER EN A GENERAL Y LA SEPARAMOS X DEPARTAMENTO SI LE PARECE A REC.HUMANOS.
+LA HOJA 3 Y 4 SON LAS TRANSFORMACIONES QUE YO HAGO PARA LA CONTABILIDAD, LA 3 VIENE ORDENADA ALFABETICAMENTE PARA CONCILIAR CON LOS SALARIOS X PAGAR QUE SE REALIZAN EN PLANILLA EMPRESARIAL CON EL BCR. Y VARIOS CHEQUES Y TRANSFERENCIAS DE SALARIOS TARDIOS. LA HOJA 4 ESTA ORDENADA X DEPARTAMENTOS Y ESA LA USO PARA LOS ASIENTOS CONTABLES.
+
+DESDE MI CORREO PERSONAL  LE ENVIE A ALBERTO LOS MACHOTES O TABLAS QUE USO PARA CUADRAR LOS ASIENTOS ANTES DE INGRESARLOS A LA CONTABILIDAD YA QUE EL SISTEMA DE PLANILLAS NO LO BRINDA.
+
