@@ -1,0 +1,1 @@
+se sacan sobre el salario bruto mensual, esta fórmula se calcula en la última planilla y se rebaja lo correspondiente al impuesto en esta misma.
