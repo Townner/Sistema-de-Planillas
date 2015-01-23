@@ -1,3 +1,5 @@
+guiselle.caballero@sermules.com
+
 El punto 6 se refiere al siguiente cálculo,
 nuevos tramos al impuesto al salario que van del 01-10-2014 al 30-09-2015 
 se sacan sobre el salario bruto mensual, esta fórmula se calcula en la última planilla y se rebaja lo correspondiente al impuesto en esta misma.
