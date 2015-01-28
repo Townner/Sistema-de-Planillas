@@ -1,0 +1,7 @@
+c:\users\cookieguy\documents\visual studio 2010\Projects\PuestoDeVentaSermules\PuestoDeVentaSermules\bin\Debug\PuestoDeVentaSermules.exe
+c:\users\cookieguy\documents\visual studio 2010\Projects\PuestoDeVentaSermules\PuestoDeVentaSermules\bin\Debug\PuestoDeVentaSermules.pdb
+c:\users\cookieguy\documents\visual studio 2010\Projects\PuestoDeVentaSermules\PuestoDeVentaSermules\obj\x86\Debug\PuestoDeVentaSermules.Form1.resources
+c:\users\cookieguy\documents\visual studio 2010\Projects\PuestoDeVentaSermules\PuestoDeVentaSermules\obj\x86\Debug\PuestoDeVentaSermules.Properties.Resources.resources
+c:\users\cookieguy\documents\visual studio 2010\Projects\PuestoDeVentaSermules\PuestoDeVentaSermules\obj\x86\Debug\PuestoDeVentaSermules.csproj.GenerateResource.Cache
+c:\users\cookieguy\documents\visual studio 2010\Projects\PuestoDeVentaSermules\PuestoDeVentaSermules\obj\x86\Debug\PuestoDeVentaSermules.exe
+c:\users\cookieguy\documents\visual studio 2010\Projects\PuestoDeVentaSermules\PuestoDeVentaSermules\obj\x86\Debug\PuestoDeVentaSermules.pdb
