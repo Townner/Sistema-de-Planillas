@@ -1,13 +1,0 @@
-Sistema Planillas
- 1- Capacidad para manejar hasta 500 empleados
- 
- 2- Pueda hacer acción de personal
-3- Debe ser capaz hacer el comprobante de pago y enviarlo por correo de manera automática después de hacer la planilla.
-4- Verificar (detalle), actualizar y calcular ahorro y préstamos y descontar de la planilla.
- 5- Aumentos, que nada mas se agregue el porcentaje de aumento y esto actualiza automáticamente la planilla.   6- Que realice el cálculo del impuesto sobre la renta para los empleados que lo ameriten.
- 7- Que cada empleado mantenga un código x departamento según su función.   8- Que genere el asiento contable con sus divisiones por departamento, así como los cálculos del aguinaldo.
-  
-9-  Que la base de datos contenga: nombre-cédula-correo electrónico-teléfono-fecha de cumpleaños- fecha de ingreso- como de salida para el historial-experiencia-dirección-títulos- # cuenta bancaria- licencia-# asegurado-horario-fechas de entrega de uniformes.
-(Con respecto a la licencia y cédula, que detalle su vencimiento, para que de avisos, también cuando se cumple con los 3 meses de prueba.)
- 
-10 -Que se pueda ver el historial de salarios para generar liquidaciones.
