@@ -1,0 +1,4 @@
+c:\users\cookieguy\documents\visual studio 2010\Projects\rnd\rnd\bin\rnd.dll
+c:\users\cookieguy\documents\visual studio 2010\Projects\rnd\rnd\bin\rnd.pdb
+c:\users\cookieguy\documents\visual studio 2010\Projects\rnd\rnd\obj\Debug\rnd.dll
+c:\users\cookieguy\documents\visual studio 2010\Projects\rnd\rnd\obj\Debug\rnd.pdb
