@@ -1,0 +1,4 @@
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\BL\bin\Debug\BL.dll
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\BL\bin\Debug\BL.pdb
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\BL\obj\Debug\BL.dll
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\BL\obj\Debug\BL.pdb
