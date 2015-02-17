@@ -52,7 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Theme_Login\Login.css" />
-    <Content Include="App_Themes\Theme_Master\Master.css" />
+    <Content Include="App_Themes\Theme_Master\Master_RH.css" />
+    <Content Include="App_Themes\Theme_Master\Master_Admin.css" />
     <Content Include="Images\Back_Login.jpg" />
     <Content Include="Images\Browsers\Chrome.png" />
     <Content Include="Images\Browsers\Explorer.png" />

@@ -15,6 +15,11 @@ namespace UI
         {
            // lblUser.Text = Request.QueryString["field1"];
             lblUser.Text = (string)Session["UserName"]; // Carga ID del user por medio de variable de session
+            string tipo = (string)Session["Type"]; // Carga el tipo de usario
+            if(tipo == "RH"){
+                Admin.Visible = false;
+                Users.Visible = false;
+            }
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

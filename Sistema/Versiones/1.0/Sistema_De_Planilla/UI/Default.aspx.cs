@@ -65,16 +65,19 @@ namespace UI
                   (txtUsuario.Text, CBSesion.Checked);*/
                 // Response.Redirect("/Inicio.aspx?field1="+this.txtUsuario.Text);
                 Session["UserName"] = txtUsuario.Text; // se crea variable de sesion para ID del user
+                Session["Type"] = Tipo;
                 Response.Redirect("/InicioAdmin.aspx");
             }else { 
                 if (identificado && Tipo == "RH")
                 {
                 Session["UserName"] = txtUsuario.Text; // se crea variable de sesion para ID del user
+                Session["Type"] = Tipo;
                 Response.Redirect("/InicioRH.aspx");
                 }else{
                   if (identificado && Tipo == "FI")
                 {
                 Session["UserName"] = txtUsuario.Text; // se crea variable de sesion para ID del user
+                Session["Type"] = Tipo;
                 Response.Redirect("/InicioFI.aspx");
                 }else { 
                 if (cont == 2)

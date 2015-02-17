@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Inicio - Sistema de Planilla</title>
-    <link rel="stylesheet" href="/App_Themes/Theme_Master/Master.css" type="text/css" />
+    <link rel="stylesheet" href="/App_Themes/Theme_Master/Master_Admin.css" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
@@ -70,20 +70,24 @@
          
          </li>
          
-         <li>Administración
+         <li id ="Admin" runat="server"> Administracion
                  
             <ul class = "subMenu">
 
                 <li><a href="/AgregarCuentaCobrar.aspx">Aprobar Planilla</a></li>
                 <li><a href="/AnularCuentaCobrar.aspx">Cambiar datos globales</a></li>
             </ul>
+         </li>
 
-         <li>Usuarios
+         <li id ="Users" runat="server">Usuarios
+
           <ul class="subMenu">
+
             <li><a href="/CrearUsuario.aspx">Crear Usuario</a></li> 
             <li><a href="/ConsultarUsuario.aspx">Consultar Usuario</a></li>
             <li><a href="/ModificarUsuario.aspx">Modificar Usuario</a></li>
             <li><a href="/GestionarUsuarios.aspx">Gestionar Usuarios</a></li>
+          
           </ul>
          </li>
 

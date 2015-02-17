@@ -1,9 +1,0 @@
-X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\bin\Debug\TO.dll
-X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\bin\Debug\TO.pdb
-X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\obj\Debug\TO.dll
-X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\obj\Debug\TO.pdb
-C:\Users\Jose\Desktop\Sistema_De_Planilla\TO\bin\Debug\TO.dll
-C:\Users\Jose\Desktop\Sistema_De_Planilla\TO\bin\Debug\TO.pdb
-C:\Users\Jose\Desktop\Sistema_De_Planilla\TO\obj\Debug\TO.csprojResolveAssemblyReference.cache
-C:\Users\Jose\Desktop\Sistema_De_Planilla\TO\obj\Debug\TO.dll
-C:\Users\Jose\Desktop\Sistema_De_Planilla\TO\obj\Debug\TO.pdb

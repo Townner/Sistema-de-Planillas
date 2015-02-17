@@ -1,4 +1,0 @@
-X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\DA\bin\Debug\DA.dll
-X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\DA\bin\Debug\DA.pdb
-X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\DA\obj\Debug\DA.dll
-X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\DA\obj\Debug\DA.pdb
