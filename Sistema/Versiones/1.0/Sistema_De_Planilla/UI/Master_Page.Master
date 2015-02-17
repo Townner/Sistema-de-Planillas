@@ -33,7 +33,8 @@
                              <img alt="" class="Logo" src="Images/Logo.png" /></td>
                          <td class="style3">
                              Bienvenido:
-                         </td>
+                             <asp:Label ID="lblUser" runat="server" Text="User"></asp:Label>
+&nbsp;</td>
                          <td>
                              <asp:Button ID="btnLogout" runat="server" Text="Salir" 
                                  onclick="btnLogout_Click" />

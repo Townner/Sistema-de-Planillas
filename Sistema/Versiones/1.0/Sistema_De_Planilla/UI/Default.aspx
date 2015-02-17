@@ -1,4 +1,4 @@
-﻿<%@ Page Theme="Theme_Login" Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="UI.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="UI.WebForm1" %>
 <%@ Import Namespace="System.Web.Security" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -6,6 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Login - Sistema de Planilla</title>
+    <link rel="stylesheet" href="/App_Themes/Theme_Login/Login.css" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -28,8 +29,16 @@
                     Contraseña:</td>
                 <td class="txtContrasena">
                     <asp:TextBox ID="txtContrasena" runat="server" TextMode="Password" Width="137px"></asp:TextBox>
-                    <asp:CheckBox ID="CheckBox1" runat="server" style="padding-left: 50px" Text="Recordarme" />
                     <inpu id="iContrasena" type="password" /></td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="lblContrasena">
+                    &nbsp;</td>
+                <td class="txtContrasena">
+                    <asp:CheckBox ID="CBSesion" runat="server" style=" text-align:center" Text="Mantener Sesion Abierta" />
+                    </td>
                 <td>
                     &nbsp;</td>
             </tr>
@@ -50,7 +59,8 @@
                 <td class="btnOlvido">
                     &nbsp;</td>
                 <td class="btnLogin" style="text-align: center">
-                    <asp:Button ID="btnLogin" runat="server" Text="Login" onclick="Login_Click" />
+                    <asp:Button ID="btnLogin" runat="server" Text="Ingresar" 
+                        onclick="Login_Click" />
                 </td>
                 <td>
                     &nbsp;</td>
