@@ -43,8 +43,8 @@ namespace UI
 
             if (identificado)
             {
-               // FormsAuthentication.RedirectFromLoginPage //Autentificacion por forms
-                 (txtUsuario.Text, CBSesion.Checked);
+               /* FormsAuthentication.RedirectFromLoginPage //Autentificacion por forms
+                 (txtUsuario.Text, CBSesion.Checked);*/
                // Response.Redirect("/Inicio.aspx?field1="+this.txtUsuario.Text);
                 Session["UserName"] = txtUsuario.Text; // se crea variable de sesion para ID del user
                 Response.Redirect("/Inicio.aspx");
