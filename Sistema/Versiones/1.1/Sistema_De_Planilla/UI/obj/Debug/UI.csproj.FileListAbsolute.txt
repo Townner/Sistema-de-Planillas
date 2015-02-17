@@ -1,0 +1,5 @@
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\bin\UI.dll
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\bin\UI.pdb
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\obj\Debug\UI.dll
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\obj\Debug\UI.pdb
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
