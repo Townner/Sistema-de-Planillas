@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace rnd
+namespace DA
 {
     public class DAAhorro
     {
-        public void AgregarAhrro(TOAhorro ahr)
+        public void AgregarAhrro(TO.TOAhorro ahr)
         {
             throw new NotImplementedException();
         }
 
-        public void EditarAhorro(TOAhorro ahorro)
+        public void EditarAhorro(TO.TOAhorro ahorro)
         {
             throw new NotImplementedException();
         }
 
-        public void ConsultarAhorro(TOAhorro ahorro)
+        public void ConsultarAhorro(TO.TOAhorro ahorro)
         {
             throw new NotImplementedException();
         }
 
-        public void ElimianrAhorro(TOAhorro ahorro)
+        public void ElimianrAhorro(TO.TOAhorro ahorro)
         {
             throw new NotImplementedException();
         }

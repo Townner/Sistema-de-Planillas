@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace rnd
+namespace TO
 {
     public class TOTrabajdor
     {

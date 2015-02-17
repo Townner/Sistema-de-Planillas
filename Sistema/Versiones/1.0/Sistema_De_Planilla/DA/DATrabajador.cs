@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using rnd.TOTrabajdor;
 
-namespace rnd
+namespace DA
 {
     public class DATrabajador
     {

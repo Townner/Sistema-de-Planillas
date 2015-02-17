@@ -3,35 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace rnd
+namespace BL
 {
     public class BLAhorro
     {
         public void AgregarAhrro(double ahorro)
         {
-            TOAhorro ahr = new TOAhorro();
+            TO.TOAhorro ahr = new TO.TOAhorro();
             ahr.Ahorro = ahorro;
 
-            DAAhorro aahr = new DAAhorro();
+            DA.DAAhorro aahr = new DA.DAAhorro();
             aahr.AgregarAhrro(ahr);
         }
 
-        public void EditarAhorro(TOAhorro ahorro)
+        public void EditarAhorro(TO.TOAhorro ahorro)
         {
-            DAAhorro edahr = new DAAhorro();
+            DA.DAAhorro edahr = new DA.DAAhorro();
             edahr.EditarAhorro(ahorro);
         }
 
-        public TOAhorro ConsultarAhorro(TOAhorro ahorro)
+        public TO.TOAhorro ConsultarAhorro(TO.TOAhorro ahorro)
         {
-            DAAhorro conahr = new DAAhorro();
+            DA.DAAhorro conahr = new DA.DAAhorro();
             conahr.ConsultarAhorro(ahorro);
             throw new NotImplementedException();
         }
 
-        public void ElimianrAhorro(TOAhorro ahorro)
+        public void ElimianrAhorro(TO.TOAhorro ahorro)
         {
-            DAAhorro elahr = new DAAhorro();
+            DA.DAAhorro elahr = new DA.DAAhorro();
             elahr.ElimianrAhorro(ahorro);
         }
     }

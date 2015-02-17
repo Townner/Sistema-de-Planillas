@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using rnd.TOTrabajdor;
 
-namespace rnd
+namespace BL
 {
     public class BLTrabjador
     {

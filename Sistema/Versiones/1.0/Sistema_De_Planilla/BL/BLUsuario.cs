@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using rnd.TOUsuario;
 
-namespace rnd
+namespace BL
 {
     public class BLUsuario
     {
