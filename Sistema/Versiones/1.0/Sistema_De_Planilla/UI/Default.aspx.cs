@@ -15,15 +15,20 @@ namespace UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void Login_Click(object sender, EventArgs e)
         {
-           int cont = 1;
+            string Tipo = "";
+            string Estado = "";
+            // Identifica el tipo de usuario
+
+            int cont = 1; // Indica si hay que mostrar algun msj
+
             SqlCommand consulta = new SqlCommand();
             consulta.Connection = conexion;
-            consulta.CommandText = "select * from dbo.usuario where ID = @Usuario and Pass = @Constrasena and Estado = 'Activo'";
+            consulta.CommandText = "select * from dbo.usuario where ID = @Usuario and Pass = @Constrasena and Sesion = 'Cerrada'";
             consulta.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
             consulta.Parameters.AddWithValue("@Constrasena", txtContrasena.Text);
 
@@ -34,33 +39,54 @@ namespace UI
             Boolean identificado = false;
 
             if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                Tipo = (string)reader["Tipo"];
+                Estado = (string)reader["Estado"];
                 identificado = true;
-            else
+                }
+            }else
             {
                 cont = 2;
             }
             conexion.Close();
 
-            if (identificado)
+            if (Estado == "Desactivado")
             {
-               /* FormsAuthentication.RedirectFromLoginPage //Autentificacion por forms
-                 (txtUsuario.Text, CBSesion.Checked);*/
-               // Response.Redirect("/Inicio.aspx?field1="+this.txtUsuario.Text);
-                Session["UserName"] = txtUsuario.Text; // se crea variable de sesion para ID del user
-                Response.Redirect("/Inicio.aspx");
-            }
-            else { 
 
+                msgDesactivado.Visible = true;
+
+            }else{
+
+            if (identificado && Tipo == "Admin")
+            {
+                /* FormsAuthentication.RedirectFromLoginPage //Autentificacion por forms
+                  (txtUsuario.Text, CBSesion.Checked);*/
+                // Response.Redirect("/Inicio.aspx?field1="+this.txtUsuario.Text);
+                Session["UserName"] = txtUsuario.Text; // se crea variable de sesion para ID del user
+                Response.Redirect("/InicioAdmin.aspx");
+            }else { 
+                if (identificado && Tipo == "RH")
+                {
+                Session["UserName"] = txtUsuario.Text; // se crea variable de sesion para ID del user
+                Response.Redirect("/InicioRH.aspx");
+                }else{
+                  if (identificado && Tipo == "FI")
+                {
+                Session["UserName"] = txtUsuario.Text; // se crea variable de sesion para ID del user
+                Response.Redirect("/InicioFI.aspx");
+                }else { 
                 if (cont == 2)
                 {
-                    msgIncorrecto.Visible = true;
+                  msgIncorrecto.Visible = true;
 
                 }
-                else
-                {
-                    msgDesactivado.Visible = true;
-                }
-             } 
+               } 
+              } 
+            }
+           }
+            
         }
     }
 }

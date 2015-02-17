@@ -89,9 +89,7 @@
 
          <li>Opciones
             <ul  class = "subMenu">
-                <li><a href="/Personalizar.aspx">Elejir tema</a></li>
-                <li><a href="/Default.aspx">Cerrar Sesión</a></li>
-
+                <li><a href="/Personalizar.aspx">Cambiar Contraseña</a></li>
             </ul>
          </li>
       </ul>

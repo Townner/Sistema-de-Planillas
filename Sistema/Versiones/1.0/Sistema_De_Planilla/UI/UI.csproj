@@ -61,7 +61,9 @@
     <Content Include="Images\Browsers\Safari.png" />
     <Content Include="Images\Logo.png" />
     <Content Include="Images\Townner.S.A.png" />
-    <Content Include="Inicio.aspx" />
+    <Content Include="InicioAdmin.aspx" />
+    <Content Include="InicioFI.aspx" />
+    <Content Include="InicioRH.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -74,12 +76,26 @@
     <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Inicio.aspx.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
+    <Compile Include="InicioAdmin.aspx.cs">
+      <DependentUpon>InicioAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Inicio.aspx.designer.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
+    <Compile Include="InicioAdmin.aspx.designer.cs">
+      <DependentUpon>InicioAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioFI.aspx.cs">
+      <DependentUpon>InicioFI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioFI.aspx.designer.cs">
+      <DependentUpon>InicioFI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioRH.aspx.cs">
+      <DependentUpon>InicioRH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioRH.aspx.designer.cs">
+      <DependentUpon>InicioRH.aspx</DependentUpon>
     </Compile>
     <Compile Include="Master_Page.Master.cs">
       <DependentUpon>Master_Page.Master</DependentUpon>
