@@ -1,4 +1,5 @@
 ﻿<%@ Page Theme="Theme_Login" Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="UI.WebForm1" %>
+<%@ Import Namespace="System.Web.Security" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -27,6 +28,7 @@
                     Contraseña:</td>
                 <td class="txtContrasena">
                     <asp:TextBox ID="txtContrasena" runat="server" TextMode="Password" Width="137px"></asp:TextBox>
+                    <asp:CheckBox ID="CheckBox1" runat="server" style="padding-left: 50px" Text="Recordarme" />
                     <inpu id="iContrasena" type="password" /></td>
                 <td>
                     &nbsp;</td>

@@ -3,3 +3,12 @@ X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\b
 X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\obj\Debug\UI.dll
 X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\obj\Debug\UI.pdb
 X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\bin\UI.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\bin\UI.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\bin\BL.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\bin\BL.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\obj\Debug\UI.Properties.Resources.resources
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\obj\Debug\UI.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\UI\obj\Debug\UI.pdb

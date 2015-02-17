@@ -4,13 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Web.Security;
 
 namespace UI
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        // private SqlConnection conexion = new SqlConnection(Proyecto.Properties.Settings.Default.ConString);
-
+        private SqlConnection conexion = new SqlConnection(UI.Properties.Settings.Default.ConString);
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,12 +20,12 @@ namespace UI
 
         protected void Login_Click(object sender, EventArgs e)
         {
-           /* int cont = 1;
+           int cont = 1;
             SqlCommand consulta = new SqlCommand();
             consulta.Connection = conexion;
-            consulta.CommandText = "select * from Proyecto_Usuarios where Usuario = @Usuario and Contrasena = @Constrasena and Estado = 1";
-            consulta.Parameters.AddWithValue("@Usuario", iUsuario.Text);
-            consulta.Parameters.AddWithValue("@Constrasena", iContrasena.Text);
+            consulta.CommandText = "select * from dbo.usuario where ID = @Usuario and Pass = @Constrasena and Estado = 'Activo'";
+            consulta.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
+            consulta.Parameters.AddWithValue("@Constrasena", txtContrasena.Text);
 
             conexion.Open();
 
@@ -41,19 +42,23 @@ namespace UI
             conexion.Close();
 
             if (identificado)
+            {
+                FormsAuthentication.RedirectFromLoginPage
+                 (txtUsuario.Text, CheckBox1.Checked);
                 Response.Redirect("/Inicio.aspx");
-            else
+            }
+            else { 
 
                 if (cont == 2)
                 {
-                    MSJ.Visible = true;
+                    msgIncorrecto.Visible = true;
 
                 }
                 else
                 {
-                    MSJ1.Visible = true;
+                    msgDesactivado.Visible = true;
                 }
-                */
+             } 
         }
     }
 }

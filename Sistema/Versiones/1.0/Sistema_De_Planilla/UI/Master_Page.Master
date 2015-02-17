@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master_Page.master.cs" Inherits="UI.Master_Page" %>
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Inicio - Sistema de Planilla</title>
+    <link rel="stylesheet" href="/App_Themes/Theme_Master/Master.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2
+        {
+            width: 211px;
+        }
+        .style3
+        {
+            width: 750px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id = "Encabezado">
+        
+        <div id = "ContenidoEncabezado">
+
+            <div id = "LogoTipo">
+                 &nbsp;<table style="width:100%;">
+                     <tr>
+                         <td class="style2">
+                             <img alt="" class="Logo" src="Images/Logo.png" /></td>
+                         <td class="style3">
+                             Bienvenido:
+                         </td>
+                         <td>
+                             <asp:Button ID="btnLogout" runat="server" Text="Salir" 
+                                 onclick="btnLogout_Click" />
+                         </td>
+                     </tr>
+                 </table>
+            </div>
+        </div>
+    </div>
+  </form>
+
+  <ul id = "BarraHorizontal">
+         
+         <li><a href="/Inicio.aspx">Inicio</a></li>
+
+         <li>Trabajadores
+         
+            <ul class = "subMenu">
+              <li><a href="/AgregarCliente.aspx">Agregar Trabajador</a></li>
+              <li><a href="/ConsultarCliente.aspx">Consultar Trabajador</a></li>
+              <li><a href="/ModificarCliente.aspx">Modificar Trabajador</a></li>
+              <li><a href="/EliminarCliente.aspx">Eliminar Trabajador</a></li>
+            </ul>
+         </li>
+
+         <li>Reportes
+           <ul class ="subMenu">
+              <li><a href="/AgregarProvedor.aspx">Reporte 1</a>
+              <li><a href="/ConsultarProvedor.aspx">Reporte 2</a>
+              <li><a href="/ModificarProvedor.aspx">Reporte 3</a>
+              <li><a href="/EliminarProvedor.aspx">Reporte 4</a>
+           </ul>
+         
+         </li>
+         
+         <li>Administración
+                 
+            <ul class = "subMenu">
+
+                <li><a href="/AgregarCuentaCobrar.aspx">Aprobar Planilla</a></li>
+                <li><a href="/AnularCuentaCobrar.aspx">Cambiar datos globales</a></li>
+            </ul>
+
+         <li>Usuarios
+          <ul class="subMenu">
+            <li><a href="/CrearUsuario.aspx">Crear Usuario</a></li> 
+            <li><a href="/ConsultarUsuario.aspx">Consultar Usuario</a></li>
+            <li><a href="/ModificarUsuario.aspx">Modificar Usuario</a></li>
+            <li><a href="/GestionarUsuarios.aspx">Gestionar Usuarios</a></li>
+          </ul>
+         </li>
+
+         <li>Opciones
+            <ul  class = "subMenu">
+                <li><a href="/Personalizar.aspx">Elejir tema</a></li>
+                <li><a href="/Default.aspx">Cerrar Sesión</a></li>
+
+            </ul>
+         </li>
+      </ul>
+
+    <div id = "Cuerpo">
+        
+        <div id = "ContenidoIzquierdo">
+            
+            <asp:ContentPlaceHolder ID="ContenidoPrincipalIzquierdo" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div id = "ContenidoCentral">
+            <asp:ContentPlaceHolder ID="ContenidoPrincipalCentral" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div id = "ContenidoDerecho">
+            
+            
+
+        </div>
+
+        <div id = "Pie">
+            <span id=NSistema> Sistema de Planilla - Townner S.A</span>
+            
+             <a href="https://www.google.com/intl/es/chrome/browser/?hl=es"> <img src="/Images/Browsers/Chrome.png" style="height: 24px; width: 24px"> </a>
+        <a href="http://www.mozilla.org/es-ES/firefox/new/"> <img src="/Images/Browsers/Firefox.png" style="height: 24px; width: 24px"> </a>
+        <a href="http://windows.microsoft.com/es-es/internet-explorer/ie-9-worldwide-languages"> <img src="/Images/Browsers/Explorer.png" style="height: 24px; width: 24px"> </a>
+        <a href="http://www.opera.com/es-419/"> <img src="/Images/Browsers/Opera.png" style="height: 24px; width: 24px"> </a>
+        <a href="http://support.apple.com/kb/dl1531?viewlocale=es_ES&locale=es_ES"> <img src="/Images/Browsers/Safari.png" style="height: 24px; width: 24px"> </a>
+
+        </div>
+
+    </div>
+
+    <div>
+        
+    </div>
+
+</body>
+</html>
