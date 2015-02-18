@@ -10,33 +10,33 @@ namespace BL
         public void AgregarUsuario(int id_trabajador, string Id,
             string pass, string estado, string tipo)
         {
-            TOUsuario usr = new TOUsuario();
+            TO.TOUsuario usr = new TO.TOUsuario();
             usr.Id_Trabajador = id_trabajador;
             usr.ID = Id;
             usr.Pass = pass;
             usr.Estado = estado;
             usr.Tipo = tipo;
 
-            DAUsuario dusr = new DAUsuario();
+            DA.DAUsuario dusr = new DA.DAUsuario();
             dusr.AgregarUsuario(usr);
 
         }
 
-        public void ModifcarUsuario(TOUsuario usr)
+        public void ModifcarUsuario(TO.TOUsuario usr)
         {
-            DAUsuario modusr = new DAUsuario();
-            modusr.ModifcarUsuario(usr)
+            DA.DAUsuario modusr = new DA.DAUsuario();
+            modusr.ModifcarUsuario(usr);
         }
 
-        public void EliminarUsuario(TOUsuario usr)
+        public void EliminarUsuario(TO.TOUsuario usr)
         {
-            DAUsuario elusr = new DAUsuario();
+            DA.DAUsuario elusr = new DA.DAUsuario();
             elusr.EliminarUsuario(usr);
         }
 
-        public TOUsuario ConsultarUsuario(TOUsuario usr)
+        public TO.TOUsuario ConsultarUsuario(TO.TOUsuario usr)
         {
-            DAUsuario conusr = new DAUsuario();
+            DA.DAUsuario conusr = new DA.DAUsuario();
             conusr.ConsultarUsuario(usr);
             throw new NotImplementedException();
         }

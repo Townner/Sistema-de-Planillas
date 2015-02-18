@@ -1,8 +1,0 @@
-X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\bin\Debug\TO.dll
-X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\bin\Debug\TO.pdb
-X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\obj\Debug\TO.dll
-X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\obj\Debug\TO.pdb
-\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\bin\Debug\TO.dll
-\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\bin\Debug\TO.pdb
-\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\obj\Debug\TO.dll
-\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\obj\Debug\TO.pdb

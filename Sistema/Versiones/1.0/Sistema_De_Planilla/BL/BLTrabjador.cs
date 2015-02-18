@@ -18,7 +18,7 @@ namespace BL
             , DateTime V_Lic2, DateTime V_Lic3, int Num_Seguro, DateTime Uniformes, string Estado_T
             , string Inact, string L_Trabajo, string T_Usuario, int Depa)
         {
-            TOTrabajdor tb = new TOTrabajdor();
+            TO.TOTrabajdor tb = new TO.TOTrabajdor();
             tb.Id = Id;
             tb.Nom = Nom;
             tb.Ap1 = Ap1;
@@ -70,27 +70,27 @@ namespace BL
             tb.T_Usuario = T_Usuario;
             tb.Depa = Depa;
 
-            DATrabajador datb = new DATrabajador();
+            DA.DATrabajador datb = new DA.DATrabajador();
             datb.AgregarTrabajdor(tb);
 
         }
 
 
-        public void ModifcarTrabajador(TOTrabajdor trab)
+        public void ModifcarTrabajador(TO.TOTrabajdor trab)
         {
-            DATrabajador modtb = new DATrabajador();
+            DA.DATrabajador modtb = new DA.DATrabajador();
             modtb.ModifcarTrabajador(trab);
         }
         
-        public void EliminarTrabajador(TOTrabajdor trab)
+        public void EliminarTrabajador(TO.TOTrabajdor trab)
         {
-            DATrabajador eltb = new DATrabajador();
+            DA.DATrabajador eltb = new DA.DATrabajador();
             eltb.EliminarTrabajador(trab);
         }
         
-        public TOTrabajdor ConsultarTrabajador(TOTrabajdor trab)
+        public TO.TOTrabajdor ConsultarTrabajador(TO.TOTrabajdor trab)
         {
-            DATrabajador contb = new DATrabajador();
+            DA.DATrabajador contb = new DA.DATrabajador();
             contb.ConsultarTrabajador(trab);
 
             throw new NotImplementedException();//////////////////////////////

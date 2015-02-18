@@ -9,35 +9,42 @@ namespace BL
     {
         public void NuevaPrestamo(double prestamo)
         {
-            TOPrestamo pres = new TOPrestamo();
+            TO.TOPrestamo pres = new TO.TOPrestamo();
             pres.Prestamo = prestamo;
-            
-            DAPrestamo dpres = new DAPrestamo();
+
+            DA.DAPrestamo dpres = new DA.DAPrestamo();
             dpres.AprobarPrestamo(pres);
         }
         
-        public void EditarPrestamo(DAPrestamo pres)
+        public void EditarPrestamo(TO.TOPrestamo pres)
         {
-            DAPrestamo edpres = new DAPrestamo();
+            DA.DAPrestamo edpres = new DA.DAPrestamo();
             edpres.EditarPrestamo(pres);
         }
         
-        public DAPrestamo ConsultarPrestamo(DAPrestamo pres)
+        public TO.TOPrestamo ConsultarPrestamo(TO.TOPrestamo pres)
         {
-            DAPrestamo conpres = new DAPrestamo();
+            DA.DAPrestamo conpres = new DA.DAPrestamo();
             conpres.ConsultarPlanilla(pres);
             throw new NotImplementedException();
         }
 
-        public void EliminarPrestamo(DAPrestamo pres)
+        public void EliminarPrestamo(TO.TOPrestamo pres)
         {
-            DAPrestamo elpres = new DAPrestamo();
+            DA.DAPrestamo elpres = new DA.DAPrestamo();
             elpres.EliminarPrestamo(pres);
         }
 
-        public double CalculoIntereses()
+        public double CalculoIntereses(double S_Bruto, double Interes)
         {
-            throw new NotImplementedException();
+            double var = 0.0;
+
+            var = S_Bruto * (Interes/100);
+
+            DA.DAPrestamo calcint = new DA.DAPrestamo();
+            calcint.CalculoIntereses(S_Bruto, Interes);
+
+            return var;
         }
 
         

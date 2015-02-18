@@ -7,22 +7,23 @@ namespace DA
 {
     public class DAUsuario
     {
-        public void AgregarUsuario(TOUsuario usr)
+
+        public void AgregarUsuario(TO.TOUsuario usr)
         {
             throw new NotImplementedException();
         }
 
-        public void ModifcarUsuario(TOUsuario usr)
+        public void ModifcarUsuario(TO.TOUsuario usr)
         {
             throw new NotImplementedException();
         }
 
-        public void EliminarUsuario(TOUsuario usr)
+        public void EliminarUsuario(TO.TOUsuario usr)
         {
             throw new NotImplementedException();
         }
 
-        public void ConsultarUsuario(TOUsuario usr)
+        public void ConsultarUsuario(TO.TOUsuario usr)
         {
             throw new NotImplementedException();
         }

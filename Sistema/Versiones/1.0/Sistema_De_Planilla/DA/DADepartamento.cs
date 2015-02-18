@@ -7,22 +7,23 @@ namespace DA
 {
     public class DADepartamento
     {
-        public void CrearDepartamento(TODepartamento dep)
+
+        public void CrearDepartamento(TO.TODepartamento dep)
         {
             throw new NotImplementedException();
         }
 
-        public void ModificarDeprtamento(TODepartamento departamento)
+        public void ModificarDeprtamento(TO.TODepartamento departamento)
         {
             throw new NotImplementedException();
         }
 
-        public void ConsultarDepartameto(TODepartamento departamento)
+        public void ConsultarDepartameto(TO.TODepartamento departamento)
         {
             throw new NotImplementedException();
         }
 
-        public void EliminarDepartamento(TODepartamento departamento)
+        public void EliminarDepartamento(TO.TODepartamento departamento)
         {
             throw new NotImplementedException();
         }

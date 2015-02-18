@@ -11,9 +11,9 @@ namespace BL
         {
             double sub = 0;
 
-            sub = Subsidio * asdfaads;
+           // sub = Subsidio * asdfaads;
 
-            DACalculos calsub = new DACalculos();
+            DA.DACalculos calsub = new DA.DACalculos();
             calsub.CalculoSubcidio(sub);
 
             return sub;
@@ -25,7 +25,7 @@ namespace BL
 
             ad = 0;
 
-            DACalculos calcadmen = new DACalculos();
+            DA.DACalculos calcadmen = new DA.DACalculos();
             calcadmen.CalculoAdicionalMensual(ad);
 
             return ad;
@@ -37,7 +37,7 @@ namespace BL
 
             ad = 0;
 
-            DACalculos calcadquin = new DACalculos();
+            DA.DACalculos calcadquin = new DA.DACalculos();
             calcadquin.CalculoAdicionalQuincenal(ad);
 
             return ad;
@@ -49,7 +49,7 @@ namespace BL
 
             inc = Incapacidad * (S_Bruto/160);
 
-            DACalculos calcincap = new DACalculos();
+            DA.DACalculos calcincap = new DA.DACalculos();
             calcincap.CalculoIncapacida(inc);
 
             return inc;
@@ -61,7 +61,7 @@ namespace BL
 
             hex = H_Extra * ((S_Bruto/160)*1.5);
 
-            DACalculos calchex = new DACalculos();
+            DA.DACalculos calchex = new DA.DACalculos();
             calchex.CalculoHorasExtra(hex);
 
             return hex;
@@ -75,7 +75,7 @@ namespace BL
                 CalculoAdicionalQuincenal() - CalculoImpuestoRenta(S_Bruto, Hijos, Conyugue) + CalculoIncapacida(Incapacidad, S_Bruto) +
                 CalculoSubcidio(Subsidio);
 
-            DACalculos calcsdin = new DACalculos();
+            DA.DACalculos calcsdin = new DA.DACalculos();
             calcsdin.CalculoSalarioFinal(final);
 
             return final;
@@ -87,7 +87,7 @@ namespace BL
 
             neto = S_Bruto - CalculoCargasPatronales(Cargas, S_Bruto);
 
-            DACalculos calsnto = new DACalculos();
+            DA.DACalculos calsnto = new DA.DACalculos();
             calsnto.CalculoSalarioNeto(neto);
 
             return neto;
@@ -99,7 +99,7 @@ namespace BL
 
             var = (Cargas/100) * S_Bruto;
 
-            DACalculos calccpatron = new DACalculos();
+            DA.DACalculos calccpatron = new DA.DACalculos();
             calccpatron.CalculoCargasPatronales(var);
 
             return var;
@@ -123,7 +123,7 @@ namespace BL
 
             total = varSB + varH + varC;
 
-            DACalculos calcimprent = new DACalculos();
+            DA.DACalculos calcimprent = new DA.DACalculos();
             calcimprent.CalculoImpuestoRenta(total);
 
             return total;

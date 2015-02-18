@@ -11,3 +11,12 @@ X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\BL\o
 \\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
 \\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\BL\obj\Debug\BL.dll
 \\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\BL\obj\Debug\BL.pdb
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\BL\obj\Debug\BL.dll
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\BL\obj\Debug\BL.pdb
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\BL\bin\Debug\BL.dll
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\BL\bin\Debug\BL.pdb
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\BL\bin\Debug\DA.dll
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\BL\bin\Debug\TO.dll
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\BL\bin\Debug\DA.pdb
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\BL\bin\Debug\TO.pdb

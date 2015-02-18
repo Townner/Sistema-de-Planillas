@@ -2,29 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using rnd.TOTrabajdor;
 
 namespace DA
 {
     public class DATrabajador
     {
 
-        public void AgregarTrabajdor(TOTrabajdor trab)
+        public void AgregarTrabajdor(TO.TOTrabajdor tb)
         {
             throw new NotImplementedException();
         }
 
-        public void ModifcarTrabajador(TOTrabajdor trab)
+        public void ModifcarTrabajador(TO.TOTrabajdor trab)
         {
             throw new NotImplementedException();
         }
 
-        public void EliminarTrabajador(TOTrabajdor trab)
+        public void EliminarTrabajador(TO.TOTrabajdor trab)
         {
             throw new NotImplementedException();
         }
 
-        public void ConsultarTrabajador(TOTrabajdor trab)
+        public void ConsultarTrabajador(TO.TOTrabajdor trab)
         {
             throw new NotImplementedException();
         }

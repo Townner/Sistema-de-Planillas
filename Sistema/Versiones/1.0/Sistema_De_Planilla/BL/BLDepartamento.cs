@@ -9,30 +9,30 @@ namespace BL
     {
         public void CrearDepartamento(int ID, string Nombre)
         {
-            TODepartamento dep = new TODepartamento();
+            TO.TODepartamento dep = new TO.TODepartamento();
             dep.ID = ID;
             dep.Nombre = Nombre;
 
-            DADepartamento crdep = new DADepartamento();
+            DA.DADepartamento crdep = new DA.DADepartamento();
             crdep.CrearDepartamento(dep);
         }
 
-        public void ModificarDeprtamento(TODepartamento departamento)
+        public void ModificarDeprtamento(TO.TODepartamento departamento)
         {
-            DADepartamento moddep = new DADepartamento();
+            DA.DADepartamento moddep = new DA.DADepartamento();
             moddep.ModificarDeprtamento(departamento);
         }
 
-        public TODepartamento ConsultarDepartameto(TODepartamento departamento)
+        public TO.TODepartamento ConsultarDepartameto(TO.TODepartamento departamento)
         {
-            DADepartamento condep = new DADepartamento();
+            DA.DADepartamento condep = new DA.DADepartamento();
             condep.ConsultarDepartameto(departamento);
             throw new NotImplementedException();
         }
 
-        public void EliminarDepartamento(TODepartamento departamento)
+        public void EliminarDepartamento(TO.TODepartamento departamento)
         {
-            DADepartamento eldep = new DADepartamento();
+            DA.DADepartamento eldep = new DA.DADepartamento();
             eldep.EliminarDepartamento(departamento);
         }
     }

@@ -7,22 +7,23 @@ namespace DA
 {
     public class DAPlanilla
     {
-        public void AgregarPlanilla(TOPlanilla pln)
+
+        public void AgregarPlanilla(TO.TOPlanilla pln)
         {
             throw new NotImplementedException();
         }
 
-        public void EditarPlanilla(TOPlanilla planilla)
+        public void EditarPlanilla(TO.TOPlanilla planilla)
         {
             throw new NotImplementedException();
         }
 
-        public void ConsultarPlanilla(TOPlanilla planilla)
+        public void ConsultarPlanilla(TO.TOPlanilla planilla)
         {
             throw new NotImplementedException();
         }
 
-        public void EliminarPlanilla(TOPlanilla planilla)
+        public void EliminarPlanilla(TO.TOPlanilla planilla)
         {
             throw new NotImplementedException();
         }

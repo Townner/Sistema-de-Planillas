@@ -7,36 +7,36 @@ namespace BL
 {
     public class BLPlanilla
     {
-        public void AgregarPlanilla(TOUsuario usuario, TOTrabajdor trabajador
-            , TOCalculos calculos, TOPrestamo prestamo, TOAhorro ahorro)
+        public void AgregarPlanilla(TO.TOUsuario usuario, TO.TOTrabajdor trabajador
+            , TO.TOCalculos calculos, TO.TOPrestamo prestamo, TO.TOAhorro ahorro)
         {
-            TOPlanilla pln = new TOPlanilla();
+            TO.TOPlanilla pln = new TO.TOPlanilla();
             pln.Usuario = usuario;
             pln.Trabajador = trabajador;
             pln.Calculos = calculos;
             pln.Prestamo = prestamo;
             pln.Ahorro = ahorro;
 
-            DAPlanilla apln = new DAPlanilla();
+            DA.DAPlanilla apln = new DA.DAPlanilla();
             apln.AgregarPlanilla(pln);
         }
 
-        public void EditarPlanilla(TOPlanilla planilla)
+        public void EditarPlanilla(TO.TOPlanilla planilla)
         {
-            DAPlanilla edapln = new DAPlanilla();
+            DA.DAPlanilla edapln = new DA.DAPlanilla();
             edapln.EditarPlanilla(planilla);
         }
 
-        public TOPrestamo ConsultarPlanilla(TOPlanilla planilla)
+        public TO.TOPrestamo ConsultarPlanilla(TO.TOPlanilla planilla)
         {
-            DAPlanilla conapln = new DAPlanilla();
+            DA.DAPlanilla conapln = new DA.DAPlanilla();
             conapln.ConsultarPlanilla(planilla);
             throw new NotImplementedException();
         }
 
-        public void EliminarPlanilla(TOPlanilla planilla)
+        public void EliminarPlanilla(TO.TOPlanilla planilla)
         {
-            DAPlanilla elapln = new DAPlanilla();
+            DA.DAPlanilla elapln = new DA.DAPlanilla();
             elapln.EliminarPlanilla(planilla);
         }
     }
