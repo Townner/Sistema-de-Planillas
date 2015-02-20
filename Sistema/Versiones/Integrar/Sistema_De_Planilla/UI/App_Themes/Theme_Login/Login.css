@@ -1,0 +1,66 @@
+﻿body 
+{
+    text-align:center;
+    color:White;
+    font-family: arial;
+    font-style:italic;
+     background-image:url(/Images/Back_login.jpg);
+    background-attachment:fixed;
+    background-position:bottom;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+#VentanaPrincipal
+{
+    width:auto;
+    height:auto;
+    margin-top:20%;
+}
+
+#Login
+{
+    margin:auto;
+}
+
+.style1
+{
+    height: 23px;
+}
+.lblUsuario
+{
+    height: 23px;
+    width: 190px;
+    text-align: right;
+}
+.style3
+{
+    width: 190px;
+    text-align: center;
+}
+.lblContrasena
+{
+    width: 190px;
+    text-align: right;
+}
+.style5
+{
+    width: 190px;
+    text-align: center;
+    height: 23px;
+}
+.txtContrasena
+{
+    width: 235px;
+}
+
+.btnOlvido
+{
+    width: 190px;
+    text-align: right;
+}
+.txtUsuario
+{
+    height: 23px;
+    width: 235px;
+}
