@@ -21,7 +21,8 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="FormEncabezado" runat="server">
+
     <div id = "Encabezado">
         
         <div id = "ContenidoEncabezado">
@@ -44,7 +45,7 @@
             </div>
         </div>
     </div>
-  </form>
+ 
 
   <ul id = "BarraHorizontal">
          
@@ -55,8 +56,15 @@
             <ul class = "subMenu">
               <li><a href="/AgregarCliente.aspx">Ingresar Trabajador</a></li>
               <li><a href="/ConsultarCliente.aspx">Consultar Trabajador</a></li>
-              <li><a href="/ModificarCliente.aspx">Modificar Trabajador</a></li>
               <li><a href="/EliminarCliente.aspx">Dar de Baja Trabajador</a></li>
+            </ul>
+         </li>
+
+         <li id ="Li1" runat="server">Actualizacion
+         
+            <ul class = "subMenu">
+              <li><a href="/AgregarCliente.aspx">Actualizacion de Datos Financieros</a></li>
+              <li><a href="/ConsultarCliente.aspx">Actualizacion de Datos Personales</a></li>
             </ul>
          </li>
 
@@ -100,7 +108,7 @@
 
           <ul class="subMenu">
 
-            <li><a href="/CrearUsuario.aspx">Crear Usuario</a></li> 
+            <li><a href="/AgregarUsuario.aspx">Crear Usuario</a></li> 
             <li><a href="/ConsultarUsuario.aspx">Consultar Usuario</a></li>
             <li><a href="/ModificarUsuario.aspx">Modificar Usuario</a></li>
             <li><a href="/GestionarUsuarios.aspx">Eliminar Usuarios</a></li>
@@ -152,6 +160,6 @@
     <div>
         
     </div>
-
+ </form>
 </body>
 </html>

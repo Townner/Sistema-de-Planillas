@@ -7,38 +7,55 @@ namespace BL
 {
     public class BLUsuario
     {
-        public void AgregarUsuario(int id_trabajador, string Id,
-            string pass, string estado, string tipo)
+        public int Trabajador_ID;
+        public string Trabajador_Ced;
+        public string Id;
+        public string pass;
+        public string estado;
+        public string tipo;
+        public string sesion;
+
+        public void AgregarUsuario()
+        {
+            TO.TOUsuario TO_Usr = new TO.TOUsuario();
+            TO_Usr.Trabajador_Ced = this.Trabajador_Ced;
+            TO_Usr.ID = this.Id;
+            TO_Usr.Pass = this.pass;
+            TO_Usr.Estado = this.estado;
+            TO_Usr.Tipo = this.tipo;
+            //TO_Usr.Sesion = this.sesion;
+            
+            DA.DAUsuario DA_Usr = new DA.DAUsuario();
+            DA_Usr.AgregarUsuario(TO_Usr);
+
+        }
+
+        public void ModifcarUsuario()
         {
             TO.TOUsuario usr = new TO.TOUsuario();
-            usr.Id_Trabajador = id_trabajador;
-            usr.ID = Id;
-            usr.Pass = pass;
-            usr.Estado = estado;
-            usr.Tipo = tipo;
+            usr.Trabajador_Ced = this.Trabajador_Ced;
+            usr.Estado = this.estado;
+            usr.Tipo = this.tipo;
+            usr.Pass = this.pass;
 
-            DA.DAUsuario dusr = new DA.DAUsuario();
-            dusr.AgregarUsuario(usr);
-
+            DA.DAUsuario DA_Usuario = new DA.DAUsuario();
+            DA_Usuario.ModifcarUsuario(usr);
         }
 
-        public void ModifcarUsuario(TO.TOUsuario usr)
+        public void EliminarUsuario(string Ced)
         {
-            DA.DAUsuario modusr = new DA.DAUsuario();
-            modusr.ModifcarUsuario(usr);
+            DA.DAUsuario DA_Usr = new DA.DAUsuario();
+            DA_Usr.EliminarUsuario(Ced);
         }
 
-        public void EliminarUsuario(TO.TOUsuario usr)
+        public void ConsultarUsuario(string Ced)
         {
-            DA.DAUsuario elusr = new DA.DAUsuario();
-            elusr.EliminarUsuario(usr);
-        }
-
-        public TO.TOUsuario ConsultarUsuario(TO.TOUsuario usr)
-        {
-            DA.DAUsuario conusr = new DA.DAUsuario();
-            conusr.ConsultarUsuario(usr);
-            throw new NotImplementedException();
+            DA.DAUsuario DA_Usr = new DA.DAUsuario();
+            this.Trabajador_Ced = DA_Usr.ConsultarUsuario(Ced).Trabajador_Ced;
+            this.Id = DA_Usr.ConsultarUsuario(Ced).ID;
+            this.tipo = DA_Usr.ConsultarUsuario(Ced).Tipo;
+            this.estado = DA_Usr.ConsultarUsuario(Ced).Estado;
+            
         }
 
         /*  public void IniciarSesion(string ID_usr)

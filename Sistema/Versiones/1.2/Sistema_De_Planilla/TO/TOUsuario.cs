@@ -7,17 +7,24 @@ namespace TO
 {
     public class TOUsuario
     {
-        private int id_trabajador;
+        private int trabajador_ID;   
+        private string trabajador_Ced;
         private string Id;
         private string pass;
         private string estado;
         private string tipo;
         private string sesion;
 
-        public int Id_Trabajador
+        public int Trabajador_ID
         {
-            get { return id_trabajador; }
-            set { id_trabajador = value; }
+            get { return trabajador_ID; }
+            set { trabajador_ID = value; }
+        }
+
+        public string Trabajador_Ced
+        {
+            get { return trabajador_Ced; }
+            set { trabajador_Ced = value; }
         }
         public string ID
         {
