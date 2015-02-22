@@ -7,15 +7,30 @@ namespace TO
 {
     public class TOCalculos
     {
+        private int trabajadr_id;
+        private string trabajador_ced;
         private double imprenta;
         private int hijos;
         private int conyugue;
         private double cargas;
+        private double s_cargas;
+        private double s_extras;
+        private double s_incapcidad;
+        private double s_base;
         private double s_bruto;
         private double s_neto;
         private double s_final;
-        
 
+        public int Trabajador_ID
+        {
+            get { return trabajadr_id; }
+            set { trabajadr_id = value; }
+        }
+        public string Trabajador_Ced
+        {
+            get { return trabajador_ced; }
+            set { trabajador_ced = value; }
+        }
         public double ImpRenta
         {
             get { return imprenta; }
@@ -31,10 +46,30 @@ namespace TO
             get { return conyugue; }
             set { conyugue = value; }
         }
+        public double S_Incapacidad
+        {
+            get { return s_incapcidad; }
+            set { s_incapcidad = value; }
+        }
         public double Cargas
         {
             get { return cargas; }
             set { cargas = value; }
+        }
+        public double S_Cargas
+        {
+            get { return s_cargas; }
+            set { s_cargas = value; }
+        }
+        public double S_Extras
+        {
+            get { return s_extras; }
+            set { s_extras = value; }
+        }
+        public double S_Base
+        {
+            get { return s_base; }
+            set { s_base = value; }
         }
         public double S_Bruto
         {
@@ -51,6 +86,6 @@ namespace TO
             get { return s_final; }
             set { s_final = value; }
         }
-        
+
     }
 }

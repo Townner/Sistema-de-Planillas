@@ -7,7 +7,8 @@ namespace TO
 {
     public class TOCalculos_Financieros
     {
-        private string ced;
+        private int trabajador_id;
+        private string trabajador_ced;
         private double ahorro;
         private double interes;
         private double m_prestamo;
@@ -21,10 +22,16 @@ namespace TO
         private double m_subcidio;
         private double s_subcidio;
 
-        public string Ced
+
+        public int Trabajador_ID
         {
-            get { return ced; }
-            set { ced = value; }
+            get { return trabajador_id; }
+            set { trabajador_id = value; }
+        }
+        public string Trabajador_Ced
+        {
+            get { return trabajador_ced; }
+            set { trabajador_ced = value; }
         }
         public double Ahorro
         {

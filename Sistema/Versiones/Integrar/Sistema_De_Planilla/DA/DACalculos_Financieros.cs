@@ -26,12 +26,15 @@ namespace DA
             {
                 while (read.Read())
                 {
+                    temp.Trabajador_ID = (int)read["Trabajador_ID"];
+                    temp.Trabajador_Ced = (string)read["Trabajador_Ced"];
                     temp.Ahorro = (double)read["Ahorros"];
                     temp.Interes = (double)read["Intereses"];
                     temp.M_Prestamo = (double)read["M_Prestamo"];
                     temp.C_Prest = (double)read["C_Prest"];
                     temp.A_Quincenal = (double)read["A_Quincenal"];
-                    temp.A_Mensual1 = (double)read["A_Mensual"];
+                    temp.A_Mensual1 = (double)read["A_Mensual1"];
+                    temp.A_Mensual2 = (double)read["A_Mensual2"];
                     temp.Embar = (double)read["Embar"];
                     temp.Adelan = (double)read["Adelan"];
                     temp.Otros = (double)read["Otros"];
@@ -44,24 +47,52 @@ namespace DA
             return temp;
         }
 
-        public void CalculoInetresesPrestamo(TO.TOCalculos_Financieros calcf)
+        public void CalculoInetresesPrestamo(double interes)
         {
-            throw new NotImplementedException();
+            SqlCommand calcintpres = new SqlCommand();
+            calcintpres.Connection = Conexion;
+
+            calcintpres.CommandText = "UPDATE @Intereses from Cargos_Financieros values as @interes";
+
+            calcintpres.Parameters.AddWithValue("@interes", interes);
+
+            Conexion.Close();
         }
 
-        public void CalculoSubcidio(TO.TOCalculos_Financieros calcsub)
+        public void CalculoSubcidio(double s_subcidio)
         {
-            throw new NotImplementedException();
+            SqlCommand calcintpres = new SqlCommand();
+            calcintpres.Connection = Conexion;
+
+            calcintpres.CommandText = "UPDATE @S_Subcdio from Cargos_Financieros values as @s_subcidio";
+
+            calcintpres.Parameters.AddWithValue("@s_subcidio", s_subcidio);
+
+            Conexion.Close();
         }
 
-        public void CalculoAdicionalMensual(TO.TOCalculos_Financieros calcamen)
+        public void CalculoAdicionalMensual(double a_mensual1)
         {
-            throw new NotImplementedException();
+            SqlCommand calcintpres = new SqlCommand();
+            calcintpres.Connection = Conexion;
+
+            calcintpres.CommandText = "UPDATE @A_Mensual1 from Cargos_Financieros values as @a_mensual1";
+
+            calcintpres.Parameters.AddWithValue("@a_mensual1", a_mensual1);
+
+            Conexion.Close();
         }
 
-        public void CalculoAdicionalQuincenal(double p)
+        public void CalculoAdicionalQuincenal(double a_quincenal)
         {
-            throw new NotImplementedException();
+            SqlCommand calcintpres = new SqlCommand();
+            calcintpres.Connection = Conexion;
+
+            calcintpres.CommandText = "UPDATE @A_Quincenal from Cargos_Financieros values as @a_quincenal";
+
+            calcintpres.Parameters.AddWithValue("@a_quincenal", a_quincenal);
+
+            Conexion.Close();
         }
     }
 }

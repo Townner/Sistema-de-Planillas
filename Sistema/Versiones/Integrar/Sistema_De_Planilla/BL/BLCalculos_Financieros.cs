@@ -7,99 +7,98 @@ namespace BL
 {
     public class BLCalculos_Financieros
     {
-        private string ced;
-        private double ahorro;
-        private double interes;
-        private double m_prestamo;
-        private double c_prest;
-        private double a_quincenal;
-        private double a_mensual1;
-        private double a_mensual2;
-        private double embar;
-        private double adelan;
-        private double otros;
-        private double m_subcidio;
-        private double s_subcidio;
+        public int trabajador_id;
+        public string trabajador_ced;
+        public double ahorro;
+        public double interes;
+        public double m_prestamo;
+        public double c_prest;
+        public double a_quincenal;
+        public double a_mensual1;
+        public double a_mensual2;
+        public double embar;
+        public double adelan;
+        public double otros;
+        public double m_subcidio;
+        public double s_subcidio;
         
-        public TO.TOCalculos_Financieros Search(string ced)
+        public void Search(string ced)
         {
-            DA.DACalculos_Financieros bp = new DA.DACalculos_Financieros();
-
-            return bp.Search(ced);
+            DA.DACalculos_Financieros sr = new DA.DACalculos_Financieros();
+            this.trabajador_id = sr.Search(ced).Trabajador_ID;
+            this.trabajador_ced = sr.Search(ced).Trabajador_Ced;
+            this.ahorro = sr.Search(ced).Ahorro;
+            this.interes = sr.Search(ced).Interes;
+            this.m_prestamo = sr.Search(ced).Interes;
+            this.c_prest = sr.Search(ced).C_Prest;
+            this.a_quincenal = sr.Search(ced).A_Quincenal;
+            this.a_mensual1 = sr.Search(ced).A_Mensual1;
+            this.a_mensual2 = sr.Search(ced).A_Mensual2;
+            this.embar = sr.Search(ced).Embar;
+            this.adelan = sr.Search(ced).Adelan;
+            this.otros = sr.Search(ced).Otros;
+            this.m_subcidio = sr.Search(ced).M_Subcidio;
+            this.s_subcidio = sr.Search(ced).S_Subcidio;
 
         }
 
         public double CalculoInetresesPrestamo(string ced)
         {            
-            TO.TOCalculos_Financieros calintpres = new TO.TOCalculos_Financieros();
-            
-            calintpres = Search(ced);
-
-            calintpres.Interes = calintpres.M_Prestamo * ( calintpres.C_Prest / 100);
+            interes = m_prestamo * ( c_prest / 100);
 
             DA.DACalculos_Financieros calcintpres = new DA.DACalculos_Financieros();
-            calcintpres.CalculoInetresesPrestamo(calintpres);
+            calcintpres.CalculoInetresesPrestamo(interes);
 
-            return calintpres.Interes;
+            return interes;
         }
 
-        public double CalculoSubcidio(string ced, int h_sub)
+        public double CalculoSubcidio(string ced)
         {
-            TO.TOCalculos_Financieros calcsub = new TO.TOCalculos_Financieros();
+            TO.TOHoras h = new TO.TOHoras();
 
-            calcsub = Search(ced);
-
-            calcsub.S_Subcidio = h_sub * calcsub.M_Subcidio;
+            s_subcidio = h.Subcidio * m_subcidio;
 
             DA.DACalculos_Financieros calsub = new DA.DACalculos_Financieros();
-            calsub.CalculoSubcidio(calcsub);
+            calsub.CalculoSubcidio(s_subcidio);
 
-            return calcsub.S_Subcidio;
+            return s_subcidio;
         }
 
 
         public double CalculoAdicionalMensual(string ced, double monto)
         {
-            TO.TOCalculos_Financieros calcamen = new TO.TOCalculos_Financieros();
-            
-            calcamen = Search(ced);
-
-            if (calcamen.A_Mensual1 == 0 && calcamen.A_Mensual2 == 0)
+            if (a_mensual1 == 0 && a_mensual2 == 0)
             {
-                calcamen.A_Mensual1 = monto / 2;
-                calcamen.A_Mensual2 = monto / 2;
+                a_mensual1 = monto / 2;
+                a_mensual2 = monto / 2;
             }
-            else if (calcamen.A_Mensual1 == 0 && calcamen.A_Mensual2 != 0)
+            else if (a_mensual1 == 0 && a_mensual2 != 0)
             {
-                calcamen.A_Mensual1 = calcamen.A_Mensual2;
-                calcamen.A_Mensual2 = 0;
+                a_mensual1 = a_mensual2;
+                a_mensual2 = 0;
             }
             
             DA.DACalculos_Financieros calcadmen = new DA.DACalculos_Financieros();
-            calcadmen.CalculoAdicionalMensual(calcamen);
+            calcadmen.CalculoAdicionalMensual(a_mensual1);
 
-            return calcamen.A_Mensual1;
+            return a_mensual1;
         }
 
         public double CalculoAdicionalQuincenal(string ced, double monto)
         {
-            TO.TOCalculos_Financieros calcqiun = new TO.TOCalculos_Financieros();
-
-            if (calcqiun.A_Quincenal == 0)
+            if (a_quincenal == 0)
             {
-                calcqiun.A_Quincenal = monto;
+                a_quincenal = monto;
             }
-            else if (calcqiun.A_Quincenal != 0)
+            else if (a_quincenal != 0)
             {
-                calcqiun.A_Quincenal = 0;
+                a_quincenal = 0;
             }
             
-
-
             DA.DACalculos_Financieros calcadquin = new DA.DACalculos_Financieros();
-            calcadquin.CalculoAdicionalQuincenal(calcqiun.A_Quincenal);
+            calcadquin.CalculoAdicionalQuincenal(a_quincenal);
 
-            return calcqiun.A_Quincenal;
+            return a_quincenal;
         }
     }
 }
