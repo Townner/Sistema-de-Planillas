@@ -34,17 +34,15 @@ namespace DA
             return temp;
         }
 
-
-
         public void CrearDepartamento(int id, string nombre)
         {
             SqlCommand cdep = new SqlCommand();
             cdep.Connection = Conexion;
 
-            cdep.CommandText = "INSERT into Departamentos values (@id, @nom)";
+            cdep.CommandText = "INSERT into Departamentos(ID_Departamento, Nom_Dep) values (@ID_Departamento, @Nom_Dep)";
 
-            cdep.Parameters.AddWithValue("@id", id);
-            cdep.Parameters.AddWithValue("@nom",nombre);
+            cdep.Parameters.AddWithValue("@ID_Departamento", id);
+            cdep.Parameters.AddWithValue("@Nom_Dep", nombre);
             
             Conexion.Close();
         }
@@ -54,9 +52,9 @@ namespace DA
             SqlCommand moddep = new SqlCommand();
             moddep.Connection = Conexion;
 
-            moddep.CommandText = "UPDATE @Nom_Dep from Departamentos values as @nom";
+            moddep.CommandText = "UPDATE Departamentos SET ID_Departamento = @ID_Departamento, Nom_Dep = @Nom_Dep  values as @Nom_Dep";
 
-            moddep.Parameters.AddWithValue("@nom", nom);
+            moddep.Parameters.AddWithValue("@Nom_Dep", nom);
 
             Conexion.Close();
         }
@@ -66,9 +64,9 @@ namespace DA
             SqlCommand eldep = new SqlCommand();
             eldep.Connection = Conexion;
             // se tiene que validar la cantidad de trabajadores asignados (count) por departamento si tiene que no borre
-            eldep.CommandText = "UPDATE @Nom_Dep from Departamentos values as @nom";
+            eldep.CommandText = "DELETE FROM Nom_Dep from Departamentos values as @Nom_Dep";
 
-            eldep.Parameters.AddWithValue("@nom", nom);
+            eldep.Parameters.AddWithValue("@Nom_Dep", nom);
 
             Conexion.Close();
         }

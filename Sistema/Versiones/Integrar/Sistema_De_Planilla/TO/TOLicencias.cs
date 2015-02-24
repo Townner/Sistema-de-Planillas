@@ -7,7 +7,8 @@ namespace TO
 {
     public class TOLicencias
     {
-        private int id_trabajador;
+        private int trabajador_id;
+        private string trabajador_ced;
         private string lic1;
         private string lic2;
         private string lic3;
@@ -15,11 +16,16 @@ namespace TO
         private DateTime v_lic2;
         private DateTime v_lic3;
 
-
-        public int ID_Trabajador
+        public int Trabajador_ID
         {
-            get { return id_trabajador; }
-            set { id_trabajador = value; }
+            get { return trabajador_id; }
+            set { trabajador_id = value; }
+        }
+
+        public string Trabajador_Ced
+        {
+            get { return trabajador_ced; }
+            set { trabajador_ced = value; }
         }
         public string Lic1
         {

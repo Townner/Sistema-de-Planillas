@@ -7,16 +7,14 @@ namespace TO
 {
     public class TOPuesto
     {
-
         private int id_puesto;
+        private string nom_puesto;
 
         public int ID_Puesto
         {
             get { return id_puesto; }
             set { id_puesto = value; }
         }
-        private string nom_puesto;
-
         public string Nom_Puesto
         {
             get { return nom_puesto; }

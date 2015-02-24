@@ -11,68 +11,142 @@ namespace DA
     {
         SqlConnection Conexion = new SqlConnection();
 
-        public void AgregarTrabajdor(TO.TOTrabajdor tb)
+        public TO.TOTrabajdor Search(string ced)
         {
-            SqlCommand Agregar = new SqlCommand();
-            Agregar.Connection = Conexion;
-            Agregar.CommandText = "INSERT into Trabajador(ID, Ced, Ven_Ced, Nombre, Apellido1, Apellido2, "+
-                "Nac, Est_Civ, Mail, Tel1, Tel2, Dir, Fechas_Trabajdor, Usuario_ID, ID_Horas_Salarios_ID, ID_Puesto, Experiencia, "+
-                "Titulos, Num_Seguro, Uniforme, Estado_T, Inact, L_Trabajo, ID_Departamento) values (@Id, @Ced, @VC, @Nom, @Ap1, @Ap2, "+
-                "@Nac, @EC, @M, @T1, @T2, @Dir, @FT, @UID, @IDHS, @IDP, @Exp, @Tit, @NSeg, @Unif, @EstT, @Inact, @LT, @IDDep)";
-            
-            Agregar.Parameters.AddWithValue("@ID,", tb.Id);
-            Agregar.Parameters.AddWithValue("@Ced", tb.Ced);
-            Agregar.Parameters.AddWithValue("@VC", tb.Ven_Ced);
-            Agregar.Parameters.AddWithValue("@Nom", tb.Nom);
-            Agregar.Parameters.AddWithValue("@Ap1", tb.Ap1);
-            Agregar.Parameters.AddWithValue("@Ap2", tb.Ap2);
-            Agregar.Parameters.AddWithValue("@Nac", tb.Nac);
-            Agregar.Parameters.AddWithValue("@EC", tb.Est_Civ);
-            Agregar.Parameters.AddWithValue("@M", tb.Mail);
-            Agregar.Parameters.AddWithValue("@T1", tb.Tel1);
-            Agregar.Parameters.AddWithValue("@T2", tb.Tel2);
-            Agregar.Parameters.AddWithValue("@Dir", tb.Dir);
-            Agregar.Parameters.AddWithValue("@FT", tb);
-            Agregar.Parameters.AddWithValue("@UID", tb.T_Usuario);
-            Agregar.Parameters.AddWithValue("@IDHS", tb);
-            Agregar.Parameters.AddWithValue("@IDP", tb.Puesto);
-            Agregar.Parameters.AddWithValue("@Exp", tb.Exp);
-            Agregar.Parameters.AddWithValue("@Tit", tb.Titulo);
-            Agregar.Parameters.AddWithValue("@NSeg", tb.Num_Seguro);
-            Agregar.Parameters.AddWithValue("@Unif", tb.Uniformes);
-            Agregar.Parameters.AddWithValue("@EstT", tb.Estado_T);
-            Agregar.Parameters.AddWithValue("@Inact", tb.Inact);
-            Agregar.Parameters.AddWithValue("@LT", tb.L_Trabajo);
-            Agregar.Parameters.AddWithValue("@IDDep", tb.Depa);
-            
+            SqlCommand Search = new SqlCommand();
+            Search.Connection = Conexion;
+            Search.CommandText = "Select * from Trabajador where Ced = ced value as @ced";
 
-            if(Conexion.State == ConnectionState.Closed){
-                Conexion.Open();
+            Search.Parameters.AddWithValue("@ced", ced);
+
+            SqlDataReader read = Search.ExecuteReader();
+            TO.TOTrabajdor temp = new TO.TOTrabajdor();
+
+            if (read.Read())
+            {
+                while (read.Read())
+                {
+                    temp.ID = (int)read["ID"];
+                    temp.Ced = (string)read["Ced"];
+                    temp.Ven_Ced = (DateTime)read["Ven_Ced"];
+                    temp.Nombre = (string)read["Nombre"];
+                    temp.Apellido1 = (string)read["Apellido1"];
+                    temp.Apellido2 = (string)read["Apellido2"];
+                    temp.Mail = (string)read["Mail"];
+                    temp.Tel1 = (string)read["Tel1"];
+                    temp.Tel2 = (string)read["Tel2"];
+                    temp.Dir = (string)read["Dir"];
+                    temp.Experiencia = (string)read["Experiencia"];
+                    temp.Titulos = (string)read["Titulos"];
+                    temp.Num_Seguro = (int)read["Num_Seguro"];
+                    temp.Uniforme = (DateTime)read["Uniforme"];
+                    temp.Estado_t = (string)read["Estado_t"];
+                    temp.Inact = (string)read["Inact"];
+                    temp.L_Trabajo = (string)read["L_Trabajo"];
+                    temp.Est_Civ = (string)read["Est_Civ"];
+                    temp.Nacionalidad = (string)read["Nacionalidad"];
+                    temp.ID_Departamento = (int)read["ID_Departamento"];
+                    temp.ID_Puesto = (int)read["ID_Puesto"];
+                }
             }
+            Conexion.Close();
 
-            Agregar.ExecuteNonQuery();
-
-            if(Conexion.State != ConnectionState.Closed){
-                Conexion.Open();
-            }
-
+            return temp;
         }
 
-        public void ModifcarTrabajador(TO.TOTrabajdor trab)
+
+
+
+        public void AgregarTrabajdor(int id, string ced, DateTime ven_ced, string nombre, 
+            string apellido1, string apellido2, string mail, string tel1, string tel2, 
+            string dir, string experiencia, string titulos, int num_seguro, 
+            DateTime uniforme, string estado_t, string inact, string l_trabajo, 
+            string est_civ, string nacionalidad, int id_departamento, int id_puesto)
         {
-            throw new NotImplementedException();
+            SqlCommand atrab = new SqlCommand();
+            atrab.Connection = Conexion;
+            atrab.CommandText = "INSERT into Trabajador(ID, Ced, Ven_Ced, Nombre, Apellido1"+
+                ", Apellido2, Mail, Tel1, Tel2, Dir, Experiencia, Titulos, Num_Seguro, Uniforme" +
+                ", Estado_t, Inact, L_Trabajo, Est_Civ, Nacionalidad, ID_Departamento, ID_Puesto)"+
+                " values (@id, @ced, @ven_ced, @nombre, @apellido1, @apellido2, @mail, @tel1, @tel2"+
+                ", @dir, @experiencia, @titulos, @num_seguro, @uniforme, @estad_t, @inact, @l_trabajo"+
+                ", @est_civ, @nacionalidad, @id_departamento, @id_puesto)";
+            
+            atrab.Parameters.AddWithValue("@id,", id);
+            atrab.Parameters.AddWithValue("@ced", ced);
+            atrab.Parameters.AddWithValue("@ven_ced", ven_ced);
+            atrab.Parameters.AddWithValue("@nombre", nombre);
+            atrab.Parameters.AddWithValue("@apellido1", apellido1);
+            atrab.Parameters.AddWithValue("@apellido2", apellido2);
+            atrab.Parameters.AddWithValue("@mail", mail);
+            atrab.Parameters.AddWithValue("@tel1", tel1);
+            atrab.Parameters.AddWithValue("@tel2", tel2);
+            atrab.Parameters.AddWithValue("@dir", dir);
+            atrab.Parameters.AddWithValue("@experiencia", experiencia);
+            atrab.Parameters.AddWithValue("@titulos", titulos);
+            atrab.Parameters.AddWithValue("@num_seguro", num_seguro);
+            atrab.Parameters.AddWithValue("@uniforme", uniforme);
+            atrab.Parameters.AddWithValue("@estad_t", estado_t);
+            atrab.Parameters.AddWithValue("@inact", inact);
+            atrab.Parameters.AddWithValue("@l_trabajo", l_trabajo);
+            atrab.Parameters.AddWithValue("@est_civ", est_civ);
+            atrab.Parameters.AddWithValue("@nacionalidad", nacionalidad);
+            atrab.Parameters.AddWithValue("@id_departamento", id_departamento);
+            atrab.Parameters.AddWithValue("@id_puesto", id_puesto);
+
+
+            Conexion.Close();
+
         }
 
-        public void EliminarTrabajador(TO.TOTrabajdor trab)
+
+        public void ModifcarTrabajador(string ced, DateTime ven_ced, string nombre, string apellido1, string apellido2, string mail, string tel1, string tel2, string dir, string experiencia, string titulos, int num_seguro, DateTime uniforme, string estado_t, string inact, string l_trabajo, string est_civ, string nacionalidad, int id_departamento, int id_puesto)
         {
-            throw new NotImplementedException();
+            SqlCommand modtrab = new SqlCommand();
+            modtrab.Connection = Conexion;
+            modtrab.CommandText = "UPDATE Trabajador(Ced, Ven_Ced, Nombre, Apellido1" +
+                ", Apellido2, Mail, Tel1, Tel2, Dir, Experiencia, Titulos, Num_Seguro, Uniforme" +
+                ", Estado_t, Inact, L_Trabajo, Est_Civ, Nacionalidad, ID_Departamento, ID_Puesto)" +
+                " values (@ced, @ven_ced, @nombre, @apellido1, @apellido2, @mail, @tel1, @tel2" +
+                ", @dir, @experiencia, @titulos, @num_seguro, @uniforme, @estad_t, @inact, @l_trabajo" +
+                ", @est_civ, @nacionalidad, @id_departamento, @id_puesto)";
+
+            modtrab.Parameters.AddWithValue("@ced", ced);
+            modtrab.Parameters.AddWithValue("@ven_ced", ven_ced);
+            modtrab.Parameters.AddWithValue("@nombre", nombre);
+            modtrab.Parameters.AddWithValue("@apellido1", apellido1);
+            modtrab.Parameters.AddWithValue("@apellido2", apellido2);
+            modtrab.Parameters.AddWithValue("@mail", mail);
+            modtrab.Parameters.AddWithValue("@tel1", tel1);
+            modtrab.Parameters.AddWithValue("@tel2", tel2);
+            modtrab.Parameters.AddWithValue("@dir", dir);
+            modtrab.Parameters.AddWithValue("@experiencia", experiencia);
+            modtrab.Parameters.AddWithValue("@titulos", titulos);
+            modtrab.Parameters.AddWithValue("@num_seguro", num_seguro);
+            modtrab.Parameters.AddWithValue("@uniforme", uniforme);
+            modtrab.Parameters.AddWithValue("@estad_t", estado_t);
+            modtrab.Parameters.AddWithValue("@inact", inact);
+            modtrab.Parameters.AddWithValue("@l_trabajo", l_trabajo);
+            modtrab.Parameters.AddWithValue("@est_civ", est_civ);
+            modtrab.Parameters.AddWithValue("@nacionalidad", nacionalidad);
+            modtrab.Parameters.AddWithValue("@id_departamento", id_departamento);
+            modtrab.Parameters.AddWithValue("@id_puesto", id_puesto);
+
+            Conexion.Close();
         }
 
-        public void ConsultarTrabajador(TO.TOTrabajdor trab)
+        public void EliminarTrabajador(string ced, string estado_t, string inact)
         {
-            throw new NotImplementedException();
-        }
+            SqlCommand eltrab = new SqlCommand();
+            eltrab.Connection = Conexion;
+            eltrab.CommandText = "UPDATE Trabajador(Ced, Estado_t, Inact)" +
+                " values (@ced, @estad_t, @inact)";
 
-        public System.Data.ConnectionState ConnctionState { get; set; }
+            eltrab.Parameters.AddWithValue("@ced", ced);
+            eltrab.Parameters.AddWithValue("@estad_t", estado_t);
+            eltrab.Parameters.AddWithValue("@inact", inact);
+
+            Conexion.Close();
+        }
     }
 }

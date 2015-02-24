@@ -31,7 +31,7 @@ namespace BL
         {
             DA.DADepartamento moddep = new DA.DADepartamento();
             moddep.Search(id);
-            moddep.ModificarDeprtamento(nomber);
+            moddep.ModificarDeprtamento(nombre);
         }
 
         public void EliminarDepartamento(int id, string nombre)

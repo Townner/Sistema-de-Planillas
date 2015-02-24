@@ -7,35 +7,45 @@ namespace BL
 {
     public class BLLicencias
     {
-        public void AgregarLicencia(int id, string lic1, string lic2, string lic3)
+        public int trabajador_id;
+        public string trabajador_ced;
+        public string lic1;
+        public string lic2;
+        public string lic3;
+        public DateTime v_lic1;
+        public DateTime v_lic2;
+        public DateTime v_lic3;
+
+        public void Search(string ced)
         {
-            TO.TOLicencias lic = new TO.TOLicencias();
-            lic.ID_Trabajador = id;
-            lic.Lic1 = lic1;
-            lic.Lic2 = lic2;
-            lic.Lic3 = lic3;
+            DA.DALicencias sr = new DA.DALicencias();
+            this.trabajador_id = sr.Search(ced).Trabajador_ID;
+            this.trabajador_ced = sr.Search(ced).Trabajador_Ced;
+            this.lic1 = sr.Search(ced).Lic1;
+            this.lic2 = sr.Search(ced).Lic2;
+            this.lic3 = sr.Search(ced).Lic3;
+            this.v_lic1 = sr.Search(ced).V_Lic1;
+            this.v_lic2 = sr.Search(ced).V_Lic2;
+            this.v_lic3 = sr.Search(ced).V_Lic3;
 
+        }
+
+        public void AgregarLicencia(int id, string ced, string lic1, string lic2, string lic3, DateTime vlic1, DateTime vlic2, DateTime vlic3)
+        {
             DA.DALicencias alic = new DA.DALicencias();
-            alic.AgregarLicencia(lic);
-        }  
+            alic.AgregarLicencia(id, ced, lic1, lic2, lic3, vlic1, vlic2, vlic3);
+        }
 
-        public void ModifcarLicencia(TO.TOLicencias lic)
+        public void ModifcarLicencia(string ced, string lic1, string lic2, string lic3, DateTime vlic1, DateTime vlic2, DateTime vlic3)
         {
             DA.DALicencias modlic = new DA.DALicencias();
-            modlic.ModifcarLicencia(lic);
+            modlic.ModifcarLicencia(ced, lic1, lic2, lic3, vlic1, vlic2, vlic3);
         }
 
-        public TO.TOLicencias ConsularLicencias(TO.TOLicencias lic)
-        {
-            DA.DALicencias conlic = new DA.DALicencias();
-            conlic.ConsularLicencias(lic);
-            throw new NotImplementedException();
-        }
-
-        public void EliminarLicencia(TO.TOLicencias lic)
+        public void EliminarLicencia(string ced)
         {
             DA.DALicencias elimlic = new DA.DALicencias();
-            elimlic.EliminarLicencia(lic);
+            elimlic.EliminarLicencia(ced);
         }
     }
 }

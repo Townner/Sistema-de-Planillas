@@ -7,16 +7,22 @@ namespace TO
 {
     public class TOFechas
     {
-        private int ced;
+        private int trabajador_id;
+        private string trabajador_ced;
         private DateTime f_nac;
         private DateTime f_ingreso;
         private DateTime f_prueba;
         private DateTime f_salida;
-        
-        public int Ced
+
+        public int Trabajador_ID
         {
-            get { return ced; }
-            set { ced = value; }
+            get { return trabajador_id; }
+            set { trabajador_id = value; }
+        }
+        public string Trabajador_Ced
+        {
+            get { return trabajador_ced; }
+            set { trabajador_ced = value; }
         }
         public DateTime F_Nac
         {

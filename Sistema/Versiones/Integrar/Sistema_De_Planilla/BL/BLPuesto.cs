@@ -8,34 +8,32 @@ namespace BL
     class BLPuesto
     {
 
+        int id_puesto;
+        string nom_puesto;
+
+        public void Search(int id)
+        {
+            DA.DAPuesto sr = new DA.DAPuesto();
+            this.id_puesto = sr.Search(id).ID_Puesto;
+            this.nom_puesto = sr.Search(id).Nom_Puesto;
+        }
+
         public void AgregarPuesto(int id, string nom)
         {
-
-            TO.TOPuesto puesto = new TO.TOPuesto();
-            puesto.ID_Puesto = id;
-
-
             DA.DAPuesto apuest = new DA.DAPuesto();
-            apuest.AgregarPuesto(puesto);
+            apuest.AgregarPuesto(id, nom);
         }
 
-        public void EditarPuesto(TO.TOPuesto puesto)
+        public void EditarPuesto(int id, string nom)
         {
             DA.DAPuesto edapln = new DA.DAPuesto();
-            edapln.EditarPuesto(puesto);
+            edapln.EditarPuesto(id, nom);
         }
 
-        public TO.TOPuesto ConsultarPuesto(TO.TOPuesto puesto)
-        {
-            DA.DAPuesto conapln = new DA.DAPuesto();
-            conapln.ConsultarPlanilla(puesto);
-            throw new NotImplementedException();
-        }
-
-        public void EliminarPuesto(TO.TOPuesto puesto)
+        public void EliminarPuesto(int id)
         {
             DA.DAPuesto elapln = new DA.DAPuesto();
-            elapln.EliminarPuesto(puesto);
+            elapln.EliminarPuesto(id);
         }
     }
     }
