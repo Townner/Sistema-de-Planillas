@@ -15,7 +15,7 @@ namespace DA
         {
             SqlCommand Search = new SqlCommand();
             Search.Connection = Conexion;
-            Search.CommandText = "Select * from Licencia where Puestos = ced value as @id";
+            Search.CommandText = "Select * FROM Licencia WHERE ID_Puestos = @id";
 
             Search.Parameters.AddWithValue("@id", id);
 
@@ -41,8 +41,7 @@ namespace DA
             SqlCommand apuest = new SqlCommand();
             apuest.Connection = Conexion;
 
-            apuest.CommandText = "INSERT INTO Licencia(ID_Puesto, Nom_Puesto)"
-                +"VALUES (@id, @nom)";
+            apuest.CommandText = "INSERT INTO Licencia (ID_Puesto, Nom_Puesto) VALUES ID_Puesto = @id, Nom_Puesto = @nom;";
 
             apuest.Parameters.AddWithValue("@id", id);
             apuest.Parameters.AddWithValue("@nom", nom);
@@ -56,9 +55,7 @@ namespace DA
             SqlCommand editpuest = new SqlCommand();
             editpuest.Connection = Conexion;
 
-            editpuest.CommandText = "UPDATE Puestos SET(ID_Puesto, Nom_Puesto)"
-                + "WHERE  ID_Puesto = @id"
-                + " values (@id, @nom)";
+            editpuest.CommandText = "UPDATE Puestos SET Nom_Puesto = @nom WHERE  ID_Puesto = @id;";
 
             editpuest.Parameters.AddWithValue("@id", id);
             editpuest.Parameters.AddWithValue("@nom", nom);
@@ -71,7 +68,7 @@ namespace DA
             SqlCommand elpuest = new SqlCommand();
             elpuest.Connection = Conexion;
 
-            elpuest.CommandText = "DELETE FROM Puestos WHERE ID_Puesto VALUES @id";
+            elpuest.CommandText = "DELETE FROM Puestos WHERE ID_Puesto = @id";
 
             elpuest.Parameters.AddWithValue("@id", id);
 

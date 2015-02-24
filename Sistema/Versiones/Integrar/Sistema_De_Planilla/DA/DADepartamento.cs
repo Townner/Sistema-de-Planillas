@@ -39,7 +39,7 @@ namespace DA
             SqlCommand cdep = new SqlCommand();
             cdep.Connection = Conexion;
 
-            cdep.CommandText = "INSERT into Departamentos(ID_Departamento, Nom_Dep) values (@ID_Departamento, @Nom_Dep)";
+            cdep.CommandText = "INSERT INTO Departamentos(ID_Departamento, Nom_Dep) VALUES (ID_Departamento = @ID_Departamento, Nom_Dep = @Nom_Dep);";
 
             cdep.Parameters.AddWithValue("@ID_Departamento", id);
             cdep.Parameters.AddWithValue("@Nom_Dep", nombre);
@@ -52,7 +52,7 @@ namespace DA
             SqlCommand moddep = new SqlCommand();
             moddep.Connection = Conexion;
 
-            moddep.CommandText = "UPDATE Departamentos SET ID_Departamento = @ID_Departamento, Nom_Dep = @Nom_Dep  values as @Nom_Dep";
+            moddep.CommandText = "UPDATE Departamentos SET ID_Departamento = @ID_Departamento, Nom_Dep = @Nom_Dep  values as @Nom_Dep;";
 
             moddep.Parameters.AddWithValue("@Nom_Dep", nom);
 
@@ -64,7 +64,7 @@ namespace DA
             SqlCommand eldep = new SqlCommand();
             eldep.Connection = Conexion;
             // se tiene que validar la cantidad de trabajadores asignados (count) por departamento si tiene que no borre
-            eldep.CommandText = "DELETE FROM Nom_Dep from Departamentos values as @Nom_Dep";
+            eldep.CommandText = "DELETE FROM Nom_Dep = @Nom_Dep from Departamentos;";
 
             eldep.Parameters.AddWithValue("@Nom_Dep", nom);
 

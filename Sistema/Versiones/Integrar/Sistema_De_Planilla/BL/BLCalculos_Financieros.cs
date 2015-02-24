@@ -47,7 +47,7 @@ namespace BL
             interes = m_prestamo * ( c_prest / 100);
 
             DA.DACalculos_Financieros calcintpres = new DA.DACalculos_Financieros();
-            calcintpres.CalculoInetresesPrestamo(interes);
+            calcintpres.CalculoInetresesPrestamo(ced, interes);
 
             return interes;
         }
@@ -59,7 +59,7 @@ namespace BL
             s_subcidio = h.Subcidio * m_subcidio;
 
             DA.DACalculos_Financieros calsub = new DA.DACalculos_Financieros();
-            calsub.CalculoSubcidio(s_subcidio);
+            calsub.CalculoSubcidio(ced, s_subcidio);
 
             return s_subcidio;
         }
@@ -79,7 +79,7 @@ namespace BL
             }
             
             DA.DACalculos_Financieros calcadmen = new DA.DACalculos_Financieros();
-            calcadmen.CalculoAdicionalMensual(a_mensual1);
+            calcadmen.CalculoAdicionalMensual(ced, a_mensual1);
 
             return a_mensual1;
         }
@@ -96,7 +96,7 @@ namespace BL
             }
             
             DA.DACalculos_Financieros calcadquin = new DA.DACalculos_Financieros();
-            calcadquin.CalculoAdicionalQuincenal(a_quincenal);
+            calcadquin.CalculoAdicionalQuincenal(ced, a_quincenal);
 
             return a_quincenal;
         }

@@ -15,7 +15,7 @@ namespace DA
         {
             SqlCommand Search = new SqlCommand();
             Search.Connection = Conexion;
-            Search.CommandText = "Select * from Licencia where Trabajador_Ced = ced value as @ced";
+            Search.CommandText = "Select * FROM Licencia WHERE Trabajador_Ced = @ced";
 
             Search.Parameters.AddWithValue("@ced", ced);
 
@@ -47,8 +47,8 @@ namespace DA
             SqlCommand alic = new SqlCommand();
             alic.Connection = Conexion;
 
-            alic.CommandText = "INSERT INTO Licencia(Trabajador_ID, Trabajador_Ced, Licencia_1, Licencia_2, Licencia_3, F_Vencimiento_1, F_Vencimiento_2, F_Vencimiento_3)"
-                + " values (@id, @ced, @lic1, @lic2, @lic3, @vlic1, @vlic2, @vlic3)";
+            alic.CommandText = "INSERT INTO Licencia (Trabajador_ID, Trabajador_Ced, Licencia_1, Licencia_2, Licencia_3, F_Vencimiento_1, F_Vencimiento_2, F_Vencimiento_3)"
+                + " VALUES (Trabajador_ID = @id, Trabajador_Ced = @ced, Licencia_1 = @lic1, Licencia_2 = @lic2, Licencia_3 = @lic3, F_Vencimiento_1 = @vlic1, F_Vencimiento_2 = @vlic2, F_Vencimiento_3 = @vlic3)";
 
             alic.Parameters.AddWithValue("@id", id);
             alic.Parameters.AddWithValue("@ced", ced);
@@ -67,9 +67,7 @@ namespace DA
             SqlCommand modlic = new SqlCommand();
             modlic.Connection = Conexion;
 
-            modlic.CommandText = "UPDATE Licencia SET(Licencia_1, Licencia_2, Licencia_3, F_Vencimiento_1, F_Vencimiento_2, F_Vencimiento_3)"
-                + "WHERE  Trabajador_Ced = @ced"
-                + " values (@lic1, @lic2, @lic3, @vlic1, @vlic2, @vlic3)";
+            modlic.CommandText = "UPDATE Licencia SET Licencia_1 = @lic1, Licencia_2 = @lic2, Licencia_3 = @lic3, F_Vencimiento_1 = @vlic1, F_Vencimiento_2 = @vlic2, F_Vencimiento_3 = @vlic3 WHERE Trabajador_Ced = @ced;";
 
             modlic.Parameters.AddWithValue("@ced", ced);
             modlic.Parameters.AddWithValue("@lic1", lic1);
@@ -100,9 +98,7 @@ namespace DA
             v_lic1 = v_lic2 = v_lic3 = new DateTime(1900, 01, 01, 00, 00, 00);
 
 
-            ellic.CommandText = "UPDATE Licencia SET(Licencia_1, Licencia_2, Licencia_3, F_Vencimiento_1, F_Vencimiento_2, F_Vencimiento_3)"
-                + "WHERE  Trabajador_Ced = @ced"
-                + " values (@lic1, @lic2, @lic3, @vlic1, @vlic2, @vlic3)";
+            ellic.CommandText = "UPDATE Licencia SET Licencia_1 = @lic1, Licencia_2 = @lic2, Licencia_3 = @lic3, F_Vencimiento_1 = @vlic1, F_Vencimiento_2 = @vlic2, F_Vencimiento_3 = @vlic3 WHERE Trabajador_Ced = @ced;";
 
             ellic.Parameters.AddWithValue("@ced", ced);
             ellic.Parameters.AddWithValue("@lic1", lic1);

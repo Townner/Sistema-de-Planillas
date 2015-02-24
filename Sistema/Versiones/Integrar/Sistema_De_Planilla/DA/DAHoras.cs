@@ -15,7 +15,7 @@ namespace DA
         {
             SqlCommand Search = new SqlCommand();
             Search.Connection = Conexion;
-            Search.CommandText = "Select * from Horas where Trabajador_Ced = Ced  value as @Ced";
+            Search.CommandText = "SELECT * FROM Horas WHERE Trabajador_Ced = @Ced;";
 
             Search.Parameters.AddWithValue("@Ced", ced);
 
@@ -45,8 +45,7 @@ namespace DA
             SqlCommand ahora = new SqlCommand();
             ahora.Connection = Conexion;
 
-            ahora.CommandText = "INSERT INTO Horas(Trabajador_ID, Trabajador_Ced, H_Permiso, H_Extra, H_Incap, H_Laboradas, H_Subsidio)"
-                + " VALUES (@Trabajador_ID, @Trabajador_Ced, @H_Permiso, @H_Extra, @H_Incap, @H_Laboradas, @H_Subsidio )";
+            ahora.CommandText = "INSERT INTO Horas(Trabajador_ID, Trabajador_Ced, H_Permiso, H_Extra, H_Incap, H_Laboradas, H_SubsidiO) VALUES (Trabajador_ID = @Trabajador_ID, Trabajador_Ced = @Trabajador_Ced, H_Permiso = @H_Permiso, H_Extra = @H_Extra, H_Incap = @H_Incap, H_Laboradas = @H_Laboradas, H_Subsidio = @H_Subsidio);";
 
             ahora.Parameters.AddWithValue("@Trabajador_ID", id);
             ahora.Parameters.AddWithValue("@Trabajador_Ced", ced);
@@ -64,9 +63,8 @@ namespace DA
             SqlCommand modhora = new SqlCommand();
             modhora.Connection = Conexion;
 
-            modhora.CommandText = "UPDATE Horas (H_Permiso, H_Extra, H_Incap, H_Laboradas, H_Subsidio)"
-                + "WHERE Trabajador_Ced = @Trabajador_Ced" 
-                + " VALUES (@H_Permiso, @H_Extra, @H_Incap, @H_Laboradas, @H_Subsidio )";
+            modhora.CommandText = "UPDATE Horas SET H_Permiso = @H_Permiso , H_Extra = @H_Extra, H_Incap = @H_Incap, H_Laboradas = @H_Laboradas, H_Subsidio = @H_Subsidio)"
+                + "WHERE Trabajador_Ced = @Trabajador_Ced;";
 
             modhora.Parameters.AddWithValue("@Trabajador_Ced", ced);
             modhora.Parameters.AddWithValue("@H_Permiso", h_permiso);
@@ -94,10 +92,9 @@ namespace DA
             h_incap = new DateTime(1900, 01, 01, 00 , 00, 00);
             h_laboradas = new DateTime(1900, 01, 01, 00 , 00, 00);
             subicidio = new DateTime(1900, 01, 01, 00, 00, 00);
-           
-            elhora.CommandText = "UPDATE Horas SET(H_Permiso, H_Extra, H_Incap, H_Laboradas, H_Subsidio)"
-                + "WHERE Trabajador_Ced = @Trabajador_Ced"
-                + " VALUES (@H_Permiso, @H_Extra, @H_Incap, @H_Laboradas, @H_Subsidio )";
+
+            elhora.CommandText = "UPDATE Horas SET H_Permiso = @H_Permiso , H_Extra = @H_Extra, H_Incap = @H_Incap, H_Laboradas = @H_Laboradas, H_Subsidio = @H_Subsidio)"
+                + "WHERE Trabajador_Ced = @Trabajador_Ced;";
 
             elhora.Parameters.AddWithValue("@Trabajador_Ced", ced);
             elhora.Parameters.AddWithValue("@H_Permiso", h_permiso);

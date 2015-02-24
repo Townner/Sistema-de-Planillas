@@ -15,7 +15,7 @@ namespace DA
         {
             SqlCommand Search = new SqlCommand();
             Search.Connection = Conexion;
-            Search.CommandText = "Select * from Salarios where Trabajador_Ced = ced value as @ced";
+            Search.CommandText = "Select * FROM Salarios WHERE Trabajador_Ced = @ced;";
 
             Search.Parameters.AddWithValue("@ced", ced);
 
@@ -47,69 +47,74 @@ namespace DA
 
         }
 
-        public void CalculoIncapacida(double s_incapcidad)
+        public void CalculoIncapacida(string ced, double s_incapcidad)
         {
             SqlCommand calcincap = new SqlCommand();
             calcincap.Connection = Conexion;
 
-            calcincap.CommandText = "UPDATE @S_Incapacidad from Salarios values as @incap";
+            calcincap.CommandText = "UPDATE Salarios SET S_Incapacidad = @incap WHERE Trabajador_Ced = @ced;";
 
+            calcincap.Parameters.AddWithValue("@ced", ced);
             calcincap.Parameters.AddWithValue("@incap", s_incapcidad);
 
             Conexion.Close();
         }
-        public void CalculoHorasExtra(double s_extras)
+        public void CalculoHorasExtra(string ced ,double s_extras)
         {
             SqlCommand caclhex = new SqlCommand();
             caclhex.Connection = Conexion;
 
-            caclhex.CommandText = "UPDATE @S_Extra from Salarios values as @hex";
+            caclhex.CommandText = "UPDATE Salarios SET S_Extra = @hex WHERE Trabajador_Ced = @ced; ";
 
+            caclhex.Parameters.AddWithValue("@ced", ced);
             caclhex.Parameters.AddWithValue("@hex", s_extras);
 
             Conexion.Close();
         }
-        public void CalculoImpuestoRenta(double imprenta)
+        public void CalculoImpuestoRenta(string ced, double imprenta)
         {
             SqlCommand caclimprent = new SqlCommand();
             caclimprent.Connection = Conexion;
 
-            caclimprent.CommandText = "UPDATE @S_Extra from Salarios values as @imprenta";
+            caclimprent.CommandText = "UPDATE Salarios SET S_ImpRenta = @imprenta WHERE Trabajador_Ced = @ced;";
 
             caclimprent.Parameters.AddWithValue("@imprenta", imprenta);
 
             Conexion.Close();
         }
-        public void CalculoCargasPatronales(double s_cargas)
+        public void CalculoCargasPatronales(string ced, double s_cargas)
         {
             SqlCommand calccpat = new SqlCommand();
             calccpat.Connection = Conexion;
 
-            calccpat.CommandText = "UPDATE @S_Ob_Pat from Salarios values as @s_carga";
+            calccpat.CommandText = "UPDATE @S_Ob_Pat from Salarios values as @s_carga WHERE Trabajador_Ced = @ced;";
 
+            calccpat.Parameters.AddWithValue("@ced", ced);
             calccpat.Parameters.AddWithValue("@s_carga", s_cargas);
 
             Conexion.Close();
         }
-        public void CalculoSalarioNeto(double s_neto)
+        public void CalculoSalarioNeto(string ced, double s_neto)
         {
             SqlCommand calccpat = new SqlCommand();
             calccpat.Connection = Conexion;
 
-            calccpat.CommandText = "UPDATE @S_Neto from Salarios values as @s_neto";
+            calccpat.CommandText = "UPDATE Salarios SET S_Neto = @s_neto WHERE Trabajador_Ced = @ced;";
 
+            calccpat.Parameters.AddWithValue("@ced", ced);
             calccpat.Parameters.AddWithValue("@s_neto", s_neto);
 
             Conexion.Close();
         }
 
-        public void CalculoSalarioFinal(double s_final)
+        public void CalculoSalarioFinal(string ced, double s_final)
         {
             SqlCommand calccpat = new SqlCommand();
             calccpat.Connection = Conexion;
 
-            calccpat.CommandText = "UPDATE @S_Final from Salarios values as @s_final";
+            calccpat.CommandText = "UPDATE Salarios SET S_Final = @s_final WHERE Trabajador_Ced = @ced;";
 
+            calccpat.Parameters.AddWithValue("@ced", ced);
             calccpat.Parameters.AddWithValue("@s_final", s_final);
 
             Conexion.Close();

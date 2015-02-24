@@ -15,7 +15,7 @@ namespace DA
         {
             SqlCommand Search = new SqlCommand();
             Search.Connection = Conexion;
-            Search.CommandText = "Select * from Fechas_Trabajador where Horas = ced value as @ced";
+            Search.CommandText = "Select * FROM Fechas_Trabajador WHERE (Trabajador_Ced = @ced) VALUES AS @ced;";
 
             Search.Parameters.AddWithValue("@ced", ced);
 
@@ -46,8 +46,7 @@ namespace DA
             SqlCommand afec = new SqlCommand();
             afec.Connection = Conexion;
 
-            afec.CommandText = "INSERT into Fechas_Trabajador(Trabajador_ID, Trabajador_Ced, F_Nac, F_Ingreso, F_Prueba, F_Salida)"
-                + "VALUES (@Trabajador_ID, @Trabajador_Ced, @F_Nac, @F_Ingreso, @F_Prueba, @F_Salida)";
+            afec.CommandText = "INSERT INTO Fechas_Trabajador(Trabajador_ID, Trabajador_Ced, F_Nac, F_Ingreso, F_Prueba, F_Salida) VALUES (Trabajador_ID = @Trabajador_ID, Trabajador_Ced = @Trabajador_Ced, F_Nac = @F_Nac, F_Ingreso = @F_Ingreso, F_Prueba = @F_Prueba, F_Salida = @F_Salida);";
 
             afec.Parameters.AddWithValue("@Trabajador_ID",ID);
             afec.Parameters.AddWithValue("@Trabajador_Ced", ced);
@@ -64,7 +63,7 @@ namespace DA
             SqlCommand modfec = new SqlCommand();
             modfec.Connection = Conexion;
 
-            modfec.CommandText = "UPDATE Fechas_Trabajador SET Trabajador_ID = @Trabajador_ID, Trabajador_ID = @Trabajador_ID, F_Nac = @F_Nac, F_Ingreso = @F_Ingreso, F_Prueba = @F_Prueba, F_Salida = @F_Salida";
+            modfec.CommandText = "UPDATE Fechas_Trabajador SET Trabajador_ID = @Trabajador_ID, Trabajador_ID = @Trabajador_ID, F_Nac = @F_Nac, F_Ingreso = @F_Ingreso, F_Prueba = @F_Prueba, F_Salida = @F_Salida;";
 
             modfec.Parameters.AddWithValue("@Trabajador_Ced", ced);
             modfec.Parameters.AddWithValue("@F_Nac", f_nac);
@@ -81,7 +80,7 @@ namespace DA
             SqlCommand elfec = new SqlCommand();
             elfec.Connection = Conexion;
 
-            elfec.CommandText = "DELETE FROM Fechas_Trabajador WHERE Trabajador_Ced VALUES @Trabajador_Ced";
+            elfec.CommandText = "DELETE FROM Fechas_Trabajador WHERE Trabajador_Ced = @Trabajador_Ced;";
 
             elfec.Parameters.AddWithValue("@Trabajador_Ced", ced);
 

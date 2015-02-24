@@ -15,7 +15,7 @@ namespace DA
         {
             SqlCommand Search = new SqlCommand();
             Search.Connection = Conexion;
-            Search.CommandText = "Select * from Cargos_Financieros where Trabajador_Ced = ced value as @ced";
+            Search.CommandText = "Select * FROM Cargos_Financieros where Trabajador_Ced = @ced;";
 
             Search.Parameters.AddWithValue("@ced", ced);
 
@@ -47,50 +47,54 @@ namespace DA
             return temp;
         }
 
-        public void CalculoInetresesPrestamo(double interes)
+        public void CalculoInetresesPrestamo(string ced, double interes)
         {
             SqlCommand calcintpres = new SqlCommand();
             calcintpres.Connection = Conexion;
 
-            calcintpres.CommandText = "UPDATE @Intereses from Cargos_Financieros values as @interes";
+            calcintpres.CommandText = "UPDATE Cargos_Financieros SET Intereses = @interes WHERE Trabajador_Ced = @ced;";
 
+            calcintpres.Parameters.AddWithValue("@ced",ced);
             calcintpres.Parameters.AddWithValue("@interes", interes);
 
             Conexion.Close();
         }
 
-        public void CalculoSubcidio(double s_subcidio)
+        public void CalculoSubcidio(string ced, double s_subcidio)
         {
-            SqlCommand calcintpres = new SqlCommand();
-            calcintpres.Connection = Conexion;
+            SqlCommand calcsub = new SqlCommand();
+            calcsub.Connection = Conexion;
 
-            calcintpres.CommandText = "UPDATE @S_Subcdio from Cargos_Financieros values as @s_subcidio";
+            calcsub.CommandText = "UPDATE Cargos_Financieros SET S_Subcdio = @s_subcidio WHERE Trabajador_Ced = @ced;";
 
-            calcintpres.Parameters.AddWithValue("@s_subcidio", s_subcidio);
+            calcsub.Parameters.AddWithValue("@ced", ced);
+            calcsub.Parameters.AddWithValue("@s_subcidio", s_subcidio);
 
             Conexion.Close();
         }
 
-        public void CalculoAdicionalMensual(double a_mensual1)
+        public void CalculoAdicionalMensual(string ced, double a_mensual1)
         {
-            SqlCommand calcintpres = new SqlCommand();
-            calcintpres.Connection = Conexion;
+            SqlCommand calcadmen = new SqlCommand();
+            calcadmen.Connection = Conexion;
 
-            calcintpres.CommandText = "UPDATE @A_Mensual1 from Cargos_Financieros values as @a_mensual1";
+            calcadmen.CommandText = "UPDATE Cargos_Financieros SET @A_Mensual1 = @a_mensual1 WHERE Trabajador_Ced = @ced;";
 
-            calcintpres.Parameters.AddWithValue("@a_mensual1", a_mensual1);
+            calcadmen.Parameters.AddWithValue("@ced", ced);
+            calcadmen.Parameters.AddWithValue("@a_mensual1", a_mensual1);
 
             Conexion.Close();
         }
 
-        public void CalculoAdicionalQuincenal(double a_quincenal)
+        public void CalculoAdicionalQuincenal(string ced,double a_quincenal)
         {
-            SqlCommand calcintpres = new SqlCommand();
-            calcintpres.Connection = Conexion;
+            SqlCommand calcadquin = new SqlCommand();
+            calcadquin.Connection = Conexion;
 
-            calcintpres.CommandText = "UPDATE @A_Quincenal from Cargos_Financieros values as @a_quincenal";
+            calcadquin.CommandText = "UPDATE Cargos_Financieros SET @A_Quincenal = @a_quincenal WHERE Trabajador_Ced = @ced;";
 
-            calcintpres.Parameters.AddWithValue("@a_quincenal", a_quincenal);
+            calcadquin..Parameters.AddWithValue("@ced", ced);
+            calcadquin.Parameters.AddWithValue("@a_quincenal", a_quincenal);
 
             Conexion.Close();
         }

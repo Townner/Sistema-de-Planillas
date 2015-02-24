@@ -39,31 +39,31 @@ namespace BL
             this.s_final = sr.Search(ced).S_Final;
         }
 
-        public double CalculoIncapacida()
+        public double CalculoIncapacida(string ced)
         {
             TO.TOHoras h = new TO.TOHoras();
             
             this.s_incapcidad = h.H_Incap * (this.s_bruto/160);
 
             DA.DACalculos calcinca = new DA.DACalculos();
-            calcinca.CalculoIncapacida(s_incapcidad);
+            calcinca.CalculoIncapacida(ced, s_incapcidad);
 
             return s_incapcidad;
         }
 
-        public double CalculoHorasExtra()
+        public double CalculoHorasExtra(string ced)
         {
             TO.TOHoras h = new TO.TOHoras();
             
             s_extras = h.H_Extra * ((s_bruto / 160) * 1.5);
 
             DA.DACalculos calchex = new DA.DACalculos();
-            calchex.CalculoHorasExtra(s_extras);
+            calchex.CalculoHorasExtra(ced, s_extras);
 
             return s_extras;
         }
 
-        public double CalculoImpuestoRenta()
+        public double CalculoImpuestoRenta(string ced)
                 {
                     double varSB = 0, varH = 0, varC = 0, total = 0;
                     if (s_bruto > 1190000){
@@ -84,32 +84,32 @@ namespace BL
                     imprenta = varSB + varH + varC;
 
                     DA.DACalculos calcimprent = new DA.DACalculos();
-                    calcimprent.CalculoImpuestoRenta(imprenta);
+                    calcimprent.CalculoImpuestoRenta(ced, imprenta);
 
                     return total;
                 }
 
-        public double CalculoCargasPatronales()
+        public double CalculoCargasPatronales(string ced)
                 {
                     s_cargas = (cargas/100) * s_bruto;
 
                     DA.DACalculos calccpatron = new DA.DACalculos();
-                    calccpatron.CalculoCargasPatronales(s_cargas);
+                    calccpatron.CalculoCargasPatronales(ced, s_cargas);
 
                     return s_cargas;
                 }
 
-        public double CalculoSalarioNeto()
+        public double CalculoSalarioNeto(string ced)
                 {
                     s_neto = s_bruto - CalculoCargasPatronales();
 
                     DA.DACalculos calsnto = new DA.DACalculos();
-                    calsnto.CalculoSalarioNeto(s_neto);
+                    calsnto.CalculoSalarioNeto(ced, s_neto);
 
                     return s_neto;
                 }
 
-        public double CalculoSalarioFinal()
+        public double CalculoSalarioFinal(string ced)
         {
             BL.BLCalculos_Financieros cf = new BL.BLCalculos_Financieros();
             double aneto, hextra, cimprent, cincap;
@@ -117,7 +117,7 @@ namespace BL
             s_final = aneto + hextra - cimprent + cincap - cf.CalculoAdicionalMensual() - cf.CalculoAdicionalQuincenal() - cf.CalculoInetresesPrestamo() + cf.CalculoSubcidio();
 
             DA.DACalculos calcsdin = new DA.DACalculos();
-            calcsdin.CalculoSalarioFinal(s_final);
+            calcsdin.CalculoSalarioFinal(ced, s_final);
 
             return s_final;
         }

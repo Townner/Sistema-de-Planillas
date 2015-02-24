@@ -15,7 +15,7 @@ namespace DA
         {
             SqlCommand Search = new SqlCommand();
             Search.Connection = Conexion;
-            Search.CommandText = "Select * from Trabajador where Ced = ced value as @ced";
+            Search.CommandText = "Select * from Trabajador where Ced = @ced";
 
             Search.Parameters.AddWithValue("@ced", ced);
 
@@ -65,12 +65,13 @@ namespace DA
         {
             SqlCommand atrab = new SqlCommand();
             atrab.Connection = Conexion;
-            atrab.CommandText = "INSERT into Trabajador(ID, Ced, Ven_Ced, Nombre, Apellido1"+
+            atrab.CommandText = "INSERT INTO Trabajador(ID, Ced, Ven_Ced, Nombre, Apellido1"+
                 ", Apellido2, Mail, Tel1, Tel2, Dir, Experiencia, Titulos, Num_Seguro, Uniforme" +
                 ", Estado_t, Inact, L_Trabajo, Est_Civ, Nacionalidad, ID_Departamento, ID_Puesto)"+
-                " values (@id, @ced, @ven_ced, @nombre, @apellido1, @apellido2, @mail, @tel1, @tel2"+
-                ", @dir, @experiencia, @titulos, @num_seguro, @uniforme, @estad_t, @inact, @l_trabajo"+
-                ", @est_civ, @nacionalidad, @id_departamento, @id_puesto)";
+                " values (ID = @id, Ced = @ced, Ven_Ced = @ven_ced, Nomre = @nombre, Apellido1 = @apellido1, Apellido2 = @apellido2"+
+                ", Mail = @mail, Tel1 = @tel1, Tel2 = @tel2, Dir = @dir, Experiencia = @experiencia, Titulos = @titulos"+
+                ", Num_Segur = @num_seguro, Uniform = @uniforme, Estado_t = @estado_t, Inact = @inact, L_Trabajo = @l_trabajo"+
+                ", Est_Civ = @est_civ, Nacionalidad = @nacionalidad, ID_Departamento = @id_departamento, ID_Puesto = @id_puesto);";
             
             atrab.Parameters.AddWithValue("@id,", id);
             atrab.Parameters.AddWithValue("@ced", ced);
@@ -86,7 +87,7 @@ namespace DA
             atrab.Parameters.AddWithValue("@titulos", titulos);
             atrab.Parameters.AddWithValue("@num_seguro", num_seguro);
             atrab.Parameters.AddWithValue("@uniforme", uniforme);
-            atrab.Parameters.AddWithValue("@estad_t", estado_t);
+            atrab.Parameters.AddWithValue("@estado_t", estado_t);
             atrab.Parameters.AddWithValue("@inact", inact);
             atrab.Parameters.AddWithValue("@l_trabajo", l_trabajo);
             atrab.Parameters.AddWithValue("@est_civ", est_civ);
@@ -104,12 +105,9 @@ namespace DA
         {
             SqlCommand modtrab = new SqlCommand();
             modtrab.Connection = Conexion;
-            modtrab.CommandText = "UPDATE Trabajador(Ced, Ven_Ced, Nombre, Apellido1" +
-                ", Apellido2, Mail, Tel1, Tel2, Dir, Experiencia, Titulos, Num_Seguro, Uniforme" +
-                ", Estado_t, Inact, L_Trabajo, Est_Civ, Nacionalidad, ID_Departamento, ID_Puesto)" +
-                " values (@ced, @ven_ced, @nombre, @apellido1, @apellido2, @mail, @tel1, @tel2" +
-                ", @dir, @experiencia, @titulos, @num_seguro, @uniforme, @estad_t, @inact, @l_trabajo" +
-                ", @est_civ, @nacionalidad, @id_departamento, @id_puesto)";
+            modtrab.CommandText = "UPDATE Trabajador SET Ced = @ced, Ven_Ced = @ven_ced, Nombre = @nombre, Apellido1 = @apellido1" +
+                ", Apellido2 = @apellido2, Mail = @mail, Tel1 = @tel1, Tel2 = @tel2, Dir = @dir, Experiencia = @experiencia, Titulos = @titulos, Num_Seguro = @@num_seguro, Uniforme = @@uniforme" +
+                ", Estado_t = @estado_t, Inact = @inact, L_Trabajo = @l_trabajo, Est_Civ = @est_civ, Nacionalidad = @nacionalidad, ID_Departamento = @id_departamento, ID_Puesto = @id_puesto WHERE Ced = @ced;";
 
             modtrab.Parameters.AddWithValue("@ced", ced);
             modtrab.Parameters.AddWithValue("@ven_ced", ven_ced);
@@ -124,7 +122,7 @@ namespace DA
             modtrab.Parameters.AddWithValue("@titulos", titulos);
             modtrab.Parameters.AddWithValue("@num_seguro", num_seguro);
             modtrab.Parameters.AddWithValue("@uniforme", uniforme);
-            modtrab.Parameters.AddWithValue("@estad_t", estado_t);
+            modtrab.Parameters.AddWithValue("@@estado_t", estado_t);
             modtrab.Parameters.AddWithValue("@inact", inact);
             modtrab.Parameters.AddWithValue("@l_trabajo", l_trabajo);
             modtrab.Parameters.AddWithValue("@est_civ", est_civ);
@@ -139,11 +137,10 @@ namespace DA
         {
             SqlCommand eltrab = new SqlCommand();
             eltrab.Connection = Conexion;
-            eltrab.CommandText = "UPDATE Trabajador(Ced, Estado_t, Inact)" +
-                " values (@ced, @estad_t, @inact)";
+            eltrab.CommandText = "UPDATE Trabajador SET Estado_t = @estado_t, Inact = @inact WHERE Ced = @ced";
 
             eltrab.Parameters.AddWithValue("@ced", ced);
-            eltrab.Parameters.AddWithValue("@estad_t", estado_t);
+            eltrab.Parameters.AddWithValue("@estado_t", estado_t);
             eltrab.Parameters.AddWithValue("@inact", inact);
 
             Conexion.Close();
