@@ -28,11 +28,11 @@ namespace DA
                 {
                     temp.Trabajador_ID = (int)read["Trabajador_ID"];
                     temp.Trabajador_Ced = (string)read["Trabajador_Ced"];
-                    temp.H_Permiso = (DateTime)read["H_Permiso"];
-                    temp.H_Extra = (DateTime)read["H_Extra"];
-                    temp.H_Incap = (DateTime)read["H_Incap"];
-                    temp.H_Laboradas = (DateTime)read["H_Laboradas"];
-                    temp.Subcidio = (DateTime)read["H_Subsidio"];
+                    temp.H_Permiso = (int)read["H_Permiso"];
+                    temp.H_Extra = (int)read["H_Extra"];
+                    temp.H_Incap = (int)read["H_Incap"];
+                    temp.H_Laboradas = (int)read["H_Laboradas"];
+                    temp.Subcidio = (int)read["H_Subsidio"];
                 }
             }
             Conexion.Close();
@@ -81,17 +81,17 @@ namespace DA
             SqlCommand elhora = new SqlCommand();
             elhora.Connection = Conexion;
 
-            DateTime h_permiso;
-            DateTime h_extra;
-            DateTime h_incap;
-            DateTime h_laboradas;
-            DateTime subicidio;
+            int h_permiso;
+            int h_extra;
+            int h_incap;
+            int h_laboradas;
+            int subicidio;
 
-            h_permiso = new DateTime(1900, 01, 01, 00 , 00, 00);
-            h_extra = new DateTime(1900, 01, 01, 00 , 00, 00);
-            h_incap = new DateTime(1900, 01, 01, 00 , 00, 00);
-            h_laboradas = new DateTime(1900, 01, 01, 00 , 00, 00);
-            subicidio = new DateTime(1900, 01, 01, 00, 00, 00);
+            h_permiso = 0;
+            h_extra = 0;
+            h_incap = 0;
+            h_laboradas = 0;
+            subicidio = 0;
 
             elhora.CommandText = "UPDATE Horas SET H_Permiso = @H_Permiso , H_Extra = @H_Extra, H_Incap = @H_Incap, H_Laboradas = @H_Laboradas, H_Subsidio = @H_Subsidio)"
                 + "WHERE Trabajador_Ced = @Trabajador_Ced;";

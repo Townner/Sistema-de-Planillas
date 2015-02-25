@@ -9,11 +9,11 @@ namespace BL
     {
         public int trabajador_id;
         public string trabajador_ced;
-        public DateTime h_permiso;
-        public DateTime h_extra;
-        public DateTime h_incap;
-        public DateTime h_laboradas;
-        public DateTime subcidio;
+        public int h_permiso;
+        public int h_extra;
+        public int h_incap;
+        public int h_laboradas;
+        public int subcidio;
 
         public void Search(string ced)
         {

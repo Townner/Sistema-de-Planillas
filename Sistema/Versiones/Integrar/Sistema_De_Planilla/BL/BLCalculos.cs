@@ -101,7 +101,7 @@ namespace BL
 
         public double CalculoSalarioNeto(string ced)
                 {
-                    s_neto = s_bruto - CalculoCargasPatronales();
+                    s_neto = s_bruto - CalculoCargasPatronales(ced);
 
                     DA.DACalculos calsnto = new DA.DACalculos();
                     calsnto.CalculoSalarioNeto(ced, s_neto);
@@ -109,12 +109,12 @@ namespace BL
                     return s_neto;
                 }
 
-        public double CalculoSalarioFinal(string ced)
+        public double CalculoSalarioFinal(string ced, double monto)
         {
             BL.BLCalculos_Financieros cf = new BL.BLCalculos_Financieros();
-            double aneto, hextra, cimprent, cincap;
+            
 
-            s_final = aneto + hextra - cimprent + cincap - cf.CalculoAdicionalMensual() - cf.CalculoAdicionalQuincenal() - cf.CalculoInetresesPrestamo() + cf.CalculoSubcidio();
+            s_final = s_bruto + CalculoHorasExtra(ced) - CalculoImpuestoRenta(ced) + CalculoIncapacida(ced) - cf.CalculoAdicionalMensual(ced, monto) - cf.CalculoAdicionalQuincenal(ced, monto) - cf.CalculoInetresesPrestamo(ced) + cf.CalculoSubcidio(ced);
 
             DA.DACalculos calcsdin = new DA.DACalculos();
             calcsdin.CalculoSalarioFinal(ced, s_final);

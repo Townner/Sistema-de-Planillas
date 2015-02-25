@@ -9,11 +9,11 @@ namespace TO
     {
         private int trabajador_id;
         private string trabajador_ced;
-        private DateTime h_permiso;
-        private DateTime h_extra;
-        private DateTime h_incap;
-        private DateTime h_laboradas;
-        private DateTime subcidio;
+        private int h_permiso;
+        private int h_extra;
+        private int h_incap;
+        private int h_laboradas;
+        private int subcidio;
 
         public int Trabajador_ID
         {
@@ -25,27 +25,27 @@ namespace TO
             get { return trabajador_ced; }
             set { trabajador_ced = value; }
         }
-        public DateTime H_Permiso
+        public int H_Permiso
         {
             get { return h_permiso; }
             set { h_permiso = value; }
         }
-        public DateTime H_Extra
+        public int H_Extra
         {
             get { return h_extra; }
             set { h_extra = value; }
         }
-        public DateTime H_Incap
+        public int H_Incap
         {
             get { return h_incap; }
             set { h_incap = value; }
         }
-        public DateTime H_Laboradas
+        public int H_Laboradas
         {
             get { return h_laboradas; }
             set { h_laboradas = value; }
         }
-        public DateTime Subcidio
+        public int Subcidio
         {
             get { return subcidio; }
             set { subcidio = value; }

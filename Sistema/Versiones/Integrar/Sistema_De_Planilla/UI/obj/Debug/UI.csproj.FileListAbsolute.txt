@@ -47,3 +47,16 @@ Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\UI\b
 \\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\UI\obj\Debug\UI.csproj.GenerateResource.Cache
 \\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\UI\obj\Debug\UI.dll
 \\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\UI\obj\Debug\UI.pdb
+C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\bin\UI.dll
+C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\bin\UI.pdb
+C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\bin\BL.dll
+C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\bin\TO.dll
+C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\bin\DA.dll
+C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\bin\BL.pdb
+C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\bin\TO.pdb
+C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\bin\DA.pdb
+C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
+C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\obj\Debug\UI.dll
+C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\obj\Debug\UI.pdb

@@ -93,7 +93,7 @@ namespace DA
 
             calcadquin.CommandText = "UPDATE Cargos_Financieros SET @A_Quincenal = @a_quincenal WHERE Trabajador_Ced = @ced;";
 
-            calcadquin..Parameters.AddWithValue("@ced", ced);
+            calcadquin.Parameters.AddWithValue("@ced", ced);
             calcadquin.Parameters.AddWithValue("@a_quincenal", a_quincenal);
 
             Conexion.Close();
