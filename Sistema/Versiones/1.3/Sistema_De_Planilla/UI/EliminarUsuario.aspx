@@ -5,7 +5,7 @@
         .style9
         {
             padding-bottom:10px;
-            width: 135px;
+            width: 71px;
             text-align: right;
             height: 49px;
         }
@@ -16,7 +16,7 @@
         }
         .style6
         {
-            width: 135px;
+            width: 71px;
             height: 23px;
         }
         .style7
@@ -33,7 +33,7 @@
         
         .style4
         {
-            width: 135px;
+            width: 71px;
         }
         .style10
         {
@@ -73,9 +73,8 @@
             <td class="style6">
             </td>
             <td class="style7">
-                <asp:GridView ID="GrdUsers" runat="server" 
-                    style="margin-left:auto; margin-right:auto; text-align:center;" ShowHeaderWhenEmpty="True"
-         emptydatatext="No hay datos" Width="300px">
+                <asp:GridView ID="GrdUsers" runat="server" style="margin-left:auto; margin-right:auto; text-align:center;" ShowHeaderWhenEmpty="True"
+         emptydatatext="No hay datos" Width="500px">
                 </asp:GridView>
             </td>
             <td class="style8">

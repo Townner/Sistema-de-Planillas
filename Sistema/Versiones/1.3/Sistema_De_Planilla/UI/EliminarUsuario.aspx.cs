@@ -58,7 +58,6 @@ namespace UI
         {
             if (CargarDatos().Trabajador_Ced != null)
             {
-                this.txtCed.Text = "";
                 btnDelete.Visible = true;
             }
             else {
@@ -73,7 +72,7 @@ namespace UI
             BL_Usr.EliminarUsuario(txtCed.Text);
             btnDelete.Visible = false;
 
-            Response.Write("<script>alert('Usuario eliminado correctamente')</script>");
+            Response.Write("<script>alert('Usuario eliminado correctamente');document.location.href='" + "/EliminarUsuario.aspx" + "'; </script>");
         }
     }
     }

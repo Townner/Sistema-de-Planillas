@@ -5,7 +5,7 @@
         .style9
         {
             padding-bottom:10px;
-            width: 135px;
+            width: 75px;
             text-align: right;
         }
         .style5
@@ -15,7 +15,7 @@
         }
         .style6
         {
-            width: 135px;
+            width: 75px;
             height: 23px;
         }
         .style7
@@ -32,8 +32,8 @@
         
         .style4
         {
-            width: 135px;
-        }
+        width: 75px;
+    }
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContenidoPrincipalIzquierdo" runat="server">
@@ -50,7 +50,7 @@
                 <asp:Button ID="btnConsultar" runat="server" Text="Consultar" 
                     style="margin-left:auto; margin-right:auto;" onclick="btnConsultar_Click" />
                 <br />
-            <asp:RegularExpressionValidator ID="RegexCed" runat="server" style="color:Red; float: left;"
+            <asp:RegularExpressionValidator ID="RegexCed" runat="server" style="color:Red; float: left; margin-left:10px;"
                 ControlToValidate="txtCed" ErrorMessage="Formato permitido 1-1111-1111" 
                 ValidationExpression="^\d{1}( |-)\d{4}( |-)\d{4}"></asp:RegularExpressionValidator>
             
@@ -63,7 +63,7 @@
             </td>
             <td class="style7">
                 <asp:GridView ID="GrdUsers" runat="server" style="margin-left:auto; margin-right:auto; text-align:center;" ShowHeaderWhenEmpty="True"
-         emptydatatext="No hay datos" Width="300px">
+         emptydatatext="No hay datos" Width="500px">
                 </asp:GridView>
             </td>
             <td class="style8">

@@ -24,8 +24,8 @@ namespace UI
                     BL_Usr.Trabajador_Ced = this.txtCed.Text;
                     BL_Usr.Id = this.txtID.Text;
                     BL_Usr.pass = this.txtPass.Text;
-                    BL_Usr.estado = this.DropEstado.SelectedValue;
-                    BL_Usr.tipo = this.DropTipo.SelectedValue;
+                    //BL_Usr.estado = this.DropEstado.SelectedValue;
+                   // BL_Usr.tipo = this.DropTipo.SelectedValue;
                     BL_Usr.AgregarUsuario();
 
                     Response.Write("<script language='javascript'>alert('El usuario fue agregado correctamente');document.location.href='" + "/AgregarUsuario.aspx" + "'; </script>");

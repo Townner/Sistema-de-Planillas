@@ -27,7 +27,7 @@ namespace UI.Images
 
             if (BL_Usr.estado == null)
             {
-                Response.Write("<script language='javascript'>alert('El usuario con la cedula " + txtCed.Text + " no existe')</script>");
+                Response.Write("<script language='javascript'>alert('El usuario con la cedula " + txtCed.Text + " no existe');document.location.href='" + "/ModificarUsuario.aspx" + "'; </script>");
             }
             else { 
                btnConsultar.Text = "Consultar de nuevo";
@@ -39,11 +39,12 @@ namespace UI.Images
             BL.BLUsuario BL_Usr = new BL.BLUsuario();
             BL_Usr.estado = this.DropEstado.SelectedValue;
             BL_Usr.tipo = this.DropTipo.SelectedValue;
+            BL_Usr.Trabajador_Ced = this.txtCed.Text;
             BL_Usr.ModifcarUsuario();
 
             txtCed.Text = "";
 
-            Response.Write("<script>alert('Usuario modificado correctamente')</script>");
+            Response.Write("<script>alert('Usuario modificado correctamente');document.location.href='" + "/ModificarUsuario.aspx" + "'; </script>");
         }
     }
 }

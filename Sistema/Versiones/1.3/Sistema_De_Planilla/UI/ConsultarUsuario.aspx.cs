@@ -72,6 +72,7 @@ namespace UI
         {
             GrdUsers.DataSource = null;
             btnNueva.Visible = false;
+            btnConsultar.Visible = true;
         }
 
       }

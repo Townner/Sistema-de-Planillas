@@ -111,14 +111,14 @@
             <li><a href="/AgregarUsuario.aspx">Crear Usuario</a></li> 
             <li><a href="/ConsultarUsuario.aspx">Consultar Usuario</a></li>
             <li><a href="/ModificarUsuario.aspx">Modificar Usuario</a></li>
-            <li><a href="/GestionarUsuarios.aspx">Eliminar Usuarios</a></li>
+            <li><a href="/EliminarUsuario.aspx">Eliminar Usuarios</a></li>
           
           </ul>
          </li>
 
          <li>Opciones
             <ul  class = "subMenu">
-                <li><a href="/Personalizar.aspx">Cambiar Contraseña</a></li>
+                <li><a href="/CambiarContrasena.aspx">Cambiar Contraseña</a></li>
             </ul>
          </li>
       </ul>

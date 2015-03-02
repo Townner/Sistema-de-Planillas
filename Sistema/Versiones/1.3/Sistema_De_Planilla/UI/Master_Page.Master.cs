@@ -16,23 +16,24 @@ namespace UI
            // lblUser.Text = Request.QueryString["field1"];
             lblUser.Text = (string)Session["UserName"]; // Carga ID del user por medio de variable de session
             string tipo = (string)Session["Type"]; // Carga el tipo de usario
-            if (tipo == "RH")
+            if (tipo == "Recursos Humanos")
             {
                 Admin.Visible = false;
                 Users.Visible = false;
                 ReportesFI.Visible = false;
             }
             else {
-                if (tipo == "Admin")
+                if (tipo == "Administrador")
                 {
                     ReportesFI.Visible = false;
                 }
                 else {
-                    if (tipo == "FI") {
+                    if (tipo == "Financiero") {
                         Trabajadores.Visible = false;
                         Reportes.Visible = false;
                         Admin.Visible = false;
                         Users.Visible = false;
+                        Actualizacion.Visible = false;
                     }
                 }
             

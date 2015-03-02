@@ -52,6 +52,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnConsultar" runat="server" Text="Consultar" 
                     style="margin-left:auto; margin-right:auto;" onclick="btnConsultar_Click" />
                 <br />
+            &nbsp;
             <asp:RegularExpressionValidator ID="RegexCed" runat="server" style="color:Red;"
                 ControlToValidate="txtCed" ErrorMessage="Formato permitido 1-1111-1111" 
                 ValidationExpression="^\d{1}( |-)\d{4}( |-)\d{4}"></asp:RegularExpressionValidator>
@@ -76,19 +77,22 @@
                 Estado:</td>
             <td class="style12">
                 <asp:DropDownList ID="DropEstado" runat="server">
-                <asp:ListItem Text="Administrador" Value="Admin"></asp:ListItem>
-                <asp:ListItem Text="Recursos Humanos" Value="RH"></asp:ListItem>
-                <asp:ListItem Text="Financiero" Value="FI"></asp:ListItem>
+                <asp:ListItem Text="Selecione un valor" Value="Default"></asp:ListItem>
+                <asp:ListItem Text="Activado" Value="Activo"></asp:ListItem>
+                <asp:ListItem Text="Desactivado" Value="Desactivado"></asp:ListItem>
                 </asp:DropDownList>
-            </td>
+                &nbsp;&nbsp;
+                </td>
         </tr>
         <tr>
             <td id ="lblTipo" runat="server" class="style10">
                 Tipo:</td>
             <td class="style5">
                 <asp:DropDownList ID="DropTipo" runat="server">
-                <asp:ListItem Text="Activado" Value="Activado"></asp:ListItem>
-                <asp:ListItem Text="Desactivado" Value="Desactivado"></asp:ListItem>
+                 <asp:ListItem Text="Selecione un valor" Value="Default"></asp:ListItem>
+                <asp:ListItem Text="Administrador" Value="Administrador"></asp:ListItem>
+                <asp:ListItem Text="Recursos Humanos" Value="Recursos Humanos"></asp:ListItem>
+                <asp:ListItem Text="Financiero" Value="Financiero"></asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>

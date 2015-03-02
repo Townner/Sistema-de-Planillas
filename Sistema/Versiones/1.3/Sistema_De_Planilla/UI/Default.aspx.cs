@@ -61,7 +61,7 @@ namespace UI
 
             }else{
 
-            if (identificado && Tipo == "Admin")
+            if (identificado && Tipo == "Administrador")
             {
                 /* FormsAuthentication.RedirectFromLoginPage //Autentificacion por forms
                   (txtUsuario.Text, CBSesion.Checked);*/
@@ -70,13 +70,13 @@ namespace UI
                 Session["Type"] = Tipo;
                 Response.Redirect("/InicioAdmin.aspx");
             }else { 
-                if (identificado && Tipo == "RH")
+                if (identificado && Tipo == "Recursos Humanos")
                 {
                 Session["UserName"] = txtUsuario.Text; // se crea variable de sesion para ID del user
                 Session["Type"] = Tipo;
                 Response.Redirect("/InicioRH.aspx");
                 }else{
-                  if (identificado && Tipo == "FI")
+                  if (identificado && Tipo == "Financiero")
                 {
                 Session["UserName"] = txtUsuario.Text; // se crea variable de sesion para ID del user
                 Session["Type"] = Tipo;

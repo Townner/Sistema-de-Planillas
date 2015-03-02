@@ -36,6 +36,7 @@ namespace BL
             usr.Estado = this.estado;
             usr.Tipo = this.tipo;
             usr.Pass = this.pass;
+            usr.Trabajador_Ced = this.Trabajador_Ced;
 
             DA.DAUsuario DA_Usuario = new DA.DAUsuario();
             DA_Usuario.ModifcarUsuario(usr);
@@ -56,6 +57,23 @@ namespace BL
             this.estado = DA_Usr.ConsultarUsuario(Ced).Estado;
             
         }
+
+        public void ConsultarPassViejo(string ID)
+        {
+            DA.DAUsuario DA_Usr = new DA.DAUsuario();
+            this.pass = DA_Usr.ConsultarPassViejo(ID);
+        }
+
+        public void CambiarPass(string ID, string pass)
+        {
+            TO.TOUsuario TO_Usr = new TO.TOUsuario();
+            TO_Usr.ID = ID;
+            TO_Usr.Pass = pass;
+            DA.DAUsuario DA_Usr = new DA.DAUsuario();
+            DA_Usr.ModifcarUsuario(TO_Usr);
+        }
+
+
 
         /*  public void IniciarSesion(string ID_usr)
         { 

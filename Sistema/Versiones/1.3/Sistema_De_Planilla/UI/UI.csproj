@@ -62,6 +62,7 @@
     <Content Include="Images\Browsers\Firefox.png" />
     <Content Include="Images\Browsers\Opera.png" />
     <Content Include="Images\Browsers\Safari.png" />
+    <Content Include="CambiarContrasena.aspx" />
     <Content Include="Images\Logo.png" />
     <Content Include="ModificarUsuario.aspx" />
     <Content Include="Images\Townner.png" />
@@ -100,6 +101,13 @@
     </Compile>
     <Compile Include="EliminarUsuario.aspx.designer.cs">
       <DependentUpon>EliminarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CambiarContrasena.aspx.cs">
+      <DependentUpon>CambiarContrasena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CambiarContrasena.aspx.designer.cs">
+      <DependentUpon>CambiarContrasena.aspx</DependentUpon>
     </Compile>
     <Compile Include="ModificarUsuario.aspx.cs">
       <DependentUpon>ModificarUsuario.aspx</DependentUpon>
@@ -185,7 +193,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52282</DevelopmentServerPort>
+          <DevelopmentServerPort>50642</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

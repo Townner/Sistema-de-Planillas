@@ -59,44 +59,43 @@ namespace DA
         {
             if (usr.Estado != null)
             {
-                SqlCommand update = new SqlCommand();
-                update.Connection = conexion;
-                update.CommandText = "update dbo.Usuarios set Estado = @Est where ID = @ID";
-                update.Parameters.AddWithValue("@Est", usr.Estado);
-                update.Parameters.AddWithValue("@ID", usr.ID);
+                SqlCommand updateEstado = new SqlCommand();
+                updateEstado.Connection = conexion;
+                updateEstado.CommandText = "update dbo.usuarios set Estado = @Est where Trabajador_Ced = @Ced";
+                updateEstado.Parameters.AddWithValue("@Est", usr.Estado);
+                updateEstado.Parameters.AddWithValue("@Ced", usr.Trabajador_Ced);
 
                 conexion.Open();
-                update.ExecuteNonQuery();
+                updateEstado.ExecuteNonQuery();
                 conexion.Close();
             }
-            else {
-                if (usr.Tipo != null)
+            
+            if (usr.Tipo != null)
                 {
-                    SqlCommand update = new SqlCommand();
-                    update.Connection = conexion;
-                    update.CommandText = "update dbo.Usuarios set Tipo = @Tipo where ID = @ID";
-                    update.Parameters.AddWithValue("@Tipo", usr.Estado);
-                    update.Parameters.AddWithValue("@ID", usr.ID);
+                    SqlCommand updateTipo = new SqlCommand();
+                    updateTipo.Connection = conexion;
+                    updateTipo.CommandText = "update dbo.Usuarios set Tipo = @Tipo where Trabajador_Ced = @Ced";
+                    updateTipo.Parameters.AddWithValue("@Tipo", usr.Tipo);
+                    updateTipo.Parameters.AddWithValue("@Ced", usr.Trabajador_Ced);
 
                     conexion.Open();
-                    update.ExecuteNonQuery();
+                    updateTipo.ExecuteNonQuery();
                     conexion.Close();
                 }
-                else {
-                    if (usr.Pass != null) { 
-                        SqlCommand update = new SqlCommand();
-                        update.Connection = conexion;
-                        update.CommandText = "update dbo.Usuarios set Pass = @Pass where ID = @ID";
-                        update.Parameters.AddWithValue("@Pass", usr.Estado);
-                        update.Parameters.AddWithValue("@ID", usr.ID);
+             
+             if (usr.Pass != null) { 
+                        SqlCommand updatePass = new SqlCommand();
+                        updatePass.Connection = conexion;
+                        updatePass.CommandText = "update dbo.Usuarios set Pass = @Pass where ID = @ID";
+                        updatePass.Parameters.AddWithValue("@Pass", usr.Pass);
+                        updatePass.Parameters.AddWithValue("@ID", usr.ID);
 
                         conexion.Open();
-                        update.ExecuteNonQuery();
+                        updatePass.ExecuteNonQuery();
                         conexion.Close();
                     } 
                 }
-            }    
-        }
+     
 
         public void EliminarUsuario(string ced)
         {
@@ -135,6 +134,34 @@ namespace DA
 
             }
             else {
+            }
+            conexion.Close();
+            return temp;
+        }
+
+        public string ConsultarPassViejo(string ID)
+        {
+            SqlCommand Buscar = new SqlCommand();
+            Buscar.Connection = conexion;
+            Buscar.CommandText = "Select Pass from dbo.Usuarios where ID = @ID";
+            Buscar.Parameters.AddWithValue("@ID", ID);
+
+            conexion.Open();
+
+            SqlDataReader reader = Buscar.ExecuteReader();
+
+            string temp = "";
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    temp = (string)reader["Pass"];
+                }
+
+            }
+            else
+            {
             }
             conexion.Close();
             return temp;

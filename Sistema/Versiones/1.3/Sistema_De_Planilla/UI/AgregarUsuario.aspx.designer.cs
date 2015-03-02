@@ -85,24 +85,6 @@ namespace UI {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RFPass;
         
         /// <summary>
-        /// DropTipo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropTipo;
-        
-        /// <summary>
-        /// RFEstate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFEstate;
-        
-        /// <summary>
         /// DropEstado control.
         /// </summary>
         /// <remarks>
@@ -112,13 +94,31 @@ namespace UI {
         protected global::System.Web.UI.WebControls.DropDownList DropEstado;
         
         /// <summary>
-        /// RFType control.
+        /// RFEstado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFType;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFEstado;
+        
+        /// <summary>
+        /// DropTipo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropTipo;
+        
+        /// <summary>
+        /// RFTipo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFTipo;
         
         /// <summary>
         /// btnReg control.

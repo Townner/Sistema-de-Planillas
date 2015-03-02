@@ -36,6 +36,14 @@
             text-align: left;
             width: 463px;
         }
+        
+         .style12
+        {
+            text-align: left;
+            width: 463px;
+            height: 26px;
+        }
+        
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContenidoPrincipalIzquierdo" runat="server">
@@ -82,7 +90,7 @@
                 Contraseña:</td>
         <td class="style5">
                 <asp:TextBox ID="txtPass" runat="server" TextMode="Password" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-                &nbsp;<asp:RequiredFieldValidator ID="RFPass" runat="server" style="float: left; color:Red;"
+                &nbsp;<asp:RequiredFieldValidator ID="RFPass" runat="server" style="float: left; color:Red; margin-left:5px;"
                     ControlToValidate="txtPass" ErrorMessage="Se requiere una contraseña"></asp:RequiredFieldValidator>
                 <br />
         </td>
@@ -93,13 +101,14 @@
         <td class="style9">
                 Estado:</td>
         <td class="style5">
-                <asp:DropDownList ID="DropTipo" runat="server" style="float:left; margin-left:10px;">
+                <asp:DropDownList ID="DropEstado" runat="server" style="float: left; margin-left:10px;">
                 <asp:ListItem Text="Selecione un valor" Value="Default"></asp:ListItem>
-                <asp:ListItem Text="Activado" Value="Activado"></asp:ListItem>
+                <asp:ListItem Text="Activado" Value="Activo"></asp:ListItem>
                 <asp:ListItem Text="Desactivado" Value="Desactivado"></asp:ListItem>
                 </asp:DropDownList>
-                <asp:RequiredFieldValidator ID="RFEstate" runat="server" style="float: left; color:Red; margin-left:11px;"
-                    ControlToValidate="DropEstado" ErrorMessage="Se requiere un estado"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RFEstado" runat="server"
+                    ControlToValidate="DropEstado" ErrorMessage="Se requiere un estado" 
+                    InitialValue="Default" style="float: left; margin-left:5px; color: Red;"></asp:RequiredFieldValidator>
                 <br />
         </td>
         <td>
@@ -109,15 +118,15 @@
         <td class="style9">
                 Tipo:</td>
         <td class="style5">
-                <asp:DropDownList ID="DropEstado" runat="server" style="float:left; margin-left:10px;">
-                    <asp:ListItem Text="Selecione un valor" Value="Default"></asp:ListItem>
-                    <asp:ListItem Text="Administrador" Value="Admin"></asp:ListItem>
-                    <asp:ListItem Text="Recursos Humanos" Value="RH"></asp:ListItem>
-                    <asp:ListItem Text="Financiero" Value="FI"></asp:ListItem>
+                <asp:DropDownList ID="DropTipo" runat="server" style="float: left; margin-left:10px;">
+                 <asp:ListItem Text="Selecione un valor" Value="Default"></asp:ListItem>
+                <asp:ListItem Text="Administrador" Value="Administrador"></asp:ListItem>
+                <asp:ListItem Text="Recursos Humanos" Value="Recursos Humanos"></asp:ListItem>
+                <asp:ListItem Text="Financiero" Value="Financiero"></asp:ListItem>
                 </asp:DropDownList>
-                <asp:RequiredFieldValidator ID="RFType" runat="server" style="float: left; color:Red; margin-left:6px;"
-                    ErrorMessage="Se requiere un tipo" ControlToValidate="DropTipo"></asp:RequiredFieldValidator>
-                <br />
+                <asp:RequiredFieldValidator ID="RFTipo" runat="server" 
+                    ControlToValidate="DropTipo" ErrorMessage="Se requiere un tipo" 
+                    InitialValue="Default" style="float: left; margin-left:5px; color: Red;"></asp:RequiredFieldValidator>
         </td>
         <td>
                 &nbsp;</td>
