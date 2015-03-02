@@ -62,7 +62,7 @@ namespace UI
                 btnDelete.Visible = true;
             }
             else {
-                Response.Write("<script language='javascript'>alert('El usuario con la cedula " + txtCed.Text + " no existe');document.location.href='" + "/EliminarUsuario.aspx" + "'; </script>");
+                Response.Write("<script language='javascript'>alert('El usuario con la cedula " + txtCed.Text + " no esta asignado a un usuario');document.location.href='" + "/EliminarUsuario.aspx" + "'; </script>");
             }
             
         }

@@ -49,6 +49,11 @@
                 <asp:TextBox ID="txtCed" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
                 <asp:Button ID="btnConsultar" runat="server" Text="Consultar" 
                     style="margin-left:auto; margin-right:auto;" onclick="btnConsultar_Click" />
+                <br />
+            <asp:RegularExpressionValidator ID="RegexCed" runat="server" style="color:Red; float: left;"
+                ControlToValidate="txtCed" ErrorMessage="Formato permitido 1-1111-1111" 
+                ValidationExpression="^\d{1}( |-)\d{4}( |-)\d{4}"></asp:RegularExpressionValidator>
+            
             </td>
             <td>
                 &nbsp;</td>
@@ -58,7 +63,7 @@
             </td>
             <td class="style7">
                 <asp:GridView ID="GrdUsers" runat="server" style="margin-left:auto; margin-right:auto; text-align:center;" ShowHeaderWhenEmpty="True"
-         emptydatatext="No hay datos" Width="100px">
+         emptydatatext="No hay datos" Width="300px">
                 </asp:GridView>
             </td>
             <td class="style8">

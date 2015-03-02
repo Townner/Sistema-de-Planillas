@@ -90,7 +90,14 @@ namespace BL
             DA.DATrabajador eltb = new DA.DATrabajador();
             eltb.EliminarTrabajador(ced, estado_t, inact);
         }
-        
+
+        public int ConsultarTrabajador(string Ced)
+        {
+            DA.DATrabajador DA_Usr = new DA.DATrabajador();
+            return this.id = DA_Usr.ConsultarTrabajador(Ced);
+
+        }
+
     }
 
 }

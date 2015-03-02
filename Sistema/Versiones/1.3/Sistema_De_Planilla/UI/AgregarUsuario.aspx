@@ -49,9 +49,14 @@
                 Cedula:</td>
         <td class="style10">
             <asp:TextBox ID="txtCed" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-            &nbsp;<asp:RegularExpressionValidator ID="RegexCed" runat="server" style="color: Red;"
-                ControlToValidate="txtCed" ErrorMessage="Numero de cedula Invalida" 
-                ValidationExpression="^\d{1}( |-)\d{4}( |-)\d{4}">1-1111-1111</asp:RegularExpressionValidator>
+            
+            &nbsp;<asp:RequiredFieldValidator ID="RFCed" runat="server" ControlToValidate="txtID" style="color:Red;"
+                ErrorMessage="Campo Obligatorio"></asp:RequiredFieldValidator>
+            <br />
+            &nbsp;<asp:RegularExpressionValidator ID="RegexCed" runat="server" style="color:Red;"
+                ControlToValidate="txtCed" ErrorMessage="Formato Permitido: 1-1111-1111" 
+                ValidationExpression="^\d{1}( |-)\d{4}( |-)\d{4}"></asp:RegularExpressionValidator>
+            
         </td>
         <td>
                 &nbsp;</td>
@@ -62,9 +67,12 @@
  
         <td class="style10">
                 <asp:TextBox ID="txtID" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-                &nbsp;<asp:RegularExpressionValidator ID="RegexID" runat="server" style="color: Red;"
-                    ControlToValidate="txtID" ErrorMessage="Usuario Incorrecto" 
-                    ValidationExpression="^[A-Za-z]+\.([A-Za-z]\.)?[A-Za-z]+$">ejemplo.ejemplo</asp:RegularExpressionValidator>
+                &nbsp;<asp:RequiredFieldValidator ID="RFID" runat="server" style="color:Red;"
+                    ControlToValidate="txtID" ErrorMessage="Campo Obligatorio"></asp:RequiredFieldValidator>
+                <br />
+                &nbsp;<asp:RegularExpressionValidator ID="RegexID" runat="server" style="color:Red;"
+                    ControlToValidate="txtID" ErrorMessage="Formato Permitido: ejemplo.ejemplo" 
+                    ValidationExpression="^[A-Za-z]+\.([A-Za-z]\.)?[A-Za-z]+$"></asp:RegularExpressionValidator>
         </td>
         <td>
                 &nbsp;</td>
@@ -74,7 +82,7 @@
                 Contraseña:</td>
         <td class="style5">
                 <asp:TextBox ID="txtPass" runat="server" TextMode="Password" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-                &nbsp;<asp:RequiredFieldValidator ID="RFPass" runat="server" style="float: left;"
+                &nbsp;<asp:RequiredFieldValidator ID="RFPass" runat="server" style="float: left; color:Red;"
                     ControlToValidate="txtPass" ErrorMessage="Se requiere una contraseña"></asp:RequiredFieldValidator>
                 <br />
         </td>
@@ -90,6 +98,8 @@
                 <asp:ListItem Text="Activado" Value="Activado"></asp:ListItem>
                 <asp:ListItem Text="Desactivado" Value="Desactivado"></asp:ListItem>
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="RFEstate" runat="server" style="float: left; color:Red; margin-left:11px;"
+                    ControlToValidate="DropEstado" ErrorMessage="Se requiere un estado"></asp:RequiredFieldValidator>
                 <br />
         </td>
         <td>
@@ -105,6 +115,8 @@
                     <asp:ListItem Text="Recursos Humanos" Value="RH"></asp:ListItem>
                     <asp:ListItem Text="Financiero" Value="FI"></asp:ListItem>
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="RFType" runat="server" style="float: left; color:Red; margin-left:6px;"
+                    ErrorMessage="Se requiere un tipo" ControlToValidate="DropTipo"></asp:RequiredFieldValidator>
                 <br />
         </td>
         <td>

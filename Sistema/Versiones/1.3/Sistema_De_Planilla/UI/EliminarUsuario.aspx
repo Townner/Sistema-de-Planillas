@@ -7,6 +7,7 @@
             padding-bottom:10px;
             width: 135px;
             text-align: right;
+            height: 49px;
         }
         .style5
         {
@@ -34,6 +35,16 @@
         {
             width: 135px;
         }
+        .style10
+        {
+            text-align: center;
+            width: 463px;
+            height: 49px;
+        }
+        .style11
+        {
+            height: 49px;
+        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContenidoPrincipalIzquierdo" runat="server">
@@ -45,13 +56,18 @@
         <tr>
             <td class="style9">
                 Cedula:</td>
-            <td class="style5">
+            <td class="style10">
                 <asp:TextBox ID="txtCed" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
                 <asp:Button ID="btnConsultar" runat="server" Text="Consultar" 
                     style="margin-left:auto; margin-right:auto;" onclick="btnConsultar_Click" />
+                <br />
+            <asp:RegularExpressionValidator ID="RegexCed" runat="server" style="color:Red; float: left; margin-left: 8px;"
+                ControlToValidate="txtCed" ErrorMessage="Formato permitido 1-1111-1111" 
+                ValidationExpression="^\d{1}( |-)\d{4}( |-)\d{4}"></asp:RegularExpressionValidator>
+            
             </td>
-            <td>
-                &nbsp;</td>
+            <td class="style11">
+                </td>
         </tr>
         <tr>
             <td class="style6">
@@ -59,7 +75,7 @@
             <td class="style7">
                 <asp:GridView ID="GrdUsers" runat="server" 
                     style="margin-left:auto; margin-right:auto; text-align:center;" ShowHeaderWhenEmpty="True"
-         emptydatatext="No hay datos" Width="100px">
+         emptydatatext="No hay datos" Width="300px">
                 </asp:GridView>
             </td>
             <td class="style8">

@@ -9,7 +9,7 @@ namespace DA
 {
     public class DATrabajador
     {
-        SqlConnection Conexion = new SqlConnection();
+        SqlConnection Conexion = new SqlConnection(DA.Properties.Settings.Default.ConString);
 
         public TO.TOTrabajdor Search(string ced)
         {
@@ -145,5 +145,35 @@ namespace DA
 
             Conexion.Close();
         }
+
+        public int ConsultarTrabajador(string ced)
+        {
+            SqlCommand Buscar = new SqlCommand();
+            Buscar.Connection = Conexion;
+            Buscar.CommandText = "select ID from dbo.trabajador where Ced = @Ced";
+            Buscar.Parameters.AddWithValue("@Ced", ced);
+
+            Conexion.Open();
+
+            SqlDataReader reader = Buscar.ExecuteReader();
+
+            int temp = 0;
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    temp = (int)reader["ID"];
+                }
+
+            }
+            else
+            {
+
+            }
+            Conexion.Close();
+            return temp;
+        }
+
     }
 }

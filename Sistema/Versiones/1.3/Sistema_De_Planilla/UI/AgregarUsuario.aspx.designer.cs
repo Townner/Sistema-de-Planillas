@@ -22,6 +22,15 @@ namespace UI {
         protected global::System.Web.UI.WebControls.TextBox txtCed;
         
         /// <summary>
+        /// RFCed control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFCed;
+        
+        /// <summary>
         /// RegexCed control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtID;
+        
+        /// <summary>
+        /// RFID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFID;
         
         /// <summary>
         /// RegexID control.
@@ -76,6 +94,15 @@ namespace UI {
         protected global::System.Web.UI.WebControls.DropDownList DropTipo;
         
         /// <summary>
+        /// RFEstate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFEstate;
+        
+        /// <summary>
         /// DropEstado control.
         /// </summary>
         /// <remarks>
@@ -83,6 +110,15 @@ namespace UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropEstado;
+        
+        /// <summary>
+        /// RFType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFType;
         
         /// <summary>
         /// btnReg control.

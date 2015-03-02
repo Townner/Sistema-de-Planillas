@@ -49,9 +49,13 @@
                 Cedula:</td>
             <td class="style5">
                 <asp:TextBox ID="txtCed" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnConsultar" runat="server" Text="Consultar" 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnConsultar" runat="server" Text="Consultar" 
                     style="margin-left:auto; margin-right:auto;" onclick="btnConsultar_Click" />
+                <br />
+            <asp:RegularExpressionValidator ID="RegexCed" runat="server" style="color:Red;"
+                ControlToValidate="txtCed" ErrorMessage="Formato permitido 1-1111-1111" 
+                ValidationExpression="^\d{1}( |-)\d{4}( |-)\d{4}"></asp:RegularExpressionValidator>
+            
             </td>
         </tr>
         <tr>

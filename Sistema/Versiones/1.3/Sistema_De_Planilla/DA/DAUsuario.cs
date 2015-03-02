@@ -14,10 +14,11 @@ namespace DA
         {
             SqlCommand Insertar = new SqlCommand();
             Insertar.Connection = conexion;
-            Insertar.CommandText = "insert into dbo.Usuarios(Trabajador_ID,Trabajador_Ced,ID,Pass,Estado,Tipo,Sesion) values (NULL,@Ced,@ID,@Pas,@Est,@Tipo,'Cerrada')";
+            Insertar.CommandText = "insert into dbo.Usuarios(Trabajador_ID,Trabajador_Ced,ID,Pass,Estado,Tipo,Sesion) values (@ID,@Ced,@IDUser,@Pass,@Est,@Tipo,'Cerrada')";
+            Insertar.Parameters.AddWithValue("@ID", getCedula(usr.Trabajador_Ced));
             Insertar.Parameters.AddWithValue("@Ced", usr.Trabajador_Ced);
-            Insertar.Parameters.AddWithValue("@ID", usr.ID);
-            Insertar.Parameters.AddWithValue("@Pas", usr.Pass);
+            Insertar.Parameters.AddWithValue("@IDUser", usr.ID);
+            Insertar.Parameters.AddWithValue("@Pass", usr.Pass);
             Insertar.Parameters.AddWithValue("@Est", usr.Estado);
             Insertar.Parameters.AddWithValue("@Tipo", usr.Tipo);
 
@@ -26,6 +27,34 @@ namespace DA
             conexion.Close();
         }
 
+        public int getCedula(string cedula) {
+          
+            SqlCommand getCedula = new SqlCommand();
+            getCedula.Connection = conexion;
+            getCedula.CommandText = "select ID from dbo.trabajador where Ced = @Ced";
+            getCedula.Parameters.AddWithValue("@Ced", cedula);
+
+           conexion.Open();
+
+            SqlDataReader reader = getCedula.ExecuteReader();
+
+            int temp = 0;
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    temp = (int)reader["ID"];
+                }
+
+            }
+            else {
+            }
+            conexion.Close();
+
+            return temp;
+        }
+        
         public void ModifcarUsuario(TO.TOUsuario usr)
         {
             if (usr.Estado != null)
