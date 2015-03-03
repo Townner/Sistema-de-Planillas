@@ -73,3 +73,5 @@ Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\UI\b
 \\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\UI\obj\Debug\UI.csproj.GenerateResource.Cache
 \\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\UI\obj\Debug\UI.dll
 \\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\UI\obj\Debug\UI.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\UI\bin\Reports\CRTotalAdelantos.rpt
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\UI\bin\Reports\CRTotalAdelantos.cs

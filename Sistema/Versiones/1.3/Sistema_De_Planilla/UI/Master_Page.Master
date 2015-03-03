@@ -49,7 +49,7 @@
 
   <ul id = "BarraHorizontal">
          
-         <li><a href="/Inicio.aspx">Inicio</a></li>
+         <li><a id="Inicio" runat="server" href="/Inicio.aspx">Inicio</a></li>
 
          <li id ="Trabajadores" runat="server">Trabajadores
          
@@ -70,12 +70,12 @@
 
          <li id ="Reportes" runat="server">Reportes Recursos Humanos
            <ul class ="subMenu">
-              <li><a href="/AgregarProvedor.aspx">Reporte Total de Adelantos</a></li>
+              <li><a href="/ReporteTotalAdelantos.aspx">Reporte Total de Adelantos</a></li>
               <li><a href="/ConsultarProvedor.aspx">Reporte Global de Planilla</a></li>
-              <li><a href="/ModificarProvedor.aspx">Reportes de Uniformes</a></li>
+              <li><a href="/ReporteUniformes.aspx">Reportes de Uniformes</a></li>
               <li><a href="/EliminarProvedor.aspx">Reporte Total de Planilla</a></li>
-              <li><a href="/EliminarProvedor.aspx">Reporte Total Salarios Brutos</a></li>
-              <li><a href="/EliminarProvedor.aspx">Reporte Total Salarios Netos</a></li>
+              <li><a href="/ReporteTotalSalariosBrutos.aspx">Reporte Total Salarios Brutos</a></li>
+              <li><a href="/ReporteTotalSalariosNetos.aspx">Reporte Total Salarios Netos</a></li>
               <li><a href="/EliminarProvedor.aspx">Reporte Total Prestamos con Intereses</a></li>
               <li><a href="/EliminarProvedor.aspx">Reporte Total de Renta</a></li>
            </ul>
@@ -84,7 +84,7 @@
 
          <li id ="ReportesFI" runat="server">Reportes Financiero
            <ul class ="subMenu">
-               <li><a href="/AgregarProvedor.aspx">Reporte Total de Adelantos</a></li>
+               <li><a href="/ReporteTotalAdelantos.aspx">Reporte Total de Adelantos</a></li>
               <li><a href="/ConsultarProvedor.aspx">Reporte Global de Planilla</a></li>
               <li><a href="/EliminarProvedor.aspx">Reporte Total de Planilla</a></li>
               <li><a href="/EliminarProvedor.aspx">Reporte Total Salarios Brutos</a></li>
