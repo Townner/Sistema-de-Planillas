@@ -1,0 +1,50 @@
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\DA\bin\Debug\DA.dll
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\DA\bin\Debug\DA.pdb
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\DA\obj\Debug\DA.dll
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\DA\obj\Debug\DA.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\DA\bin\Debug\DA.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\DA\bin\Debug\DA.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\DA\bin\Debug\TO.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\DA\bin\Debug\TO.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\DA\obj\Debug\DA.csprojResolveAssemblyReference.cache
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\DA\obj\Debug\DA.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\DA\obj\Debug\DA.pdb
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\DA\obj\Debug\DA.csprojResolveAssemblyReference.cache
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\DA\obj\Debug\DA.dll
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\DA\obj\Debug\DA.pdb
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\DA\bin\Debug\DA.dll
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\DA\bin\Debug\DA.pdb
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\DA\bin\Debug\TO.dll
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\DA\bin\Debug\TO.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\DA\bin\Debug\DA.dll.config
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\DA\bin\Debug\DA.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\DA\bin\Debug\DA.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\DA\bin\Debug\TO.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\DA\bin\Debug\TO.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\DA\obj\Debug\DA.csprojResolveAssemblyReference.cache
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\DA\obj\Debug\DA.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\DA\obj\Debug\DA.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.2\Sistema_De_Planilla\DA\bin\Debug\DA.dll.config
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.2\Sistema_De_Planilla\DA\bin\Debug\DA.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.2\Sistema_De_Planilla\DA\bin\Debug\DA.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.2\Sistema_De_Planilla\DA\bin\Debug\TO.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.2\Sistema_De_Planilla\DA\bin\Debug\TO.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.2\Sistema_De_Planilla\DA\obj\Debug\DA.csprojResolveAssemblyReference.cache
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.2\Sistema_De_Planilla\DA\obj\Debug\DA.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.2\Sistema_De_Planilla\DA\obj\Debug\DA.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\DA\bin\Debug\DA.dll.config
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\DA\bin\Debug\DA.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\DA\bin\Debug\DA.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\DA\bin\Debug\TO.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\DA\bin\Debug\TO.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\DA\obj\Debug\DA.csprojResolveAssemblyReference.cache
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\DA\obj\Debug\DA.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\DA\obj\Debug\DA.pdb
+C:\Users\Jose\Desktop\Sistema_De_Planilla\DA\bin\Debug\DA.dll.config
+C:\Users\Jose\Desktop\Sistema_De_Planilla\DA\bin\Debug\DA.dll
+C:\Users\Jose\Desktop\Sistema_De_Planilla\DA\bin\Debug\DA.pdb
+C:\Users\Jose\Desktop\Sistema_De_Planilla\DA\bin\Debug\TO.dll
+C:\Users\Jose\Desktop\Sistema_De_Planilla\DA\bin\Debug\TO.pdb
+C:\Users\Jose\Desktop\Sistema_De_Planilla\DA\obj\Debug\DA.csprojResolveAssemblyReference.cache
+C:\Users\Jose\Desktop\Sistema_De_Planilla\DA\obj\Debug\DA.dll
+C:\Users\Jose\Desktop\Sistema_De_Planilla\DA\obj\Debug\DA.pdb
