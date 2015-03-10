@@ -57,10 +57,12 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AgregarPuesto.aspx" />
     <Content Include="AgregarUsuario.aspx" />
     <Content Include="App_Themes\Theme_Login\Login.css" />
     <Content Include="App_Themes\Theme_Master\Master_Admin.css" />
     <Content Include="ConsultarUsuario.aspx" />
+    <Content Include="EliminarPuesto.aspx" />
     <Content Include="EliminarUsuario.aspx" />
     <Content Include="Images\Back_Login.jpg" />
     <Content Include="Images\Browsers\Chrome.png" />
@@ -75,6 +77,11 @@
     <Content Include="InicioAdmin.aspx" />
     <Content Include="InicioFI.aspx" />
     <Content Include="InicioRH.aspx" />
+    <Content Include="ReporteCedulas.aspx" />
+    <Content Include="ReporteLicencias.aspx" />
+    <Content Include="ReportePlanillaGlobal.aspx" />
+    <Content Include="ReporteTotalPlanilla.aspx" />
+    <Content Include="ReporteTotalPretamos.aspx" />
     <Content Include="ReporteTotalRenta.aspx" />
     <Content Include="ReporteTotalSalariosBrutos.aspx" />
     <Content Include="ReporteTotalSalariosNetos.aspx" />
@@ -92,6 +99,13 @@
     <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarPuesto.aspx.cs">
+      <DependentUpon>AgregarPuesto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarPuesto.aspx.designer.cs">
+      <DependentUpon>AgregarPuesto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AgregarUsuario.aspx.cs">
       <DependentUpon>AgregarUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -106,12 +120,90 @@
     <Compile Include="ConsultarUsuario.aspx.designer.cs">
       <DependentUpon>ConsultarUsuario.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EliminarPuesto.aspx.cs">
+      <DependentUpon>EliminarPuesto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EliminarPuesto.aspx.designer.cs">
+      <DependentUpon>EliminarPuesto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteCedulas.aspx.cs">
+      <DependentUpon>ReporteCedulas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteCedulas.aspx.designer.cs">
+      <DependentUpon>ReporteCedulas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteLicencias.aspx.cs">
+      <DependentUpon>ReporteLicencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteLicencias.aspx.designer.cs">
+      <DependentUpon>ReporteLicencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePlanillaGlobal.aspx.cs">
+      <DependentUpon>ReportePlanillaGlobal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportePlanillaGlobal.aspx.designer.cs">
+      <DependentUpon>ReportePlanillaGlobal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteTotalPlanilla.aspx.cs">
+      <DependentUpon>ReporteTotalPlanilla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteTotalPlanilla.aspx.designer.cs">
+      <DependentUpon>ReporteTotalPlanilla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CRReporteCedulas.cs">
+      <DependentUpon>CRReporteCedulas.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\CRReporteLicencias.cs">
+      <DependentUpon>CRReporteLicencias.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\CRGlobalPlanilla.cs">
+      <DependentUpon>CRGlobalPlanilla.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\CRTotalPlanilla.cs">
+      <DependentUpon>CRTotalPlanilla.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\CRTotalRenta.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRTotalRenta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ReporteTotalRenta.aspx.cs">
       <DependentUpon>ReporteTotalRenta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReporteTotalRenta.aspx.designer.cs">
       <DependentUpon>ReporteTotalRenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CRTotalPrestamos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRTotalPrestamos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteTotalPretamos.aspx.cs">
+      <DependentUpon>ReporteTotalPretamos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteTotalPretamos.aspx.designer.cs">
+      <DependentUpon>ReporteTotalPretamos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Reports\CRTotalSalariosNetos.cs">
       <AutoGen>True</AutoGen>
@@ -247,6 +339,30 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\CRReporteCedulas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRReporteCedulas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CRReporteLicencias.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRReporteLicencias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CRGlobalPlanilla.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRGlobalPlanilla.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CRTotalPlanilla.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRTotalPlanilla.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CRTotalRenta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRTotalRenta.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CRTotalPrestamos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRTotalPrestamos.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\CRTotalSalariosNetos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRTotalSalariosNetos.cs</LastGenOutput>
@@ -284,7 +400,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>53516</DevelopmentServerPort>
+          <DevelopmentServerPort>55915</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

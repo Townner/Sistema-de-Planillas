@@ -71,26 +71,27 @@
          <li id ="Reportes" runat="server">Reportes Recursos Humanos
            <ul class ="subMenu">
               <li><a href="/ReporteTotalAdelantos.aspx">Reporte Total de Adelantos</a></li>
-              <li><a href="/ConsultarProvedor.aspx">Reporte Global de Planilla</a></li>
+              <li><a href="/ReportePlanillaGlobal.aspx">Reporte Global de Planilla</a></li>
               <li><a href="/ReporteUniformes.aspx">Reportes de Uniformes</a></li>
-              <li><a href="/EliminarProvedor.aspx">Reporte Total de Planilla</a></li>
+              <li><a href="/ReporteTotalPlanilla.aspx">Reporte Total de Planilla</a></li>
               <li><a href="/ReporteTotalSalariosBrutos.aspx">Reporte Total Salarios Brutos</a></li>
               <li><a href="/ReporteTotalSalariosNetos.aspx">Reporte Total Salarios Netos</a></li>
-              <li><a href="/EliminarProvedor.aspx">Reporte Total Prestamos con Intereses</a></li>
-              <li><a href="/EliminarProvedor.aspx">Reporte Total de Renta</a></li>
+              <li><a href="/ReporteTotalPretamos.aspx">Reporte Total Prestamos con Intereses</a></li>
+              <li><a href="/ReporteTotalRenta.aspx">Reporte Total de Renta</a></li>
+              <li><a href="/ReporteCedulas.aspx">Reporte Vencimiento Cedulas</a></li>
+              <li><a href="/ReporteLicencias.aspx">Reporte Vencimiento Licencias</a></li>
            </ul>
          
          </li>
 
          <li id ="ReportesFI" runat="server">Reportes Financiero
            <ul class ="subMenu">
-               <li><a href="/ReporteTotalAdelantos.aspx">Reporte Total de Adelantos</a></li>
-              <li><a href="/ConsultarProvedor.aspx">Reporte Global de Planilla</a></li>
-              <li><a href="/EliminarProvedor.aspx">Reporte Total de Planilla</a></li>
-              <li><a href="/EliminarProvedor.aspx">Reporte Total Salarios Brutos</a></li>
-              <li><a href="/EliminarProvedor.aspx">Reporte Total Salarios Netos</a></li>
-              <li><a href="/EliminarProvedor.aspx">Reporte Total Prestamos con Intereses</a></li>
-              <li><a href="/EliminarProvedor.aspx">Reporte Total de Renta</a></li>
+              <li><a href="/ReporteTotalAdelantos.aspx">Reporte Total de Adelantos</a></li>
+              <li><a href="/ReporteTotalPlanilla.aspx">Reporte Total de Planilla</a></li>
+              <li><a href="/ReporteTotalSalariosBrutos.aspx">Reporte Total Salarios Brutos</a></li>
+              <li><a href="/ReporteTotalSalariosNetos.aspx">Reporte Total Salarios Netos</a></li>
+              <li><a href="/ReporteTotalPretamos.aspx">Reporte Total Prestamos con Intereses</a></li>
+              <li><a href="/ReporteTotalRenta.aspx">Reporte Total de Renta</a></li>
            </ul>
          
          </li>
@@ -101,6 +102,10 @@
 
                 <li><a href="/AgregarCuentaCobrar.aspx">Aprobar Planilla</a></li>
                 <li><a href="/AnularCuentaCobrar.aspx">Cambiar Datos Globales</a></li>
+                <li><a href="/AnularCuentaCobrar.aspx">Agregar Puesto</a></li>
+                <li><a href="/AnularCuentaCobrar.aspx">Eliminar Puesto</a></li>
+                <li><a href="/AnularCuentaCobrar.aspx">Agregar Departamento</a></li>
+                <li><a href="/AnularCuentaCobrar.aspx">Eliminar Departamento</a></li>
             </ul>
          </li>
 

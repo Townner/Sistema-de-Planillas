@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContenidoPrincipalCentral" runat="server">
 
- <h4> Reporte de Uniformes </h4>
+ <h4> Reporte de Entrega de Uniformes </h4>
     <table style="width:100px; margin-top:20px; margin-top:10px;">
     <tr>
         <td class="style9">

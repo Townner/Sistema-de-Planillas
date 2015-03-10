@@ -9,15 +9,15 @@ namespace DA
     public class DAPuesto
     {
 
-        SqlConnection Conexion = new SqlConnection();
+        SqlConnection Conexion = new SqlConnection(DA.Properties.Settings.Default.ConString);
 
-        public TO.TOPuesto Search(int id)
+        public TO.TOPuesto BuscarPuesto(string nombre)
         {
             SqlCommand Search = new SqlCommand();
             Search.Connection = Conexion;
-            Search.CommandText = "Select * FROM Licencia WHERE ID_Puestos = @id";
+            Search.CommandText = "Select * FROM Puesto WHERE Nom_Puesto = @Nom";
 
-            Search.Parameters.AddWithValue("@id", id);
+            Search.Parameters.AddWithValue("@Nom", nombre);
 
             SqlDataReader read = Search.ExecuteReader();
             TO.TOPuesto temp = new TO.TOPuesto();
@@ -35,43 +35,44 @@ namespace DA
             return temp;
         }
 
-        public void AgregarPuesto(int id, string nom)
+
+        public void AgregarPuesto(TO.TOPuesto TO_Puest)
         {
 
-            SqlCommand apuest = new SqlCommand();
-            apuest.Connection = Conexion;
+            SqlCommand Insert = new SqlCommand();
+            Insert.Connection = Conexion;
+            Insert.CommandText = "INSERT INTO Puesto (ID_Puesto, Nom_Puesto) VALUES ID_Puesto = @id, Nom_Puesto = @nom;";
+            Insert.Parameters.AddWithValue("@id", TO_Puest.ID_Puesto);
+            Insert.Parameters.AddWithValue("@nom", TO_Puest.Nom_Puesto);
 
-            apuest.CommandText = "INSERT INTO Licencia (ID_Puesto, Nom_Puesto) VALUES ID_Puesto = @id, Nom_Puesto = @nom;";
-
-            apuest.Parameters.AddWithValue("@id", id);
-            apuest.Parameters.AddWithValue("@nom", nom);
-
+            Conexion.Open();
+            Insert.ExecuteNonQuery();
             Conexion.Close();
         }
 
-        public void EditarPuesto(int id, string nom)
+        public void EditarPuesto(TO.TOPuesto TO_Puest, string oldname)
         {
 
-            SqlCommand editpuest = new SqlCommand();
-            editpuest.Connection = Conexion;
+            SqlCommand Update = new SqlCommand();
+            Update.Connection = Conexion;
+            Update.CommandText = "UPDATE Puesto SET Nom_Puesto = @nom WHERE  Nom_Puesto = @Old;";
+            Update.Parameters.AddWithValue("@old", oldname);
+            Update.Parameters.AddWithValue("@nom", TO_Puest.Nom_Puesto);
 
-            editpuest.CommandText = "UPDATE Puestos SET Nom_Puesto = @nom WHERE  ID_Puesto = @id;";
-
-            editpuest.Parameters.AddWithValue("@id", id);
-            editpuest.Parameters.AddWithValue("@nom", nom);
-
+            Conexion.Open();
+            Update.ExecuteNonQuery();
             Conexion.Close();
         }
 
-        public void EliminarPuesto(int id)
+        public void EliminarPuesto(string nombre)
         {
-            SqlCommand elpuest = new SqlCommand();
-            elpuest.Connection = Conexion;
+            SqlCommand Delete = new SqlCommand();
+            Delete.Connection = Conexion;
+            Delete.CommandText = "DELETE FROM Puestos WHERE Nom_Puesto = @Nom";
+            Delete.Parameters.AddWithValue("@Nom", nombre);
 
-            elpuest.CommandText = "DELETE FROM Puestos WHERE ID_Puesto = @id";
-
-            elpuest.Parameters.AddWithValue("@id", id);
-
+            Conexion.Open();
+            Delete.ExecuteNonQuery();
             Conexion.Close();
         }
     }
