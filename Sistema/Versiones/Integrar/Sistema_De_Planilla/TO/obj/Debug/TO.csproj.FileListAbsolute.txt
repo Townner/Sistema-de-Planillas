@@ -26,3 +26,8 @@ Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\TO\o
 \\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\TO\obj\Debug\TO.csprojResolveAssemblyReference.cache
 \\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\TO\obj\Debug\TO.dll
 \\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\TO\obj\Debug\TO.pdb
+C:\Users\Jose\Desktop\Sistema_De_Planilla\TO\bin\Debug\TO.dll
+C:\Users\Jose\Desktop\Sistema_De_Planilla\TO\bin\Debug\TO.pdb
+C:\Users\Jose\Desktop\Sistema_De_Planilla\TO\obj\Debug\TO.csprojResolveAssemblyReference.cache
+C:\Users\Jose\Desktop\Sistema_De_Planilla\TO\obj\Debug\TO.dll
+C:\Users\Jose\Desktop\Sistema_De_Planilla\TO\obj\Debug\TO.pdb

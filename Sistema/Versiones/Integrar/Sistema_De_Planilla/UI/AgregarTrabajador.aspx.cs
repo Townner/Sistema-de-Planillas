@@ -1,47 +1,58 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
 
 namespace UI
 {
     public partial class AgregarTrabajador : System.Web.UI.Page
     {
+        private SqlConnection Conexion = new SqlConnection(UI.Properties.Settings.Default.ConString);
         protected void Page_Load(object sender, EventArgs e)
         {
+            ConsultaDepartamento();
+            ConultarPuesto();
 
         }
 
         protected void btnTrab_Click(object sender, EventArgs e)
         {
             int c = CargaDatos();
-            if (true)
-            {
-                BL.BLTrabajador BL_Trab = new BL.BLTrabajador();
-                BL_Trab.id = c;
-                BL_Trab.ced = this.txtCed.Text;
-                BL_Trab.ven_ced = this.CalVen_Ced.SelectedDate;
-                BL_Trab.nombre = this.txtNom.Text;
-                BL_Trab.apellido1 = this.txtAp1.Text;
-                BL_Trab.apellido2 = this.txtAp2.Text;
-                BL_Trab.mail = this.txtMail.Text;
-                BL_Trab.tel1 = this.txtTel1.Text;
-                BL_Trab.tel2 = this.txtTel2.Text;
-                BL_Trab.dir = this.txtDir.Text;
-                BL_Trab.experiencia = this.txtExp.Text;
-                BL_Trab.titulos = this.txtTitulos.Text;
-                BL_Trab.num_seguro = Convert.ToInt32((txtNum_Seguro.Text));
-                BL_Trab.uniforme = this.CalUniforme.SelectedDate;
-                BL_Trab.estado_t = this.DropEstado_T.Text;
-                BL_Trab.inact = "NULL";
-                BL_Trab.est_civ = this.DropEst_Civ.Text;
-                BL_Trab.nacionalidad = this.txtNacionalidad.Text;
-                BL_Trab.id_departamento = Convert.ToInt32(DropDepartamento.Text);
-                BL_Trab.id_puesto = Convert.ToInt32(DropPuesto.Text);
-            }
+            int temp1 = Int32.Parse(DropDepartamento.SelectedValue);
+            int temp2 = Int32.Parse(DropPuesto.SelectedValue);
+
+            BL.BLTrabajador BL_Trab = new BL.BLTrabajador();
+            BL_Trab.id = c;
+            BL_Trab.ced = this.txtCed.Text;
+            //BL_Trab.ven_ced = this.CalVen_Ced.SelectedDate;
+            BL_Trab.ven_ced = Convert.ToDateTime(this.lblVen_Ced.Text.ToString());
+            BL_Trab.nombre = this.txtNom.Text;
+            BL_Trab.apellido1 = this.txtAp1.Text;
+            BL_Trab.apellido2 = this.txtAp2.Text;
+            BL_Trab.mail = this.txtMail.Text;
+            BL_Trab.tel1 = this.txtTel1.Text;
+            BL_Trab.tel2 = this.txtTel2.Text;
+            BL_Trab.dir = this.txtDir.Text;
+            BL_Trab.experiencia = this.txtExp.Text;
+            BL_Trab.titulos = this.txtTitulos.Text;
+            BL_Trab.num_seguro = Convert.ToInt32((txtNum_Seguro.Text));
+            //BL_Trab.uniforme = this.CalUniforme.SelectedDate;
+            BL_Trab.uniforme = Convert.ToDateTime(this.lblUnif.Text.ToString());
+            BL_Trab.estado_t = this.DropEstado_T.Text;
+            BL_Trab.inact = "NULL";
+            BL_Trab.est_civ = this.DropEst_Civ.Text;
+            BL_Trab.nacionalidad = this.txtNacionalidad.Text;
+            BL_Trab.id_departamento = temp1;
+            BL_Trab.id_puesto = temp2;
+            BL_Trab.AgregarTrabajdor();
+
+            Response.Write("<script language='javascript'>alert('El trabajador fue agregado correctamente');document.location.href='" + "/AgregarTrabajador.aspx" + "'; </script>");
+
         }
 
         private int CargaDatos()
@@ -54,54 +65,60 @@ namespace UI
 
         private void ConsultaDepartamento()
         {
-            SqlConnection Conexion = new SqlConnection();
+            
+            SqlDataReader dr;
 
-            SqlCommand Search = new SqlCommand();
-            Search.Connection = Conexion;
-            Search.CommandText = "Select Nom_Dep from Departamentos";
+            SqlCommand com = new SqlCommand();
+            com.Connection = Conexion;
+            com.CommandText = "SELECT [Nom_Dep], [ID_Departamento] FROM [DB_Planilla].[dbo].[departamento];";
 
-            SqlDataReader read = Search.ExecuteReader();
-
-            if (read.Read())
+            Conexion.Open();
+            dr = com.ExecuteReader();
+            if (dr.HasRows)
             {
-                while (read.Read())
+                while (dr.Read())
                 {
-                    DropDepartamento.DataSource = read;
-                    DropDepartamento.DataValueField = "Nom_Dep";
-                    DropDepartamento.DataTextField = "Nom_Dep";
-                    DropDepartamento.DataBind();
+                    ListItem LI = new ListItem();
+                    LI.Value =  Convert.ToString((int)dr["ID_Departamento"]);
+                    LI.Text = dr[0].ToString();
+                    DropDepartamento.Items.Add(LI);
+                    // temp = (int)dr["ID_Departamento"];
+                    //DropPuesto.DataValueField = Convert.ToString(temp);
                 }
+
             }
             Conexion.Close();
 
         }
 
-        private void ConultarPuest()
-        {
-            SqlConnection Conexion = new SqlConnection();
+        private void ConultarPuesto()
+        {   
+            SqlDataReader dr;
 
-            SqlCommand Search = new SqlCommand();
-            Search.Connection = Conexion;
-            Search.CommandText = "Select Nom_Puesto from Puesto";
+            SqlCommand com = new SqlCommand();
+            com.Connection = Conexion;
+            com.CommandText = "SELECT [Nom_Puesto], [ID_Puesto] FROM [DB_Planilla].[dbo].[puesto];";
 
-            SqlDataReader read = Search.ExecuteReader();
-
-            if (read.Read())
+            Conexion.Open();
+            dr = com.ExecuteReader();
+            if (dr.HasRows)
             {
-                while (read.Read())
+                while (dr.Read())
                 {
-                    DropDepartamento.DataSource = read;
-                    DropDepartamento.DataValueField = "Nom_Puesto";
-                    DropDepartamento.DataTextField = "Nom_Puesto";
-                    DropDepartamento.DataBind();
+                    ListItem LI = new ListItem();
+                    LI.Value = Convert.ToString((int)dr["ID_Puesto"]);
+                    LI.Text = dr[0].ToString();
+                    DropPuesto.Items.Add(LI);
                 }
+
             }
+
             Conexion.Close();
         }
 
         protected void CalUniforme_SelectionChanged(object sender, EventArgs e)
         {
-            Label1.Text = CalUniforme.SelectedDate.ToString();
+            lblUnif.Text = CalUniforme.SelectedDate.ToString();
         }
 
         protected void CalVen_Ced_SelectionChanged(object sender, EventArgs e)

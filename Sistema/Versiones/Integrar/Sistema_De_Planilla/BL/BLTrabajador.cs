@@ -59,30 +59,64 @@ namespace BL
         }
 
 
-        public void AgregarTrabajdor(int id, string ced, DateTime ven_ced, string nombre,
-            string apellido1, string apellido2, string mail, string tel1, string tel2,
-            string dir, string experiencia, string titulos, int num_seguro, DateTime uniforme,
-            string estado_t, string inact, string l_trabajo, string est_civ, string nacionalidad,
-            int id_departamento, int id_puesto)
+        public void AgregarTrabajdor()
         {
+            TO.TOTrabajdor trab = new TO.TOTrabajdor();
+            trab.ID = this.id;
+            trab.Ced = this.ced;
+            trab.Ven_Ced = this.ven_ced;
+            trab.Nombre = this.nombre;
+            trab.Apellido1 = this.apellido1;
+            trab.Apellido2 = this.apellido2;
+            trab.Mail = this.mail;
+            trab.Tel1 = this.tel1;
+            trab.Tel2 = this.tel2;
+            trab.Dir = this.dir;
+            trab.Experiencia = this.experiencia;
+            trab.Titulos = this.titulos;
+            trab.Num_Seguro = this.num_seguro;
+            trab.Uniforme = this.uniforme;
+            trab.Estado_t = this.estado_t;
+            trab.Inact = this.inact;
+            trab.L_Trabajo = this.l_trabajo;
+            trab.Est_Civ = this.est_civ;
+            trab.Nacionalidad = this.nacionalidad;
+            trab.ID_Departamento = this.id_departamento;
+            trab.ID_Puesto = this.id_puesto;
+
             DA.DATrabajador datb = new DA.DATrabajador();
-            datb.AgregarTrabajdor(id, ced, ven_ced, nombre, apellido1, apellido2, mail,
-                tel1, tel2, dir, experiencia, titulos, num_seguro, uniforme, estado_t, 
-                inact, l_trabajo, est_civ, nacionalidad, id_departamento, id_puesto);
+            datb.AgregarTrabajdor(trab);
 
         }
 
 
-        public void ModifcarTrabajador(string ced, DateTime ven_ced, string nombre,
-            string apellido1, string apellido2, string mail, string tel1, string tel2,
-            string dir, string experiencia, string titulos, int num_seguro, DateTime uniforme,
-            string estado_t, string inact, string l_trabajo, string est_civ, string nacionalidad,
-            int id_departamento, int id_puesto)
+        public void ModifcarTrabajador()
         {
+            TO.TOTrabajdor trab = new TO.TOTrabajdor();
+            trab.ID = this.id;
+            trab.Ced = this.ced;
+            trab.Ven_Ced = this.ven_ced;
+            trab.Nombre = this.nombre;
+            trab.Apellido1 = this.apellido1;
+            trab.Apellido2 = this.apellido2;
+            trab.Mail = this.mail;
+            trab.Tel1 = this.tel1;
+            trab.Tel2 = this.tel2;
+            trab.Dir = this.dir;
+            trab.Experiencia = this.experiencia;
+            trab.Titulos = this.titulos;
+            trab.Num_Seguro = this.num_seguro;
+            trab.Uniforme = this.uniforme;
+            trab.Estado_t = this.estado_t;
+            trab.Inact = this.inact;
+            trab.L_Trabajo = this.l_trabajo;
+            trab.Est_Civ = this.est_civ;
+            trab.Nacionalidad = this.nacionalidad;
+            trab.ID_Departamento = this.id_departamento;
+            trab.ID_Puesto = this.id_puesto;
+
             DA.DATrabajador modtb = new DA.DATrabajador();
-            modtb.ModifcarTrabajador(ced, ven_ced, nombre, apellido1, apellido2, mail,
-                tel1, tel2, dir, experiencia, titulos, num_seguro, uniforme, estado_t,
-                inact, l_trabajo, est_civ, nacionalidad, id_departamento, id_puesto);
+            modtb.ModifcarTrabajador(trab);
         }
         
         public void EliminarTrabajador(string ced, string estado_t, string inact)

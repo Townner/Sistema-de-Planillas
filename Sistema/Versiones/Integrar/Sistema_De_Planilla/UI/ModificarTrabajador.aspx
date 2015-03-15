@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master_Page.Master" AutoEventWireup="true" CodeBehind="AgregarTrabajador.aspx.cs" Inherits="UI.AgregarTrabajador" %>
+﻿<%@Page Title="" Language="C#" MasterPageFile="~/Master_Page.Master" AutoEventWireup="true" CodeBehind="ModificarTrabajador.aspx.cs" Inherits="UI.ModificarTrabajador" %>
 <asp:Content ID="Conten1" ContentPlaceHolderID="head" runat="server">
-<style type="text/css">
+    <style type="text/css">
 
         .style4
         {
@@ -38,21 +38,24 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContenidoPrincipalCentral" runat="server">
 
-     <h4> Ingrese los datos del trabajador </h4>
+     <h4> Ingrese los datos del trabajador a modificar</h4>
     <table style="width:100%; margin-top:20px; margin-top:10px;">
-   
+    <tr>
+        <td class="style9">
+        ID:</td>
+        <td class="style10">
+        <asp:TextBox ID="txtID" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
+           
+        </td>
+        <td class="style10">
+        </td>
+    </tr>
     <tr>
         <td class="style9">
                 Cedula:</td>
         <td class="style10">
             <asp:TextBox ID="txtCed" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-            &nbsp;<asp:RequiredFieldValidator ID="RFCed" runat="server" ControlToValidate="txtCed" style="color:Red;"
-                ErrorMessage="Campo Obligatorio"></asp:RequiredFieldValidator>
-            <br />
-            <br />
-            &nbsp;<asp:RegularExpressionValidator ID="RegexCed" runat="server" style="color:Red;"
-                ControlToValidate="txtCed" ErrorMessage="Formato Permitido: 1-1111-1111" 
-                ValidationExpression="^\d{1}( |-)\d{4}( |-)\d{4}"></asp:RegularExpressionValidator>
+            &nbsp;
             
         </td>
         <td>
@@ -86,9 +89,7 @@
                 Nombre:</td>
         <td class="style10">
                 <asp:TextBox ID="txtNom" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-                &nbsp;<asp:RequiredFieldValidator ID="RFPass" runat="server" style="float: left; color:Red; margin-left:5px; width: 11px;"
-                    ControlToValidate="txtNom" ErrorMessage="*"></asp:RequiredFieldValidator>
-                <br />
+                &nbsp;<br />
         </td>
         <td class="style13">
                 </td>
@@ -98,9 +99,6 @@
                 Primer Apellido:</td>
         <td class="style10">
                 <asp:TextBox ID="txtAp1" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RFEstado" runat="server"
-                    ControlToValidate="txtAp1" ErrorMessage="*" 
-                    InitialValue="Default" style="float: left; margin-left:5px; color: Red;"></asp:RequiredFieldValidator>
                 <br />
         </td>
         <td>
@@ -111,9 +109,6 @@
                 Segundo Apellido:</td>
         <td class="style10">
                 <asp:TextBox ID="txtAp2" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RFTipo" runat="server" 
-                    ControlToValidate="txtAp2" ErrorMessage="*" 
-                    InitialValue="Default" style="float: left; margin-left:5px; color: Red;"></asp:RequiredFieldValidator>
                 
         </td>
         <td>
@@ -124,10 +119,7 @@
                 Email:</td>
         <td class="style10">
                 <asp:TextBox ID="txtMail" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-                &nbsp;<asp:RequiredFieldValidator ID="RFPass0" runat="server" 
-                    ControlToValidate="txtMail" ErrorMessage="*" 
-                    style="float: left; color:Red; margin-left:5px;"></asp:RequiredFieldValidator>
-                </td>
+                &nbsp;</td>
         <td class="style8">
                 </td>
     </tr>
@@ -136,10 +128,7 @@
                 Telefono Cel:</td>
         <td class="style10">
                 <asp:TextBox ID="txtTel1" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-                &nbsp;<asp:RequiredFieldValidator ID="RFPass1" runat="server" 
-                    ControlToValidate="txtTel1" ErrorMessage="*" 
-                    style="float: left; color:Red; margin-left:5px;"></asp:RequiredFieldValidator>
-                </td>
+                &nbsp;</td>
         <td class="style8">
                 </td>
     </tr>
@@ -148,10 +137,7 @@
                 Telefono Casa:</td>
         <td class="style10">
                 <asp:TextBox ID="txtTel2" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-                &nbsp;<asp:RequiredFieldValidator ID="RFPass2" runat="server" 
-                    ControlToValidate="txtTel2" ErrorMessage="*" 
-                    style="float: left; color:Red; margin-left:5px;"></asp:RequiredFieldValidator>
-                </td>
+                &nbsp;</td>
         <td class="style8">
                 </td>
     </tr>
@@ -160,10 +146,7 @@
                 Direccion Exacta:</td>
         <td class="style10">
                 <asp:TextBox ID="txtDir" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-                &nbsp;<asp:RequiredFieldValidator ID="RFPass3" runat="server" 
-                    ControlToValidate="txtDir" ErrorMessage="*" 
-                    style="float: left; color:Red; margin-left:5px;"></asp:RequiredFieldValidator>
-                </td>
+                &nbsp;</td>
         <td class="style8">
                 </td>
     </tr>
@@ -179,9 +162,6 @@
                 <asp:ListItem Text="Divorciado" Value="Divorcido"></asp:ListItem>
                 <asp:ListItem Text="Viudo" Value="Viudo"></asp:ListItem>
                 </asp:DropDownList>
-                 <asp:RequiredFieldValidator ID="rfv1" runat="server"
-                    ControlToValidate="DropEst_Civ" ErrorMessage="Se requiere ingresar el estado civil" 
-                    InitialValue="Default" style="float: left; margin-left:5px; color: Red;"></asp:RequiredFieldValidator>
                 <br />
                 </td>
         <td class="style8">
@@ -192,10 +172,7 @@
                 Nacionalidad:</td>
         <td class="style10">
                 <asp:TextBox ID="txtNacionalidad" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-                &nbsp;<asp:RequiredFieldValidator ID="RFPass4" runat="server" 
-                    ControlToValidate="txtNacionalidad" ErrorMessage="*" 
-                    style="float: left; color:Red; margin-left:5px;"></asp:RequiredFieldValidator>
-                </td>
+                &nbsp;</td>
         <td class="style8">
                 </td>
     </tr>
@@ -207,10 +184,7 @@
                 style="float: left; margin-left:10px;" Width="147px">
                 <asp:ListItem Text="Selecione un valor" Value="Default"></asp:ListItem>
                 </asp:DropDownList>
-                &nbsp;<asp:RequiredFieldValidator ID="rfv2" runat="server" 
-                    ControlToValidate="DropDepartamento" ErrorMessage="*" 
-                    style="float: left; color:Red; margin-left:5px;"></asp:RequiredFieldValidator>
-                </td>
+                &nbsp;</td>
         <td class="style8">
                 </td>
     </tr>
@@ -222,10 +196,7 @@
                 style="float: left; margin-left:10px;" Width="147px">
                 <asp:ListItem Text="Selecione un valor" Value="Default"></asp:ListItem>
                 </asp:DropDownList>
-                &nbsp;<asp:RequiredFieldValidator ID="rfv3" runat="server" 
-                    ControlToValidate="DropPuesto" ErrorMessage="*" 
-                    style="float: left; color:Red; margin-left:5px;"></asp:RequiredFieldValidator>
-                </td>
+                &nbsp;</td>
         <td class="style8">
                 </td>
     </tr>
@@ -234,10 +205,7 @@
                 Experiencia:</td>
         <td class="style10">
                 <asp:TextBox ID="txtExp" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-                &nbsp;<asp:RequiredFieldValidator ID="RFPass7" runat="server" 
-                    ControlToValidate="txtExp" ErrorMessage="*" 
-                    style="float: left; color:Red; margin-left:5px;"></asp:RequiredFieldValidator>
-                </td>
+                &nbsp;</td>
         <td class="style8">
                 </td>
     </tr>
@@ -246,10 +214,7 @@
                 Titulos:</td>
         <td class="style10">
                 <asp:TextBox ID="txtTitulos" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-                &nbsp;<asp:RequiredFieldValidator ID="RFPass8" runat="server" 
-                    ControlToValidate="txtTitulos" ErrorMessage="*" 
-                    style="float: left; color:Red; margin-left:5px;"></asp:RequiredFieldValidator>
-                </td>
+                &nbsp;</td>
         <td class="style8">
                 </td>
     </tr>
@@ -259,10 +224,7 @@
                 </td>
         <td class="style10">
                 <asp:TextBox ID="txtNum_Seguro" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-                &nbsp;<asp:RequiredFieldValidator ID="RFPass9" runat="server" 
-                    ControlToValidate="txtNum_Seguro" ErrorMessage="*" 
-                    style="float: left; color:Red; margin-left:5px;"></asp:RequiredFieldValidator>
-                </td>
+                &nbsp;</td>
         <td class="style8">
                 </td>
     </tr>
@@ -270,7 +232,7 @@
         <td class="style9">
                 Dia de Entrega de Uniforme:</td>
         <td class="style10">
-                        <asp:Label ID="lblUnif" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                 <asp:Calendar ID="CalUniforme" runat="server" BackColor="White" 
                     BorderColor="White" Font-Names="Verdana" Font-Size="9pt" 
                     ForeColor="Black" Height="190px" Width="350px" 
@@ -311,26 +273,40 @@
                 Lugar donde va a ser asignado:</td>
         <td class="style10">
                 <asp:TextBox ID="txtL_Trabajo" runat="server" 
-                    style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
-               
-                <asp:RequiredFieldValidator ID="RFPass10" runat="server" 
-                    ControlToValidate="txtL_Trabajo" ErrorMessage="*" 
-                    style="float: left; color:Red; margin-left:5px;"></asp:RequiredFieldValidator>
-               
-                </td>
+                    style="float: left; margin-left:10px;" TextMode="Password" Width="139px"></asp:TextBox>
+                &nbsp;</td>
         <td class="style8">
                 </td>
     </tr>
+   
+        
+
+    </tr>
+    <tr>
+    <td class="style9">
+                Contratable:</td>
+        <td class="style10">
+                 <asp:DropDownList ID="DropInact" runat="server" 
+                style="float: left; margin-left:10px;" Width="147px">
+                <asp:ListItem Text="Selecione un valor" Value="Default"></asp:ListItem>
+                <asp:ListItem Text="Si" Value="Default"></asp:ListItem>
+                <asp:ListItem Text="No" Value="Default"></asp:ListItem>
+                </asp:DropDownList>
+                &nbsp;</td>
+        <td class="style8">
+                </td>
+    
+    </tr> 
+    
     <tr>
         <td class="style4">
                 &nbsp;</td>
         <td class="style5">
-                <asp:Button ID="btnTrab" runat="server" Text="Agregar" 
-                    style="margin-left:auto; margin-right:auto;" onclick="btnTrab_Click"/>
+                <asp:Button ID="btnCons" runat="server" Text="Consultar" 
+                    style="margin-left:auto; margin-right:auto;" onclick="btnCons_Click"/>
+                     <asp:Button ID="btnMod" runat="server" Text="Modificar" 
+                    style="margin-left:auto; margin-right:auto;" onclick="btnMod_Click"/>
         </td>
-        <td>
-                &nbsp;</td>
-    </tr>
 </table>
 
 </asp:Content>

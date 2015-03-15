@@ -65,6 +65,7 @@
     <Content Include="Images\Browsers\Safari.png" />
     <Content Include="CambiarContrasena.aspx" />
     <Content Include="Images\Logo.png" />
+    <Content Include="ModificarTrabajador.aspx" />
     <Content Include="ModificarUsuario.aspx" />
     <Content Include="Images\Townner.png" />
     <Content Include="InicioAdmin.aspx" />
@@ -116,6 +117,13 @@
     </Compile>
     <Compile Include="CambiarContrasena.aspx.designer.cs">
       <DependentUpon>CambiarContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarTrabajador.aspx.cs">
+      <DependentUpon>ModificarTrabajador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarTrabajador.aspx.designer.cs">
+      <DependentUpon>ModificarTrabajador.aspx</DependentUpon>
     </Compile>
     <Compile Include="ModificarUsuario.aspx.cs">
       <DependentUpon>ModificarUsuario.aspx</DependentUpon>
