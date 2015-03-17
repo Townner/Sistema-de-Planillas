@@ -262,7 +262,7 @@ namespace UI {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtExp;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtExp;
         
         /// <summary>
         /// RFPass7 control.
@@ -280,7 +280,7 @@ namespace UI {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTitulos;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtTitulos;
         
         /// <summary>
         /// RFPass8 control.

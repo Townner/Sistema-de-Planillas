@@ -86,3 +86,16 @@ C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\bin\BL.pdb
 C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\bin\TO.pdb
 C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\bin\DA.pdb
 C:\Users\Jose\Desktop\Sistema_De_Planilla\UI\obj\Debug\UI.pdb
+Y:\Desktop\Sistema_De_Planilla\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
+Y:\Desktop\Sistema_De_Planilla\UI\obj\Debug\UI.Properties.Resources.resources
+Y:\Desktop\Sistema_De_Planilla\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+Y:\Desktop\Sistema_De_Planilla\UI\obj\Debug\UI.dll
+Y:\Desktop\Sistema_De_Planilla\UI\bin\UI.dll
+Y:\Desktop\Sistema_De_Planilla\UI\bin\UI.pdb
+Y:\Desktop\Sistema_De_Planilla\UI\bin\BL.dll
+Y:\Desktop\Sistema_De_Planilla\UI\bin\TO.dll
+Y:\Desktop\Sistema_De_Planilla\UI\bin\DA.dll
+Y:\Desktop\Sistema_De_Planilla\UI\bin\BL.pdb
+Y:\Desktop\Sistema_De_Planilla\UI\bin\TO.pdb
+Y:\Desktop\Sistema_De_Planilla\UI\bin\DA.pdb
+Y:\Desktop\Sistema_De_Planilla\UI\obj\Debug\UI.pdb

@@ -31,3 +31,8 @@ C:\Users\Jose\Desktop\Sistema_De_Planilla\TO\bin\Debug\TO.pdb
 C:\Users\Jose\Desktop\Sistema_De_Planilla\TO\obj\Debug\TO.csprojResolveAssemblyReference.cache
 C:\Users\Jose\Desktop\Sistema_De_Planilla\TO\obj\Debug\TO.dll
 C:\Users\Jose\Desktop\Sistema_De_Planilla\TO\obj\Debug\TO.pdb
+Y:\Desktop\Sistema_De_Planilla\TO\bin\Debug\TO.dll
+Y:\Desktop\Sistema_De_Planilla\TO\bin\Debug\TO.pdb
+Y:\Desktop\Sistema_De_Planilla\TO\obj\Debug\TO.csprojResolveAssemblyReference.cache
+Y:\Desktop\Sistema_De_Planilla\TO\obj\Debug\TO.dll
+Y:\Desktop\Sistema_De_Planilla\TO\obj\Debug\TO.pdb

@@ -32,6 +32,11 @@
             height: 32px;
         }
         
+         #TextArea1
+    {
+        width: 360px;
+    }
+        
          </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContenidoPrincipalIzquierdo" runat="server">
@@ -45,7 +50,8 @@
         <td class="style9">
                 Cedula:</td>
         <td class="style10">
-            <asp:TextBox ID="txtCed" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
+            <asp:TextBox ID="txtCed" runat="server" style="float: left; margin-left:10px;" 
+                Width="139px" ontextchanged="txtCed_TextChanged"></asp:TextBox>
             &nbsp;<asp:RequiredFieldValidator ID="RFCed" runat="server" ControlToValidate="txtCed" style="color:Red;"
                 ErrorMessage="Campo Obligatorio"></asp:RequiredFieldValidator>
             <br />
@@ -68,7 +74,7 @@
                     BorderColor="White" Font-Names="Verdana" Font-Size="9pt" 
                     ForeColor="Black" Height="190px" Width="350px" 
                             onselectionchanged="CalVen_Ced_SelectionChanged" BorderWidth="1px" 
-                            NextPrevFormat="FullMonth">
+                            NextPrevFormat="FullMonth" >
                     <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
                     <NextPrevStyle 
                         VerticalAlign="Bottom" Font-Bold="True" Font-Size="8pt" 
@@ -233,7 +239,7 @@
         <td class="style9">
                 Experiencia:</td>
         <td class="style10">
-                <asp:TextBox ID="txtExp" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
+                <textarea id="txtExp" name="txtExp" rows="2" cols="20" runat="server"></textarea>
                 &nbsp;<asp:RequiredFieldValidator ID="RFPass7" runat="server" 
                     ControlToValidate="txtExp" ErrorMessage="*" 
                     style="float: left; color:Red; margin-left:5px;"></asp:RequiredFieldValidator>
@@ -245,7 +251,7 @@
         <td class="style9">
                 Titulos:</td>
         <td class="style10">
-                <asp:TextBox ID="txtTitulos" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
+                <textarea id="txtTitulos" name="txtTitulos" rows="2" runat="server"></textarea>
                 &nbsp;<asp:RequiredFieldValidator ID="RFPass8" runat="server" 
                     ControlToValidate="txtTitulos" ErrorMessage="*" 
                     style="float: left; color:Red; margin-left:5px;"></asp:RequiredFieldValidator>
@@ -258,7 +264,9 @@
                 Numero de Seguro:
                 </td>
         <td class="style10">
-                <asp:TextBox ID="txtNum_Seguro" runat="server" style="float: left; margin-left:10px;" Width="139px"></asp:TextBox>
+                <asp:TextBox ID="txtNum_Seguro" runat="server" 
+                    style="float: left; margin-left:10px;" Width="139px" 
+                    ontextchanged="txtNum_Seguro_TextChanged"></asp:TextBox>
                 &nbsp;<asp:RequiredFieldValidator ID="RFPass9" runat="server" 
                     ControlToValidate="txtNum_Seguro" ErrorMessage="*" 
                     style="float: left; color:Red; margin-left:5px;"></asp:RequiredFieldValidator>
@@ -298,9 +306,9 @@
         <asp:DropDownList ID="DropEstado_T" runat="server" 
                     style="float: left; margin-left:10px;" Width="147px">
                 <asp:ListItem Text="Selecione un valor" Value="Default"></asp:ListItem>
-                <asp:ListItem Text="Activo" Value=""></asp:ListItem>
-                <asp:ListItem Text="Inactivo" Value=""></asp:ListItem>
-                <asp:ListItem Text="En espera" Value=""></asp:ListItem>
+                <asp:ListItem Text="Activo" Value="Activo"></asp:ListItem>
+                <asp:ListItem Text="Inactivo" Value="Inactivo"></asp:ListItem>
+                <asp:ListItem Text="En espera" Value="En espera"></asp:ListItem>
                 </asp:DropDownList>
                 &nbsp;</td>
         <td class="style8">

@@ -30,7 +30,7 @@ namespace UI
             BL_Trab.id = c;
             BL_Trab.ced = this.txtCed.Text;
             //BL_Trab.ven_ced = this.CalVen_Ced.SelectedDate;
-            BL_Trab.ven_ced = Convert.ToDateTime(this.lblVen_Ced.Text.ToString());
+            BL_Trab.ven_ced = this.lblVen_Ced.Text;
             BL_Trab.nombre = this.txtNom.Text;
             BL_Trab.apellido1 = this.txtAp1.Text;
             BL_Trab.apellido2 = this.txtAp2.Text;
@@ -38,19 +38,21 @@ namespace UI
             BL_Trab.tel1 = this.txtTel1.Text;
             BL_Trab.tel2 = this.txtTel2.Text;
             BL_Trab.dir = this.txtDir.Text;
-            BL_Trab.experiencia = this.txtExp.Text;
-            BL_Trab.titulos = this.txtTitulos.Text;
+            BL_Trab.experiencia = this.txtExp.Value.ToString();
+            BL_Trab.titulos = this.txtTitulos.Value.ToString();
             BL_Trab.num_seguro = Convert.ToInt32((txtNum_Seguro.Text));
             //BL_Trab.uniforme = this.CalUniforme.SelectedDate;
-            BL_Trab.uniforme = Convert.ToDateTime(this.lblUnif.Text.ToString());
-            BL_Trab.estado_t = this.DropEstado_T.Text;
-            BL_Trab.inact = "NULL";
-            BL_Trab.est_civ = this.DropEst_Civ.Text;
+            BL_Trab.uniforme = this.lblUnif.Text;
+            BL_Trab.estado_t = this.DropEstado_T.SelectedValue;
+            BL_Trab.inact = "Contratable";
+            BL_Trab.l_trabajo = txtL_Trabajo.Text;
+            BL_Trab.est_civ = this.DropEst_Civ.SelectedValue;
             BL_Trab.nacionalidad = this.txtNacionalidad.Text;
             BL_Trab.id_departamento = temp1;
             BL_Trab.id_puesto = temp2;
             BL_Trab.AgregarTrabajdor();
-
+            
+            
             Response.Write("<script language='javascript'>alert('El trabajador fue agregado correctamente');document.location.href='" + "/AgregarTrabajador.aspx" + "'; </script>");
 
         }
@@ -82,8 +84,6 @@ namespace UI
                     LI.Value =  Convert.ToString((int)dr["ID_Departamento"]);
                     LI.Text = dr[0].ToString();
                     DropDepartamento.Items.Add(LI);
-                    // temp = (int)dr["ID_Departamento"];
-                    //DropPuesto.DataValueField = Convert.ToString(temp);
                 }
 
             }
@@ -118,12 +118,22 @@ namespace UI
 
         protected void CalUniforme_SelectionChanged(object sender, EventArgs e)
         {
-            lblUnif.Text = CalUniforme.SelectedDate.ToString();
+            lblUnif.Text = CalUniforme.SelectedDate.ToString("yyyy-MM-dd hh:mm:ss.fff");
         }
 
         protected void CalVen_Ced_SelectionChanged(object sender, EventArgs e)
         {
-            lblVen_Ced.Text = CalVen_Ced.SelectedDate.ToString();
+            lblVen_Ced.Text = CalVen_Ced.SelectedDate.ToString("yyyy-MM-dd hh:mm:ss.fff");
+        }
+
+        protected void txtCed_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void txtNum_Seguro_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
 

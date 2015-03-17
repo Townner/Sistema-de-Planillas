@@ -6,7 +6,7 @@ namespace TO
     {
         private int id;
         private string ced;
-        private DateTime ven_ced;
+        private string ven_ced;
         private string nombre;
         private string apellido1;
         private string apellido2;
@@ -17,7 +17,7 @@ namespace TO
         private string experiencia;
         private string titulos;
         private int num_seguro;
-        private DateTime uniforme;
+        private string uniforme;
         private string estado_t;
         private string inact;
         private string l_trabajo;
@@ -38,7 +38,7 @@ namespace TO
             get { return ced; }
             set { ced = value; }
         }
-        public DateTime Ven_Ced
+        public string Ven_Ced
         {
             get { return ven_ced; }
             set { ven_ced = value; }
@@ -93,7 +93,7 @@ namespace TO
             get { return num_seguro; }
             set { num_seguro = value; }
         }
-        public DateTime Uniforme
+        public string Uniforme
         {
             get { return uniforme; }
             set { uniforme = value; }

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data.SqlClient;
-using System.Data;
+using System.Globalization;
 
 namespace DA
 {
@@ -28,7 +25,7 @@ namespace DA
                 {
                     temp.ID = (int)read["ID"];
                     temp.Ced = (string)read["Ced"];
-                    temp.Ven_Ced = (DateTime)read["Ven_Ced"];
+                    temp.Ven_Ced = (string)read["Ven_Ced"];
                     temp.Nombre = (string)read["Nombre"];
                     temp.Apellido1 = (string)read["Apellido1"];
                     temp.Apellido2 = (string)read["Apellido2"];
@@ -39,7 +36,7 @@ namespace DA
                     temp.Experiencia = (string)read["Experiencia"];
                     temp.Titulos = (string)read["Titulos"];
                     temp.Num_Seguro = (int)read["Num_Seguro"];
-                    temp.Uniforme = (DateTime)read["Uniforme"];
+                    temp.Uniforme = (string)read["Uniforme"];
                     temp.Estado_t = (string)read["Estado_t"];
                     temp.Inact = (string)read["Inact"];
                     temp.L_Trabajo = (string)read["L_Trabajo"];
@@ -87,28 +84,45 @@ namespace DA
 
         public void AgregarTrabajdor(TO.TOTrabajdor trab)
         {
+            CultureInfo prov = CultureInfo.InvariantCulture;
+            string formato = "d";
+            string f2 = "s";
+
+            //SqlParameter param2 = new SqlParameter("@e_start", SqlDbType.DateTime);
+            //param2.Value = add_avent.start;
+            //cmd.Parameters.Add(param2);
+
+
             SqlCommand atrab = new SqlCommand();
             atrab.Connection = Conexion;
-            atrab.CommandText = "  INSERT INTO trabajador(Ced, Ven_Ced, Nombre , Apellido1, Apellido2, Mail, Tel1, Tel2, Dir, Experiencia, Titulos , Num_Seguro, Uniforme, Estado_T, Inact, L_Trabajo, Est_Civ , Nacionalidad, ID_Departamento, ID_Puesto) values (@ced, @ven_ced, @nombre, @apellido1, @apellido2 , @mail, @tel1, @tel2, @dir, @experiencia, @titulos , @num_seguro, @uniforme, @estado_t, @inact, @l_trabajo , @est_civ, @nacionalidad, @id_departamento, @id_puesto); ";
-            
-            atrab.Parameters.AddWithValue("@ced", getCedula(trab.Ced) );
-            atrab.Parameters.AddWithValue("@ven_ced", trab.Ven_Ced);
+            atrab.CommandText = "INSERT INTO trabajador(Ced , Ven_Ced , Nombre , Apellido1 , Apellido2 , Mail , Tel1 , Tel2 , Dir , Experiencia , Titulos , Num_Seguro , Uniforme , Estado_T "
+                +" , Inact , L_Trabajo , Est_Civ , Nacionalidad , ID_Departamento , ID_Puesto ) values (@ced , @ven_ced , @nombre , @apellido1 , @apellido2 , @mail , @tel1 , @tel2 "
+                +" , @dir , @experiencia , @titulos  , @num_seguro , @estado_t , @inact , @l_trabajo , @est_civ , @nacionalidad , @id_departamento , @id_departamento , @id_puesto); ";
+
+            atrab.Parameters.AddWithValue("@ced", getCedula(trab.Ced));
+            atrab.Parameters.AddWithValue("@ven_ced", DateTime.ParseExact(trab.Ven_Ced, "yyyy-MM-dd HH:mm:ss.fff", null));
+            //atrab.Parameters.AddWithValue("@ven_ced", DateTime.ParseExact(trab.Ven_Ced.ToString("yyyy-MM-dd"), "yyyy-MM-dd HH:mm:ss.fff", null));
+            //atrab.Parameters.AddWithValue("@ven_ced", trab.Ven_Ced);
+
             atrab.Parameters.AddWithValue("@nombre", trab.Nombre);
             atrab.Parameters.AddWithValue("@apellido1", trab.Apellido1);
             atrab.Parameters.AddWithValue("@apellido2", trab.Apellido2);
             atrab.Parameters.AddWithValue("@mail", trab.Mail);
             atrab.Parameters.AddWithValue("@tel1", trab.Tel1);
-            atrab.Parameters.AddWithValue("@tel2", trab.Tel2);
+            atrab.Parameters.AddWithValue("@tel2", trab.Tel2); 
             atrab.Parameters.AddWithValue("@dir", trab.Dir);
             atrab.Parameters.AddWithValue("@experiencia", trab.Experiencia);
             atrab.Parameters.AddWithValue("@titulos", trab.Titulos);
             atrab.Parameters.AddWithValue("@num_seguro", trab.Num_Seguro);
-            atrab.Parameters.AddWithValue("@uniforme", trab.Uniforme);
+            atrab.Parameters.AddWithValue("@uniforme", DateTime.ParseExact(trab.Uniforme, "yyyy-MM-dd HH:mm:ss.fff", null));
+            //atrab.Parameters.AddWithValue("@uniforme", "2015-03-16");
+            //atrab.Parameters.AddWithValue("@uniforme", trab.Uniforme);
+
             atrab.Parameters.AddWithValue("@estado_t", trab.Estado_t);
             atrab.Parameters.AddWithValue("@inact", trab.Inact);
             atrab.Parameters.AddWithValue("@l_trabajo", trab.L_Trabajo);
             atrab.Parameters.AddWithValue("@est_civ", trab.Est_Civ);
-            atrab.Parameters.AddWithValue("@nacionalidad", trab.Nacionalidad);gggggggggggfffffffffbh555555555t
+            atrab.Parameters.AddWithValue("@nacionalidad", trab.Nacionalidad);
             atrab.Parameters.AddWithValue("@id_departamento", trab.ID_Departamento);
             atrab.Parameters.AddWithValue("@id_puesto", trab.ID_Puesto);
 

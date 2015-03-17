@@ -21,7 +21,7 @@ namespace UI
             {
                 BL.BLTrabajador BL_Trab = new BL.BLTrabajador();
                 this.txtCed.Text = BL_Trab.ced;
-                this.CalVen_Ced.SelectedDate = BL_Trab.ven_ced;
+                this.lblVen_Ced.Text = BL_Trab.ven_ced.ToString();
                 this.txtNom.Text = BL_Trab.nombre;
                 this.txtAp1.Text = BL_Trab.apellido1;
                 this.txtAp2.Text = BL_Trab.apellido2;
@@ -32,7 +32,7 @@ namespace UI
                 this.txtExp.Text = BL_Trab.experiencia;
                 this.txtTitulos.Text = BL_Trab.titulos;
                 this.txtNum_Seguro.Text = Convert.ToString(BL_Trab.num_seguro);
-                this.CalUniforme.SelectedDate = BL_Trab.uniforme;
+                this.lblVen_Ced.Text = BL_Trab.uniforme.ToString();
                 this.DropEstado_T.Text = BL_Trab.estado_t;
                 this.DropInact.Text = BL_Trab.inact;
                 this.DropEst_Civ.Text = BL_Trab.est_civ;
@@ -50,7 +50,7 @@ namespace UI
                 BL.BLTrabajador BL_Trab = new BL.BLTrabajador();
                 BL_Trab.id = c;
                 BL_Trab.ced = this.txtCed.Text;
-                BL_Trab.ven_ced = this.CalVen_Ced.SelectedDate;
+                BL_Trab.ven_ced = this.lblVen_Ced.Text;
                 BL_Trab.nombre = this.txtNom.Text;
                 BL_Trab.apellido1 = this.txtAp1.Text;
                 BL_Trab.apellido2 = this.txtAp2.Text;
@@ -61,7 +61,7 @@ namespace UI
                 BL_Trab.experiencia = this.txtExp.Text;
                 BL_Trab.titulos = this.txtTitulos.Text;
                 BL_Trab.num_seguro = Convert.ToInt32((txtNum_Seguro.Text));
-                BL_Trab.uniforme = this.CalUniforme.SelectedDate;
+                //BL_Trab.uniforme = this.lblUnif.text;
                 BL_Trab.estado_t = this.DropEstado_T.Text;
                 BL_Trab.inact = this.DropInact.Text;
                 BL_Trab.est_civ = this.DropEst_Civ.Text;

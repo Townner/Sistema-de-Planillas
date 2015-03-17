@@ -9,7 +9,7 @@ namespace BL
     {
         public int id;
         public string ced;
-        public DateTime ven_ced;
+        public string ven_ced;
         public string nombre;
         public string apellido1;
         public string apellido2;
@@ -20,7 +20,7 @@ namespace BL
         public string experiencia;
         public string titulos;
         public int num_seguro;
-        public DateTime uniforme;
+        public string uniforme;
         public string estado_t;
         public string inact;
         public string l_trabajo;
