@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master_Page.master.cs" Inherits="UI.Master_Page" %>
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Inicio - Sistema de Planilla</title>
+    <link rel="stylesheet" href="/App_Themes/Theme_Master/Master_Admin.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2
+        {
+            width: 211px;
+        }
+        .style3
+        {
+            width: 750px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <form id="FormEncabezado" runat="server">
+
+    <div id = "Encabezado">
+        
+        <div id = "ContenidoEncabezado">
+
+            <div id = "LogoTipo">
+                 &nbsp;<table style="width:100%;">
+                     <tr>
+                         <td class="style2">
+                             <img alt="" class="Logo" src="Images/Logo.png" /></td>
+                         <td class="style3">
+                             Bienvenido:
+                             <asp:Label ID="lblUser" runat="server" Text="User"></asp:Label>
+&nbsp;</td>
+                         <td>
+                             <asp:Button ID="btnLogout" runat="server" Text="Salir" style="margin-right:20px; margin-left: 0px;" 
+                                 onclick="btnLogout_Click" />
+                         </td>
+                     </tr>
+                 </table>
+            </div>
+        </div>
+    </div>
+ 
+
+  <ul id = "BarraHorizontal">
+         
+         <li><a id="Inicio" runat="server" href="/Inicio.aspx">Inicio</a></li>
+
+         <li id ="Trabajadores" runat="server">Trabajadores
+         
+            <ul class = "subMenu">
+              <li><a href="/AgregarCliente.aspx">Ingresar Trabajador</a></li>
+              <li><a href="/ConsultarCliente.aspx">Consultar Trabajador</a></li>
+              <li><a href="/EliminarCliente.aspx">Dar de Baja Trabajador</a></li>
+            </ul>
+         </li>
+
+         <li id ="Actualizacion" runat="server">Actualizacion
+         
+            <ul class = "subMenu">
+              <li><a href="/AgregarCliente.aspx">Actualizacion de Datos Financieros</a></li>
+              <li><a href="/ConsultarCliente.aspx">Actualizacion de Datos Personales</a></li>
+            </ul>
+         </li>
+
+         <li id ="Reportes" runat="server">Reportes Recursos Humanos
+           <ul class ="subMenu">
+              <li><a href="/ReporteTotalAdelantos.aspx">Reporte Total de Adelantos</a></li>
+              <li><a href="/ReportePlanillaGlobal.aspx">Reporte Global de Planilla</a></li>
+              <li><a href="/ReporteUniformes.aspx">Reportes de Uniformes</a></li>
+              <li><a href="/ReporteTotalPlanilla.aspx">Reporte Total de Planilla</a></li>
+              <li><a href="/ReporteTotalSalariosBrutos.aspx">Reporte Total Salarios Brutos</a></li>
+              <li><a href="/ReporteTotalSalariosNetos.aspx">Reporte Total Salarios Netos</a></li>
+              <li><a href="/ReporteTotalPretamos.aspx">Reporte Total Prestamos con Intereses</a></li>
+              <li><a href="/ReporteTotalRenta.aspx">Reporte Total de Renta</a></li>
+              <li><a href="/ReporteCedulas.aspx">Reporte Vencimiento Cedulas</a></li>
+              <li><a href="/ReporteLicencias.aspx">Reporte Vencimiento Licencias</a></li>
+           </ul>
+         
+         </li>
+
+         <li id ="ReportesFI" runat="server">Reportes Financiero
+           <ul class ="subMenu">
+              <li><a href="/ReporteTotalAdelantos.aspx">Reporte Total de Adelantos</a></li>
+              <li><a href="/ReporteTotalPlanilla.aspx">Reporte Total de Planilla</a></li>
+              <li><a href="/ReporteTotalSalariosBrutos.aspx">Reporte Total Salarios Brutos</a></li>
+              <li><a href="/ReporteTotalSalariosNetos.aspx">Reporte Total Salarios Netos</a></li>
+              <li><a href="/ReporteTotalPretamos.aspx">Reporte Total Prestamos con Intereses</a></li>
+              <li><a href="/ReporteTotalRenta.aspx">Reporte Total de Renta</a></li>
+           </ul>
+         
+         </li>
+         
+         <li id ="Admin" runat="server"> Administracion
+                 
+            <ul class = "subMenu">
+
+                <li><a href="/RevisiónFinalPlanilla.aspx">Revision Final de Planilla</a></li>
+                <li><a href="/InicioModificacionGlobales.aspx">Cambiar Datos Globales</a></li>
+                <li>---------- Puestos</li>
+                <li><a href="/AgregarPuesto.aspx">Agregar Puesto</a></li>
+                <li><a href="/EliminarPuesto.aspx">Eliminar Puesto</a></li>
+                <li><a href="/ModificarPuesto.aspx">Modificar Puesto</a></li>
+                <li>---------- Departamentos</li>
+                <li><a href="/AgregarDepartamento.aspx">Agregar Departamento</a></li>
+                <li><a href="/EliminarDepartamento.aspx">Eliminar Departamento</a></li>
+                <li><a href="/ModificarDepartamento.aspx">Modificar Puesto</a></li>
+            </ul>
+         </li>
+
+         <li id ="Users" runat="server">Usuarios
+
+          <ul class="subMenu">
+
+            <li><a href="/AgregarUsuario.aspx">Crear Usuario</a></li> 
+            <li><a href="/ConsultarUsuario.aspx">Consultar Usuario</a></li>
+            <li><a href="/ModificarUsuario.aspx">Modificar Usuario</a></li>
+            <li><a href="/EliminarUsuario.aspx">Eliminar Usuarios</a></li>
+          
+          </ul>
+         </li>
+
+         <li>Opciones
+            <ul  class = "subMenu">
+                <li><a href="/CambiarContrasena.aspx">Cambiar Contraseña</a></li>
+            </ul>
+         </li>
+      </ul>
+
+    <div id = "Cuerpo">
+        
+        <div id = "ContenidoIzquierdo">
+            
+            <asp:ContentPlaceHolder ID="ContenidoPrincipalIzquierdo" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div id = "ContenidoCentral">
+            <asp:ContentPlaceHolder ID="ContenidoPrincipalCentral" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div id = "ContenidoDerecho">
+            
+            
+
+        </div>
+
+        <div id = "Pie">
+            <span id=NSistema> Sistema de Planilla - Townner S.A</span>
+            
+             <a href="https://www.google.com/intl/es/chrome/browser/?hl=es"> <img src="/Images/Browsers/Chrome.png" style="height: 24px; width: 24px"> </a>
+        <a href="http://www.mozilla.org/es-ES/firefox/new/"> <img src="/Images/Browsers/Firefox.png" style="height: 24px; width: 24px"> </a>
+        <a href="http://windows.microsoft.com/es-es/internet-explorer/ie-9-worldwide-languages"> <img src="/Images/Browsers/Explorer.png" style="height: 24px; width: 24px"> </a>
+        <a href="http://www.opera.com/es-419/"> <img src="/Images/Browsers/Opera.png" style="height: 24px; width: 24px"> </a>
+        <a href="http://support.apple.com/kb/dl1531?viewlocale=es_ES&locale=es_ES"> <img src="/Images/Browsers/Safari.png" style="height: 24px; width: 24px"> </a>
+
+        </div>
+
+    </div>
+
+    <div>
+        
+    </div>
+ </form>
+</body>
+</html>

@@ -1,0 +1,542 @@
+﻿body 
+{
+    background-color:#DCDCDC;
+    width:960px;
+    margin:auto;
+    font-family: arial;
+    font-style:italic;
+    background-image:url(/Images/Back_login.jpg);
+    background-attachment:fixed;
+    background-position:bottom;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+/*
+    Propiedades del encabezado
+*/
+.Logo
+{
+     width: 219px;
+     height: 80px;
+     padding-left: 60px;
+    
+}
+#Encabezado
+{
+    width:960px;
+    height:105px;
+    background-color:white;
+    color:Black;
+    box-shadow:0px 10px 20px black;
+    border-radius:0px 80px 0px 80px;
+    margin:auto;
+}
+    
+
+
+#LogoTipo > img
+{    
+        height: 205px;
+        width: 960px;
+        border-radius:0px 78px 0px 78px;
+        
+}
+
+
+
+    
+/*
+    Propiedades de la barra horizontal
+*/
+    
+#BarraHorizontal
+ {
+    height:30px;
+    width:960px;
+    margin:auto;
+    margin-top:30px;
+    background-color:#2E64FE;
+    text-align:center;
+    box-shadow:0px 0px 50px black inset;
+    border-radius:30px 30px 30px 30px;
+    position:relative;
+    z-index:2;
+    
+    -moz-animation-name:animacionBarraHorizontal;
+    -webkit-animation-name:animacionBarraHorizontal;
+    -o-animation-name:animacionBarraHorizontal;
+    -ms-animation-name:animacionBarraHorizontal;
+    
+    -moz-animation-duration:3s;
+    -webkit-animation-duration:3s;
+    -o-animation-duration:3s;
+    -ms-animation-duration:3s;
+    
+}
+
+#BarraHorizontal  li > a
+ {
+     display:block;
+     color:White;
+     text-decoration:none;
+     border-radius:5px 5px 5px 5px;
+    
+ }
+
+@-moz-Keyframes animacionBarraHorizontal
+{
+    from{
+        width:900px;
+    }
+    to{
+        width:960px;
+    }
+}
+ 
+ @-webkit-Keyframes animacionBarraHorizontal
+ {
+     from{
+        width:900px;
+    }
+    to{
+        width:960px;
+    }
+ }
+ 
+  @-o-Keyframes animacionBarraHorizontal
+ {
+     from{
+        width:900px;
+    }
+    to{
+        width:960px;
+    }
+ }
+ 
+  @-ms-Keyframes animacionBarraHorizontal
+ {
+     from{
+        width:900px;
+    }
+    to{
+        width:960px;
+    }
+ }
+
+ul
+{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+
+#BarraHorizontal>li , .subMenu >li
+{
+    display:inline-block;
+    padding:5px;
+    border-radius:10px 10px 10px 10px;
+    background-color:#2E64FE;
+    box-shadow:0px 0px 5px black inset;
+    position:relative;
+    margin:-2px;
+    cursor:pointer;
+    height:18px;
+    margin-top:-5px;
+    color:White;
+}
+.subMenu
+{
+    position:absolute;
+    top:38px;
+    left:1px;
+    display:none;
+    border-radius:0px 0px 10px 10px;
+    -moz-animation-duration:0.8s;
+    -webkit--animation-duration:0.8s;
+    -o-animation-duration:0.8s;
+    -ms-animation-duration:0.8s;
+}
+
+
+.subMenu > li
+{
+    height:auto;
+    display:block;
+    box-shadow:0px 0px 10px black inset;
+    -moz-animation-duration:0.5s;
+    -webkit-animation-duration:0.5s;
+    -o-animation-duration:0.5s;
+    -ms-animation-duration:0.5s;
+    
+    
+}
+
+.subMenu>li:hover
+{
+    -moz-transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    
+    text-shadow:2px 2px 2px black;
+    z-index:2;
+    -moz-animation-name:botonSubMenu;
+    -webkit-animation-name:botonSubMenu;
+    -o-animation-name:botonSubMenu;
+    -ms-animation-name:botonSubMenu;
+    
+}
+
+@-moz-keyframes botonSubMenu
+{
+    0%
+    {
+        text-shadow:200px 2px 20px black;
+    }
+    50%
+    {
+        -moz-transform:scale(1.3);
+        border-radius:5px;
+    }
+    100%
+    {
+        -moz-transform:scale(1.1);
+        text-shadow:2px 2px 1px black;
+    }
+}
+
+@-webkit-keyframes botonSubMenu
+{
+    0%
+    {
+        text-shadow:200px 2px 20px black;
+    }
+    50%
+    {
+        -webkit-transform:scale(1.3);
+        border-radius:5px;
+    }
+    100%
+    {
+        -webkit-transform:scale(1.1);
+        text-shadow:2px 2px 1px black;
+    }
+}
+@-o-keyframes botonSubMenu
+{
+    0%
+    {
+        text-shadow:200px 2px 20px black;
+    }
+    50%
+    {
+        -o-transform:scale(1.3);
+        border-radius:5px;
+    }
+    100%
+    {
+        -o-transform:scale(1.1);
+        text-shadow:2px 2px 1px black;
+    }
+}
+@-ms-keyframes botonSubMenu
+{
+    0%
+    {
+        text-shadow:200px 2px 20px black;
+    }
+    50%
+    {
+        -ms-transform:scale(1.3);
+        border-radius:5px;
+    }
+    100%
+    {
+        -ms-transform:scale(1.1);
+        text-shadow:2px 2px 1px black;
+    }
+}
+
+
+#BarraHorizontal li:hover ul
+{
+    display:block;
+    -moz-animation-name:subMenu;
+    -webkit-animation-name:subMenu;
+    -o-animation-name:subMenu;
+    -ms-animation-name:subMenu;
+}
+
+@-moz-keyFrames subMenu
+{
+    0%
+    {
+        opacity:0;
+        left:-150px;
+    }
+    
+    50%
+    {
+        -moz-transform:skew(10deg);
+        box-shadow:-10px 4px 8px 5px black;
+    }
+    
+    100%
+    {
+        opacity:1;
+        left:1px;
+     }
+}
+
+@-webkit-keyFrames subMenu
+{
+    0%
+    {
+        opacity:0;
+        left:-150px;
+    }
+    
+    50%
+    {
+        -webkit-transform:skew(10deg);
+        box-shadow:-10px 4px 8px 5px black;
+    }
+    
+    100%
+    {
+        opacity:1;
+        left:1px;
+     }
+}
+
+@-o-keyFrames subMenu
+{
+    0%
+    {
+        opacity:0;
+        left:-150px;
+    }
+    
+    50%
+    {
+        -o-transform:skew(10deg);
+        box-shadow:-10px 4px 8px 5px black;
+    }
+    
+    100%
+    {
+        opacity:1;
+        left:1px;
+     }
+}
+
+@-ms-keyFrames subMenu
+{
+    0%
+    {
+        opacity:0;
+        left:-150px;
+    }
+    
+    50%
+    {
+        -ms-transform:skew(10deg);
+        box-shadow:-10px 4px 8px 5px black;
+    }
+    
+    100%
+    {
+        opacity:1;
+        left:1px;
+     }
+}
+
+#BarraHorizontal>li
+{
+    -moz-transition:all 0.6s ease;
+    -webkit-transition:all 0.6s ease;
+    -o-transition:all 0.6s ease;
+    -ms-transition:all 0.6s ease;
+}
+
+#BarraHorizontal>li:hover
+{
+    background-color:#2E64FE;
+    padding-top:10px;
+    box-shadow:0px 0px 7px black inset;
+    border-radius: 10px 10px 10px 10px;
+    color:White;
+    text-shadow:1px 1px 1px 1px black;
+}
+
+#BarraHorizontal>li:first-child
+{
+    
+    background-color:#2E64FE;
+    padding-top:10px;
+    box-shadow:0px 0px 10px black inset;
+    border-radius: 10px 10px 10px 10px;
+    color:White;
+    text-shadow:1px 1px 1px 1px black;
+}
+
+#BarraHorizontal>li:first-child a
+{
+    box-shadow:none;
+}
+
+ /*
+    Propiedades del cuerpo
+*/
+     
+ #Cuerpo
+ {
+     width:900px;
+     margin:auto;
+     background-color:#696969;
+     border-radius:0px 70px 20px 70px;
+     overflow:auto;
+     box-shadow:0px 0px 30px black inset;
+ }
+ 
+ 
+ #ContenidoIzquierdo
+ {
+     float:left;
+     width:20%;
+     min-height:500px;
+     text-align:right;
+     
+ }
+ 
+  #ContenidoDerecho
+  {
+      float:left;
+      width:5%;
+      background-color:#2E64FE;
+      box-shadow:0px 0px 10px black inset;
+      min-height:500px;
+      border-radius:0px 0px 20px 70px;
+  }
+  
+   
+ #ContenidoDerecho:hover
+ {
+     box-shadow:0px 0px 40px inset;
+ }
+ 
+  #ContenidoIzquierdo > ul
+ {
+     list-style-type:none;
+     padding:0;
+     margin:0;
+ }
+ 
+ #ContenidoIzquierdo  li
+ {
+     display:inline-block;
+     padding:5px;
+     cursor:pointer;
+     color:White;
+     
+     -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+ }
+ 
+ #ContenidoIzquierdo li:hover
+ {
+     border-radius:5px 5px 5px 5px;
+     box-shadow:0px 0px 30px black inset;
+     
+     -webkit-transition: all .2s ease-in-out;
+     -webkit-transform: scale(1.1);
+     
+     -moz-transition: all .2s ease-in-out;
+     -moz-transform: scale(1.1);
+     
+     -o-transition: all .2s ease-in-out;
+     -o-transform: scale(1.1);
+     
+     -ms-transition: all .2s ease-in-out;
+     -ms-transform: scale(1.1);
+     
+  
+ }
+ 
+  #ContenidoIzquierdo  li > a
+ {
+     display:block;
+     color:White;
+     text-decoration:none;
+     border-radius:5px 5px 5px 5px;
+     box-shadow:0px 0px 30px black inset;
+ }
+ 
+ 
+ 
+ #ContenidoCentral
+ {
+     float:left;
+     width:75%;
+     min-height:500px;
+     color:#000000;
+     text-align:center;
+     background-color:#FFFFFF;
+     box-shadow:0px 0px 10px black inset;
+ }
+ 
+ 
+ 
+ #ContenidoCentral > table
+ {
+     text-align:right;
+ }
+ 
+ /*
+    Propiedades del pie de pagina
+*/
+ 
+ #Pie
+ {
+     margin-top:10px;
+     height:30px;
+     background-color:#808080;
+     border-radius:0px 0px 20px 20px;
+     clear:both;
+     box-shadow:0px 0px 30px black inset;
+     color:White;
+     text-align:center;
+     padding-top:5px;
+     padding-left: 50px;
+     
+ }
+ 
+ #NSistema
+ {
+       text-align:center;
+ }
+ 
+ #Pie img
+ {
+     float:left;
+     margin-left:5px;
+     margin-right:5px;
+ }
+ 
+ #Pie img:hover
+ {
+     -webkit-transition: all .2s ease-in-out;
+     -webkit-transform: scale(1.2);
+     
+     -moz-transition: all .2s ease-in-out;
+     -moz-transform: scale(1.2);
+     
+     -o-transition: all .2s ease-in-out;
+     -o-transform: scale(1.2);
+     
+     -ms-transition: all .2s ease-in-out;
+     -ms-transform: scale(1.2);
+ }
