@@ -44,7 +44,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContenidoPrincipalCentral" runat="server">
 
-     <h4> Ingrese los datos del trabajador </h4>
+     <h4 style="margin-top:10px;"> Ingrese los datos del trabajador </h4>
     <table style="width:100%; margin-top:20px; margin-top:10px;">
    
     <tr>
@@ -268,9 +268,10 @@
                 <asp:TextBox ID="txtNum_Seguro" runat="server" 
                     style="float: left; margin-left:10px;" Width="139px" 
                     ></asp:TextBox>
-                &nbsp;<asp:RequiredFieldValidator ID="RFSeguro" runat="server" 
-                    ControlToValidate="txtNum_Seguro" ErrorMessage="*" 
-                    style="float: left; color:Red; margin-left:5px;"></asp:RequiredFieldValidator>
+                &nbsp;<asp:RegularExpressionValidator ID="RGXSeguro" runat="server" style="color:Red;"
+                    ErrorMessage="* Numeros sin guiones de 9 a 10 digitos" 
+                    ValidationExpression="^[0-9]{4,6}[0-9]{4}$" 
+                    ControlToValidate="txtNum_Seguro" EnableTheming="False"></asp:RegularExpressionValidator>
                 </td>
         <td class="style8">
                 </td>

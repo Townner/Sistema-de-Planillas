@@ -31,7 +31,8 @@ namespace DA
                     temp.ImpRenta = (double)read["S_ImpRenta"];
                     temp.Hijos = (int)read["Hijos"];
                     temp.Conyugue = (int)read["Conyugue"];
-                    temp.Cargas = (double)read["Ob_Pat"];
+                    temp.Ob_Pat_NoPen = (double)read["Ob_Pat_NoPen"];
+                    temp.Ob_Pat_Pen = (double)read["Ob_Pat_Pen"];
                     temp.S_Cargas = (double)read["S_Ob_Pat"];
                     temp.S_Extras = (double)read["S_Extra"];
                     temp.S_Incapacidad = (double)read["S_Incapacidad"];

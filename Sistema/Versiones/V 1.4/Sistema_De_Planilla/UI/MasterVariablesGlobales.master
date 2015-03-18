@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContenidoPrincipalIzquierdo" runat="server">
     <ul>
     <h4 style=" color:White;">Gestionar Datos Globales</h4>
-            <li><a href="/ModificarCargasObreras.aspx">Valor Cargas Obreras</a> </li>
+            <li><a href="/ModificarCargarObreras.aspx">Valor Cargas Obreras</a> </li>
             <li><a href="/AumentoSalarioBase.aspx">Aumentos Salariales</a> </li>
     </ul>
 </asp:Content>

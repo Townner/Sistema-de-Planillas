@@ -63,13 +63,13 @@
     <Content Include="AgregarUsuario.aspx" />
     <Content Include="App_Themes\Theme_Login\Login.css" />
     <Content Include="App_Themes\Theme_Master\Master_Admin.css" />
+    <Content Include="ModificarCargarObreras.aspx" />
     <Content Include="ModificarTrabajador.aspx" />
     <Content Include="RevisiónFinalPlanilla.aspx" />
     <Content Include="AumentoSalarioBase.aspx" />
     <Content Include="ConsultarUsuario.aspx" />
     <Content Include="EliminarDepartamento.aspx" />
     <Content Include="InicioModificacionGlobales.aspx" />
-    <Content Include="ModificarCargasObreras.aspx" />
     <Content Include="ModificarDepartamento.aspx" />
     <Content Include="ModificarPuesto.aspx" />
     <Content Include="EliminarPuesto.aspx" />
@@ -137,6 +137,13 @@
     <Compile Include="AgregarUsuario.aspx.designer.cs">
       <DependentUpon>AgregarUsuario.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ModificarCargarObreras.aspx.cs">
+      <DependentUpon>ModificarCargarObreras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarCargarObreras.aspx.designer.cs">
+      <DependentUpon>ModificarCargarObreras.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ModificarTrabajador.aspx.cs">
       <DependentUpon>ModificarTrabajador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -185,13 +192,6 @@
     </Compile>
     <Compile Include="MasterVariablesGlobales.master.designer.cs">
       <DependentUpon>MasterVariablesGlobales.master</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarCargasObreras.aspx.cs">
-      <DependentUpon>ModificarCargasObreras.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ModificarCargasObreras.aspx.designer.cs">
-      <DependentUpon>ModificarCargasObreras.aspx</DependentUpon>
     </Compile>
     <Compile Include="ModificarDepartamento.aspx.cs">
       <DependentUpon>ModificarDepartamento.aspx</DependentUpon>

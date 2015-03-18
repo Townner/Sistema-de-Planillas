@@ -12,7 +12,8 @@ namespace TO
         private double imprenta;
         private int hijos;
         private int conyugue;
-        private double cargas;
+        private double ob_pat_pen;   
+        private double ob_pat_nopen;
         private double s_final;
         private double s_cargas;
         private double s_extras;
@@ -20,7 +21,15 @@ namespace TO
         private double s_base;
         private double s_bruto;
         private double s_neto;
- 
+
+    
+
+        public double Ob_Pat_NoPen
+        {
+            get { return ob_pat_nopen; }
+            set { ob_pat_nopen = value; }
+        }
+        
         public int Trabajador_ID
         {
             get { return trabajadr_id; }
@@ -51,10 +60,10 @@ namespace TO
             get { return s_incapcidad; }
             set { s_incapcidad = value; }
         }
-        public double Cargas
+        public double Ob_Pat_Pen
         {
-            get { return cargas; }
-            set { cargas = value; }
+            get { return ob_pat_pen; }
+            set { ob_pat_pen = value; }
         }
         public double S_Cargas
         {

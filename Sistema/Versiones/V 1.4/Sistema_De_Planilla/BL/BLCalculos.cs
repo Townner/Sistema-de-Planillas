@@ -12,7 +12,8 @@ namespace BL
         public double imprenta;
         public int hijos;
         public int conyugue;
-        public double cargas;
+        public double ob_pat_pen;   
+        public double ob_pat_nopen;
         public double s_cargas;
         public double s_extras;
         public double s_incapcidad;
@@ -29,7 +30,8 @@ namespace BL
             this.imprenta = sr.Search(ced).ImpRenta;
             this.hijos = sr.Search(ced).Hijos;
             this.conyugue = sr.Search(ced).Conyugue;
-            this.cargas = sr.Search(ced).Cargas;
+            this.ob_pat_nopen = sr.Search(ced).Ob_Pat_NoPen;
+            this.ob_pat_pen = sr.Search(ced).Ob_Pat_Pen;
             this.s_cargas = sr.Search(ced).S_Cargas;
             this.s_extras = sr.Search(ced).S_Extras;
             this.s_incapcidad = sr.Search(ced).S_Incapacidad;
@@ -139,5 +141,7 @@ namespace BL
             DA_Calcu.CalculoAumentoSalarioBasePorcentual(TO_Calcu, mis, jar, cho);
         }
 
-        }
+       /* public BuscarCargasObreras
+
+        }*/
 }

@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContenidoPrincipalCentral" runat="server">
 
 <center>
-<h3> Selecione un puesto </h3>
+<h3 style="margin-top:10px;"> Selecione un puesto </h3>
 </center>
 
     <table style="width:100%;">
