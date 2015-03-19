@@ -19,6 +19,12 @@ namespace UI
             ConsultaDepartamento();
             ConultarPuesto();
 
+            if (!IsPostBack)
+            {
+                Populate_MonthList();
+                Populate_YearList();
+            }
+
         }
 
         protected void btnTrab_Click(object sender, EventArgs e)
@@ -33,7 +39,7 @@ namespace UI
             
             BL_Trab.id = c;
             BL_Trab.ced = this.txtCed.Text;
-            BL_Trab.ven_ced = this.lblVen_Ced.Text;
+            BL_Trab.ven_ced = calven_ced.SelectedDate.ToString("yyyy-MM-dd hh:mm:ss.fff");
             BL_Trab.nombre = this.txtNom.Text;
             BL_Trab.apellido1 = this.txtAp1.Text;
             BL_Trab.apellido2 = this.txtAp2.Text;
@@ -44,7 +50,7 @@ namespace UI
             BL_Trab.experiencia = this.txtExp.Value.ToString();
             BL_Trab.titulos = this.txtTitulos.Value.ToString();
             BL_Trab.num_seguro = Convert.ToInt32((txtNum_Seguro.Text));
-            BL_Trab.uniforme = this.lblUnif.Text;
+            BL_Trab.uniforme = CalUniforme.SelectedDate.ToString("yyyy-MM-dd hh:mm:ss.fff");
             BL_Trab.estado_t = this.DropEstado_T.SelectedValue;
             BL_Trab.inact = "Contratable";
             BL_Trab.l_trabajo = txtL_Trabajo.Text;
@@ -126,12 +132,12 @@ namespace UI
 
         protected void CalUniforme_SelectionChanged(object sender, EventArgs e)
         {
-            lblUnif.Text = CalUniforme.SelectedDate.ToString("yyyy-MM-dd hh:mm:ss.fff");
+            lblUnif.Text = CalUniforme.SelectedDate.ToString("yyyy-MM-dd");
         }
 
         protected void CalVen_Ced_SelectionChanged(object sender, EventArgs e)
         {
-            lblVen_Ced.Text = calven_ced.SelectedDate.ToString("yyyy-MM-dd hh:mm:ss.fff");
+            lblVen_Ced.Text = calven_ced.SelectedDate.ToString("yyyy-MM-dd");
         }
 
         protected void Calendar1_DayRender(object sender, DayRenderEventArgs e)
@@ -148,5 +154,51 @@ namespace UI
                 e.Day.IsSelectable = false;
             }
         }
+
+        protected void Populate_MonthList()
+        {
+            //Add each month to the list
+            var dtf = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat;
+            for (int i = 1; i <= 12; i++){
+                drpCalMonth.Items.Add(new ListItem(dtf.GetMonthName(i), i.ToString()));
+                DPDMonthUniforme.Items.Add(new ListItem(dtf.GetMonthName(i), i.ToString()));
+            }
+               
+            //Make the current month selected item in the list
+            drpCalMonth.Items.FindByValue(DateTime.Now.Month.ToString()).Selected = true;
+            DPDMonthUniforme.Items.FindByValue(DateTime.Now.Month.ToString()).Selected = true;
+        }
+
+
+        protected void Populate_YearList()
+        {
+            //Year list can be changed by changing the lower and upper 
+            //limits of the For statement    
+            for (int intYear = DateTime.Now.Year - 20; intYear <= DateTime.Now.Year + 20; intYear++)
+            {
+                drpCalYear.Items.Add(intYear.ToString());
+                DPDYearUniforme.Items.Add(intYear.ToString());
+            }
+
+            //Make the current year selected item in the list
+            drpCalYear.Items.FindByValue(DateTime.Now.Year.ToString()).Selected = true;
+            DPDYearUniforme.Items.FindByValue(DateTime.Now.Year.ToString()).Selected = true;
+        }
+
+        protected void Set_CalendarVen(object Sender, EventArgs e)
+        {
+            int year = int.Parse(drpCalYear.SelectedValue);
+            int month = int.Parse(drpCalMonth.SelectedValue);
+            calven_ced.TodaysDate = new DateTime(year, month, 1);
+        }
+
+
+        protected void Set_CalendarUniforme (object Sender, EventArgs e)
+        {
+            int year = int.Parse(DPDYearUniforme.SelectedValue);
+            int month = int.Parse(DPDMonthUniforme.SelectedValue);
+            CalUniforme.TodaysDate = new DateTime(year, month, 1);
+        }
+
     }
 }

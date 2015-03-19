@@ -75,6 +75,9 @@
                 <asp:ScriptManager ID="ScriptManager1" runat="server" />
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
              <ContentTemplate>
+             <asp:DropDownList id="drpCalMonth" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList>
+             <asp:DropDownList id="drpCalYear" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList> 
+                 <br />
               <asp:Label ID="lblVen_Ced" runat="server" Text=""></asp:Label>
             <asp:Calendar ID="calven_ced" runat="server" BackColor="White" ondayrender="Calendar1_DayRender"
                     BorderColor="White" Font-Names="Verdana" Font-Size="9pt" 
@@ -283,6 +286,9 @@
                         
                         <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                             <ContentTemplate>
+                            <asp:DropDownList id="DPDMonthUniforme" Runat="Server" OnSelectedIndexChanged="Set_CalendarUniforme" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList>
+                            <asp:DropDownList id="DPDYearUniforme" Runat="Server" OnSelectedIndexChanged="Set_CalendarUniforme" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList> 
+                                <br />
                             <asp:Label ID="lblUnif" runat="server" Text=""></asp:Label>
                                 <asp:Calendar ID="CalUniforme" runat="server" BackColor="White" ondayrender="Calendar1_DayRender"
                                     BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" 

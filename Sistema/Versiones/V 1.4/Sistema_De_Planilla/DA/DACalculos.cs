@@ -385,5 +385,137 @@ namespace DA
             }// End if 3
         }
 
+        public double BuscarCargarObreras(int Pen, int NoPen) {
+
+            if(Pen == 1){
+            
+            SqlCommand ConsultaCargarPen = new SqlCommand();
+            ConsultaCargarPen.Connection = Conexion;
+
+            ConsultaCargarPen.CommandText = "select Trabajador_ID, Ob_Pat_Pen from salarios where Ob_Pat_Pen != 0";
+
+            Conexion.Open();
+
+            SqlDataReader readerPuesto = ConsultaCargarPen.ExecuteReader();
+
+            double CargaObreraPen = 0;
+
+            if (readerPuesto.HasRows)
+            {
+                while (readerPuesto.Read())
+                {
+                    CargaObreraPen = Convert.ToDouble(readerPuesto["Ob_Pat_Pen"]);
+                }
+            }
+
+            Conexion.Close();
+
+            return CargaObreraPen;
+            }
+
+            if (NoPen == 1) {
+
+                SqlCommand ConsultaCargarNoPen = new SqlCommand();
+                ConsultaCargarNoPen.Connection = Conexion;
+
+                ConsultaCargarNoPen.CommandText = "select Trabajador_ID, Ob_Pat_NoPen from salarios where Ob_Pat_NoPen != 0";
+
+                Conexion.Open();
+
+                SqlDataReader readerPuesto = ConsultaCargarNoPen.ExecuteReader();
+
+                double CargaObreraNoPen = 0;
+
+                if (readerPuesto.HasRows)
+                {
+                    while (readerPuesto.Read())
+                    {
+                        CargaObreraNoPen = Convert.ToDouble(readerPuesto["Ob_Pat_NoPen"]);
+                    }
+                }
+
+                Conexion.Close();
+
+                return CargaObreraNoPen;
+            }
+
+            return 0;
+        }
+
+        public void updateCargas(int ID, double Monto, int pen) {
+
+            if (pen == 1)
+            {
+                SqlCommand UpdateCargas = new SqlCommand();
+                UpdateCargas.Connection = Conexion;
+                UpdateCargas.CommandText = "update salarios set Ob_Pat_Pen = @Monto where Trabajador_ID = @ID";
+                UpdateCargas.Parameters.AddWithValue("@ID", ID);
+                UpdateCargas.Parameters.AddWithValue("@Monto", Monto);
+                UpdateCargas.ExecuteNonQuery();
+
+            }
+            else {
+                SqlCommand UpdateCargas = new SqlCommand();
+                UpdateCargas.Connection = Conexion;
+                UpdateCargas.CommandText = "update salarios set Ob_Pat_NoPen = @Monto where Trabajador_ID = @ID";
+                UpdateCargas.Parameters.AddWithValue("@ID", ID);
+                UpdateCargas.Parameters.AddWithValue("@Monto", Monto);
+
+                UpdateCargas.ExecuteNonQuery();
+            
+            }
+            
+        }
+        public void ActualizarCargas(int Pen, int NoPen, double monto) {
+
+            if (Pen == 1)
+            {
+
+                SqlCommand ConsultaCargarPen = new SqlCommand();
+                ConsultaCargarPen.Connection = Conexion;
+
+                ConsultaCargarPen.CommandText = "select Trabajador_ID, Ob_Pat_Pen from salarios where Ob_Pat_Pen != 0";
+
+                Conexion.Open();
+
+                SqlDataReader readerCargas = ConsultaCargarPen.ExecuteReader();
+
+                if (readerCargas.HasRows)
+                {
+                    while (readerCargas.Read())
+                    {
+                        updateCargas((int)readerCargas["Trabajador_ID"], monto,Pen);
+                    }
+                }
+
+                Conexion.Close();
+            }
+
+            if (NoPen == 1)
+            {
+
+                SqlCommand ConsultaCargarNoPen = new SqlCommand();
+                ConsultaCargarNoPen.Connection = Conexion;
+
+                ConsultaCargarNoPen.CommandText = "select Trabajador_ID, Ob_Pat_NoPen from salarios where Ob_Pat_NoPen != 0";
+
+                Conexion.Open();
+
+                SqlDataReader readerCargas = ConsultaCargarNoPen.ExecuteReader();
+
+                if (readerCargas.HasRows)
+                {
+                    while (readerCargas.Read())
+                    {
+                        updateCargas((int)readerCargas["Trabajador_ID"], monto, Pen);
+                    }
+                }
+
+                Conexion.Close();
+
+            }
+
+        }
+
     }
 }

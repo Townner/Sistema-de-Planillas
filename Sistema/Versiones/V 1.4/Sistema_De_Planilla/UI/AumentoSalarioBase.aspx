@@ -68,9 +68,9 @@
                 <br />
                 <br />
                 <asp:RegularExpressionValidator ID="REXPorcentaje" runat="server" style="float:left; color: Red;"
-                    ErrorMessage="Formato Correcto: 0.00%" 
+                    ErrorMessage="Formato Correcto: 0,XX%" 
                     
-                    ValidationExpression="\b(0*(?:[0]?|100)\.[0-9]{2})\b" 
+                    ValidationExpression="\b(0*(?:[0]?|100)\,[0-9]{2})\b" 
                     ControlToValidate="txtProcentual"></asp:RegularExpressionValidator>
             </td>
         </tr>

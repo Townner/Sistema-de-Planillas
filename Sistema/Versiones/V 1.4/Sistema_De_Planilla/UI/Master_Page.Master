@@ -65,6 +65,8 @@
             <ul class = "subMenu">
               <li><a href="/AgregarCliente.aspx">Actualizacion de Datos Financieros</a></li>
               <li><a href="/ConsultarCliente.aspx">Actualizacion de Datos Personales</a></li>
+              <li><a href="/ConsultarCliente.aspx">Actualizacion de Fechas</a></li>
+              <li><a href="/ConsultarCliente.aspx">Actualizacion de Horas</a></li>
             </ul>
          </li>
 

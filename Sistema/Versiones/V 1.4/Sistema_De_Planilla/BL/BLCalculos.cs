@@ -12,7 +12,7 @@ namespace BL
         public double imprenta;
         public int hijos;
         public int conyugue;
-        public double ob_pat_pen;   
+        public double ob_pat_pen;
         public double ob_pat_nopen;
         public double s_cargas;
         public double s_extras;
@@ -44,8 +44,8 @@ namespace BL
         public double CalculoIncapacida(string ced)
         {
             TO.TOHoras h = new TO.TOHoras();
-            
-            this.s_incapcidad = h.H_Incap * (this.s_bruto/160);
+
+            this.s_incapcidad = h.H_Incap * (this.s_bruto / 160);
 
             DA.DACalculos calcinca = new DA.DACalculos();
             calcinca.CalculoIncapacida(ced, s_incapcidad);
@@ -56,7 +56,7 @@ namespace BL
         public double CalculoHorasExtra(string ced)
         {
             TO.TOHoras h = new TO.TOHoras();
-            
+
             s_extras = h.H_Extra * ((s_bruto / 160) * 1.5);
 
             DA.DACalculos calchex = new DA.DACalculos();
@@ -66,55 +66,57 @@ namespace BL
         }
 
         public double CalculoImpuestoRenta(string ced)
-                {
-                    double varSB = 0, varH = 0, varC = 0, total = 0;
-                    if (s_bruto > 1190000){
-                        varSB = s_bruto * 0.15;
-                    }
-                    else if (s_bruto < 1190000 && s_bruto > 793000)
-                    {
-                        varSB = s_bruto * 0.1;
-                    }
-                    if (hijos > 0)
-                    {
-                        varH = hijos * 1490;
-                    }
-                    if(conyugue > 0){
-                        varC = 2230;
-                    }
+        {
+            double varSB = 0, varH = 0, varC = 0, total = 0;
+            if (s_bruto > 1190000)
+            {
+                varSB = s_bruto * 0.15;
+            }
+            else if (s_bruto < 1190000 && s_bruto > 793000)
+            {
+                varSB = s_bruto * 0.1;
+            }
+            if (hijos > 0)
+            {
+                varH = hijos * 1490;
+            }
+            if (conyugue > 0)
+            {
+                varC = 2230;
+            }
 
-                    imprenta = varSB + varH + varC;
+            imprenta = varSB + varH + varC;
 
-                    DA.DACalculos calcimprent = new DA.DACalculos();
-                    calcimprent.CalculoImpuestoRenta(ced, imprenta);
+            DA.DACalculos calcimprent = new DA.DACalculos();
+            calcimprent.CalculoImpuestoRenta(ced, imprenta);
 
-                    return total;
-                }
+            return total;
+        }
 
-        public double CalculoCargasPatronales(string ced)
-                {
-                    s_cargas = (cargas/100) * s_bruto;
+        public double CalculoCargasPatronales(string ced) // REVISAR!!!
+        {
+           // s_cargas = (cargas / 100) * s_bruto;
 
-                    DA.DACalculos calccpatron = new DA.DACalculos();
-                    calccpatron.CalculoCargasPatronales(ced, s_cargas);
+            DA.DACalculos calccpatron = new DA.DACalculos();
+            calccpatron.CalculoCargasPatronales(ced, s_cargas);
 
-                    return s_cargas;
-                }
+            return s_cargas;
+        }
 
         public double CalculoSalarioNeto(string ced)
-                {
-                    s_neto = s_bruto - CalculoCargasPatronales(ced);
+        {
+            s_neto = s_bruto - CalculoCargasPatronales(ced);
 
-                    DA.DACalculos calsnto = new DA.DACalculos();
-                    calsnto.CalculoSalarioNeto(ced, s_neto);
+            DA.DACalculos calsnto = new DA.DACalculos();
+            calsnto.CalculoSalarioNeto(ced, s_neto);
 
-                    return s_neto;
-                }
+            return s_neto;
+        }
 
         public double CalculoSalarioFinal(string ced, double monto)
         {
             BL.BLCalculos_Financieros cf = new BL.BLCalculos_Financieros();
-            
+
 
             s_final = s_bruto + CalculoHorasExtra(ced) - CalculoImpuestoRenta(ced) + CalculoIncapacida(ced) - cf.CalculoAdicionalMensual(ced, monto) - cf.CalculoAdicionalQuincenal(ced, monto) - cf.CalculoInetresesPrestamo(ced) + cf.CalculoSubcidio(ced);
 
@@ -124,7 +126,8 @@ namespace BL
             return s_final;
         }
 
-        public void CalculoAumentoSalarioBase(int mis, int jar, int cho) {
+        public void CalculoAumentoSalarioBase(int mis, int jar, int cho)
+        {
             TO.TOCalculos TO_Calcu = new TO.TOCalculos();
             TO_Calcu.S_Base = this.s_base;
 
@@ -141,7 +144,28 @@ namespace BL
             DA_Calcu.CalculoAumentoSalarioBasePorcentual(TO_Calcu, mis, jar, cho);
         }
 
-       /* public BuscarCargasObreras
+        public void BuscarCargasObreras(int pen, int NoPen){
 
-        }*/
-}
+            if (pen == 1)
+            {
+                DA.DACalculos DA_Calc = new DA.DACalculos();
+                this.ob_pat_pen = DA_Calc.BuscarCargarObreras(pen, NoPen);
+
+            }
+            else {
+
+                DA.DACalculos DA_Calc = new DA.DACalculos();
+                this.ob_pat_nopen = DA_Calc.BuscarCargarObreras(pen, NoPen);
+            }
+          
+        }
+
+        public void ActualizarCargas(int pen, int NoPen, double monto)
+        {
+
+                DA.DACalculos DA_Calc = new DA.DACalculos();
+                DA_Calc.ActualizarCargas(pen, NoPen,monto);
+        }
+
+      }
+    }

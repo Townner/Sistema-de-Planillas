@@ -63,7 +63,8 @@
     <Content Include="AgregarUsuario.aspx" />
     <Content Include="App_Themes\Theme_Login\Login.css" />
     <Content Include="App_Themes\Theme_Master\Master_Admin.css" />
-    <Content Include="ModificarCargarObreras.aspx" />
+    <Content Include="ConsultarTrabajador.aspx" />
+    <Content Include="ModificarCargasObreras.aspx" />
     <Content Include="ModificarTrabajador.aspx" />
     <Content Include="RevisiónFinalPlanilla.aspx" />
     <Content Include="AumentoSalarioBase.aspx" />
@@ -137,12 +138,19 @@
     <Compile Include="AgregarUsuario.aspx.designer.cs">
       <DependentUpon>AgregarUsuario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ModificarCargarObreras.aspx.cs">
-      <DependentUpon>ModificarCargarObreras.aspx</DependentUpon>
+    <Compile Include="ConsultarTrabajador.aspx.cs">
+      <DependentUpon>ConsultarTrabajador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ModificarCargarObreras.aspx.designer.cs">
-      <DependentUpon>ModificarCargarObreras.aspx</DependentUpon>
+    <Compile Include="ConsultarTrabajador.aspx.designer.cs">
+      <DependentUpon>ConsultarTrabajador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarCargasObreras.aspx.cs">
+      <DependentUpon>ModificarCargasObreras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarCargasObreras.aspx.designer.cs">
+      <DependentUpon>ModificarCargasObreras.aspx</DependentUpon>
     </Compile>
     <Compile Include="ModificarTrabajador.aspx.cs">
       <DependentUpon>ModificarTrabajador.aspx</DependentUpon>
@@ -488,7 +496,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50422</DevelopmentServerPort>
+          <DevelopmentServerPort>52746</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
