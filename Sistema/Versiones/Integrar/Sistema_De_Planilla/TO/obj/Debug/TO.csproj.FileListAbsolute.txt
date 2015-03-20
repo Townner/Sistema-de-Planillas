@@ -1,0 +1,31 @@
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\bin\Debug\TO.dll
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\bin\Debug\TO.pdb
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\obj\Debug\TO.dll
+X:\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\obj\Debug\TO.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\bin\Debug\TO.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\bin\Debug\TO.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\obj\Debug\TO.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.0\Sistema_De_Planilla\TO\obj\Debug\TO.pdb
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\TO\bin\Debug\TO.dll
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\TO\bin\Debug\TO.pdb
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\TO\obj\Debug\TO.csprojResolveAssemblyReference.cache
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\TO\obj\Debug\TO.dll
+Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\TO\obj\Debug\TO.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\TO\bin\Debug\TO.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\TO\bin\Debug\TO.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\TO\obj\Debug\TO.csprojResolveAssemblyReference.cache
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\TO\obj\Debug\TO.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.1\Sistema_De_Planilla\TO\obj\Debug\TO.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.2\Sistema_De_Planilla\TO\bin\Debug\TO.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.2\Sistema_De_Planilla\TO\bin\Debug\TO.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.2\Sistema_De_Planilla\TO\obj\Debug\TO.csprojResolveAssemblyReference.cache
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.2\Sistema_De_Planilla\TO\obj\Debug\TO.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.2\Sistema_De_Planilla\TO\obj\Debug\TO.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\TO\bin\Debug\TO.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\TO\bin\Debug\TO.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\TO\obj\Debug\TO.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.3\Sistema_De_Planilla\TO\obj\Debug\TO.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.4\Sistema_De_Planilla\TO\bin\Debug\TO.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.4\Sistema_De_Planilla\TO\bin\Debug\TO.pdb
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.4\Sistema_De_Planilla\TO\obj\Debug\TO.dll
+\\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.4\Sistema_De_Planilla\TO\obj\Debug\TO.pdb
