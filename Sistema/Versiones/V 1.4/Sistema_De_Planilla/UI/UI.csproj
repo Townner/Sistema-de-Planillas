@@ -64,6 +64,7 @@
     <Content Include="App_Themes\Theme_Login\Login.css" />
     <Content Include="App_Themes\Theme_Master\Master_Admin.css" />
     <Content Include="ConsultarTrabajador.aspx" />
+    <Content Include="DesactivarTrabajador.aspx" />
     <Content Include="ModificarCargasObreras.aspx" />
     <Content Include="ModificarTrabajador.aspx" />
     <Content Include="RevisiónFinalPlanilla.aspx" />
@@ -144,6 +145,13 @@
     </Compile>
     <Compile Include="ConsultarTrabajador.aspx.designer.cs">
       <DependentUpon>ConsultarTrabajador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DesactivarTrabajador.aspx.cs">
+      <DependentUpon>DesactivarTrabajador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DesactivarTrabajador.aspx.designer.cs">
+      <DependentUpon>DesactivarTrabajador.aspx</DependentUpon>
     </Compile>
     <Compile Include="ModificarCargasObreras.aspx.cs">
       <DependentUpon>ModificarCargasObreras.aspx</DependentUpon>
@@ -496,7 +504,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52746</DevelopmentServerPort>
+          <DevelopmentServerPort>49849</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

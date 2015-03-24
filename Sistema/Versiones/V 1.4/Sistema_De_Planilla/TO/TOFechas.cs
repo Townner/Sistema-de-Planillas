@@ -9,10 +9,10 @@ namespace TO
     {
         private int trabajador_id;
         private string trabajador_ced;
-        private DateTime f_nac;
-        private DateTime f_ingreso;
-        private DateTime f_prueba;
-        private DateTime f_salida;
+        private string f_nac;
+        private string f_ingreso;
+        private string f_prueba;
+        private string f_salida;
 
         public int Trabajador_ID
         {
@@ -24,22 +24,22 @@ namespace TO
             get { return trabajador_ced; }
             set { trabajador_ced = value; }
         }
-        public DateTime F_Nac
+        public string F_Nac
         {
             get { return f_nac; }
             set { f_nac = value; }
         }
-        public DateTime F_Ingreso
+        public string F_Ingreso
         {
             get { return f_ingreso; }
             set { f_ingreso = value; }
         }
-        public DateTime F_Pruba
+        public string F_Pruba
         {
             get { return f_prueba; }
             set { f_prueba = value; }
         }
-        public DateTime F_Salida
+        public string F_Salida
         {
             get { return f_salida; }
             set { f_salida = value; }

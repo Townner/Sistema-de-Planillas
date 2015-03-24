@@ -9,7 +9,7 @@ namespace DA
     public class DALicencias
     {
 
-        SqlConnection Conexion = new SqlConnection();
+        SqlConnection Conexion = new SqlConnection(DA.Properties.Settings.Default.ConString);
 
         public TO.TOLicencias Search(string ced)
         {
@@ -19,21 +19,89 @@ namespace DA
 
             Search.Parameters.AddWithValue("@ced", ced);
 
+            Conexion.Open();
+
             SqlDataReader read = Search.ExecuteReader();
             TO.TOLicencias temp = new TO.TOLicencias();
 
-            if (read.Read())
+            int fieldCount = read.FieldCount;
+            object[] fieldValues = new object[fieldCount];
+            string[] headers = new string[fieldCount];
+
+            if (read.HasRows)
             {
                 while (read.Read())
                 {
-                    temp.Trabajador_ID = (int)read["ID_Departamento"];
-                    temp.Trabajador_Ced = (string)read["Nom_Dep"];
-                    temp.Lic1 = (string)read["Licencia_1"];
-                    temp.Lic2 = (string)read["Licencia_2"];
-                    temp.Lic3 = (string)read["Licencia_3"];
-                    temp.V_Lic1 = (DateTime)read["F_Vencimiento_1"];
-                    temp.V_Lic2 = (DateTime)read["F_Vencimiento_2"];
-                    temp.V_Lic3 = (DateTime)read["F_Vencimiento_3"];
+                    read.GetValues(fieldValues);
+                    string value = "";
+
+                    for (int fieldCounter = 0; fieldCounter < fieldCount; fieldCounter++)
+                    {
+                        value = fieldValues[fieldCounter].ToString();
+                        if (value == "")
+                            fieldValues[fieldCounter] = "N/A";
+                    }
+
+                    temp.Trabajador_ID = (int)read["Trabajador_ID"];
+                    temp.Trabajador_Ced = (string)read["Trabajador_Ced"];
+
+                    if (fieldValues[2].ToString() != "N/A")
+                    {
+                        temp.Lic1 = (string)read["Licencia_1"];
+                    }
+                    else
+                    {
+                        temp.Lic1 = fieldValues[2].ToString();
+                    }
+
+                    if (fieldValues[3].ToString() != "N/A")
+                    {
+                        temp.Lic2 = (string)read["Licencia_2"];
+                    }
+                    else
+                    {
+                        temp.Lic2 = fieldValues[3].ToString();
+                    }
+
+                    if (fieldValues[4].ToString() != "N/A"){
+                    
+                        temp.Lic3 = (string)read["Licencia_3"];
+                    }
+                    else
+                    {
+                        temp.Lic3 = fieldValues[4].ToString();
+                    }
+
+                    if (fieldValues[5].ToString() != "N/A")
+                    {
+
+                        temp.V_Lic1 = Convert.ToDateTime(read["F_Vencimiento_1"]).ToString("yyyy-MM-dd");
+                    }
+                    else
+                    {
+                        temp.V_Lic1 = fieldValues[5].ToString();
+                    }
+
+                    if (fieldValues[6].ToString() != "N/A")
+                    {
+
+                        temp.V_Lic2 = Convert.ToDateTime(read["F_Vencimiento_2"]).ToString("yyyy-MM-dd");
+                    }
+                    else
+                    {
+                        temp.V_Lic2 = fieldValues[6].ToString();
+                    }
+
+
+                    if (fieldValues[7].ToString() != "N/A")
+                    {
+
+                        temp.V_Lic3 = Convert.ToDateTime(read["F_Vencimiento_3"]).ToString("yyyy-MM-dd");
+                    }
+                    else
+                    {
+                        temp.V_Lic3 = fieldValues[7].ToString();
+                    }
                 }
             }
             Conexion.Close();

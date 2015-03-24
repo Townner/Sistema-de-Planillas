@@ -13,7 +13,7 @@ namespace BL
         public int h_extra;
         public int h_incap;
         public int h_laboradas;
-        public int subcidio;
+        public int h_subcidio;
 
         public void Search(string ced)
         {
@@ -24,7 +24,7 @@ namespace BL
             this.h_extra = sr.Search(ced).H_Extra;
             this.h_incap = sr.Search(ced).H_Incap;
             this.h_laboradas = sr.Search(ced).H_Laboradas;
-            this.subcidio = sr.Search(ced).Subcidio;
+            this.h_subcidio = sr.Search(ced).H_Subcidio;
 
         }
 

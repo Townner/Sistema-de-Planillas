@@ -12,9 +12,9 @@ namespace BL
         public string lic1;
         public string lic2;
         public string lic3;
-        public DateTime v_lic1;
-        public DateTime v_lic2;
-        public DateTime v_lic3;
+        public string v_lic1;
+        public string v_lic2;
+        public string v_lic3;
 
         public void Search(string ced)
         {

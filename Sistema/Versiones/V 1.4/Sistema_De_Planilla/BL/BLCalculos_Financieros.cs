@@ -56,7 +56,7 @@ namespace BL
         {
             TO.TOHoras h = new TO.TOHoras();
 
-            s_subcidio = h.Subcidio * m_subcidio;
+            s_subcidio = h.H_Subcidio * m_subcidio;
 
             DA.DACalculos_Financieros calsub = new DA.DACalculos_Financieros();
             calsub.CalculoSubcidio(ced, s_subcidio);

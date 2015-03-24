@@ -12,31 +12,85 @@ namespace DA
         {
             SqlCommand Search = new SqlCommand();
             Search.Connection = Conexion;
-            Search.CommandText = "Select * from Trabajador where Ced = @ced";
+            Search.CommandText = "Select * from dbo.trabajador where Ced = @ced";
 
             Search.Parameters.AddWithValue("@ced", ced);
+
+            Conexion.Open();
 
             SqlDataReader read = Search.ExecuteReader();
             TO.TOTrabajador temp = new TO.TOTrabajador();
 
-            if (read.Read())
+            int fieldCount = read.FieldCount;
+            object[] fieldValues = new object[fieldCount];
+            string[] headers = new string[fieldCount];
+
+            if (read.HasRows)
             {
                 while (read.Read())
                 {
+                   read.GetValues(fieldValues);
+                   string value = "";
+
+                    for (int fieldCounter = 0; fieldCounter < fieldCount; fieldCounter++)
+                    {
+                        value = fieldValues[fieldCounter].ToString();
+                        if (value == "")
+                            fieldValues[fieldCounter] = "N/A";
+                    }
+
                     temp.ID = (int)read["ID"];
                     temp.Ced = (string)read["Ced"];
-                    temp.Ven_Ced = (string)read["Ven_Ced"];
+                    temp.Ven_Ced = Convert.ToDateTime(read["Ven_Ced"]).ToString("yyyy-MM-dd");
                     temp.Nombre = (string)read["Nombre"];
                     temp.Apellido1 = (string)read["Apellido1"];
                     temp.Apellido2 = (string)read["Apellido2"];
-                    temp.Mail = (string)read["Mail"];
-                    temp.Tel1 = (string)read["Tel1"];
-                    temp.Tel2 = (string)read["Tel2"];
+
+                    if (fieldValues[6].ToString() != "N/A")
+                    {
+                        temp.Mail = (string)read["Mail"];
+                    }
+                    else {
+                        temp.Mail = fieldValues[6].ToString();
+                    }
+
+                    if (fieldValues[7].ToString() != "N/A")
+                    {
+                        temp.Tel1 = (string)read["Tel1"];
+                    }
+                    else
+                    {
+                        temp.Tel1 = fieldValues[7].ToString();
+                    }
+
+                    if (fieldValues[8].ToString() != "N/A")
+                    {
+                        temp.Tel2 = (string)read["Tel2"];
+                    }
+                    else
+                    {
+                        temp.Tel2 = fieldValues[8].ToString();
+                    }
                     temp.Dir = (string)read["Dir"];
-                    temp.Experiencia = (string)read["Experiencia"];
-                    temp.Titulos = (string)read["Titulos"];
-                    temp.Num_Seguro = (int)read["Num_Seguro"];
-                    temp.Uniforme = (string)read["Uniforme"];
+
+                    if (fieldValues[10].ToString() != "N/A")
+                    {
+                        temp.Experiencia = (string)read["Experiencia"];
+                    }
+                    else
+                    {
+                        temp.Experiencia = fieldValues[10].ToString();
+                    }
+                    if (fieldValues[11].ToString() != "N/A")
+                    {
+                        temp.Titulos = (string)read["Titulos"];
+                    }
+                    else
+                    {
+                        temp.Titulos = fieldValues[11].ToString();
+                    }
+                    temp.Num_Seguro = Convert.ToInt32(read["Num_Seguro"]);
+                    temp.Uniforme = Convert.ToDateTime(read["Uniforme"]).ToString("yyyy-MM-dd");
                     temp.Estado_t = (string)read["Estado_t"];
                     temp.Inact = (string)read["Inact"];
                     temp.L_Trabajo = (string)read["L_Trabajo"];
@@ -124,9 +178,9 @@ namespace DA
         {
             SqlCommand modtrab = new SqlCommand();
             modtrab.Connection = Conexion;
-            modtrab.CommandText = "UPDATE Trabajador SET Ced = @ced, Ven_Ced = @ven_ced, Nombre = @nombre, Apellido1 = @apellido1" +
-                ", Apellido2 = @apellido2, Mail = @mail, Tel1 = @tel1, Tel2 = @tel2, Dir = @dir, Experiencia = @experiencia, Titulos = @titulos, Num_Seguro = @@num_seguro, Uniforme = @@uniforme" +
-                ", Estado_t = @estado_t, Inact = @inact, L_Trabajo = @l_trabajo, Est_Civ = @est_civ, Nacionalidad = @nacionalidad, ID_Departamento = @id_departamento, ID_Puesto = @id_puesto WHERE Ced = @ced;";
+            modtrab.CommandText = " UPDATE dbo.Trabajador SET Ced = @ced, Ven_Ced = @ven_ced, Nombre = @nombre, Apellido1 = @apellido1 " +
+                " , Apellido2 = @apellido2, Mail = @mail, Tel1 = @tel1, Tel2 = @tel2, Dir = @dir, Experiencia = @experiencia, Titulos = @titulos, Num_Seguro = @num_seguro, Uniforme = @uniforme " +
+                " , Estado_t = @estado_t, Inact = @inact, L_Trabajo = @l_trabajo, Est_Civ = @est_civ, Nacionalidad = @nacionalidad, ID_Departamento = @id_departamento, ID_Puesto = @id_puesto WHERE Ced = @ced;";
 
             modtrab.Parameters.AddWithValue("@ced", trab.Ced);
             modtrab.Parameters.AddWithValue("@ven_ced", trab.Ven_Ced);
@@ -141,7 +195,7 @@ namespace DA
             modtrab.Parameters.AddWithValue("@titulos", trab.Titulos);
             modtrab.Parameters.AddWithValue("@num_seguro", trab.Num_Seguro);
             modtrab.Parameters.AddWithValue("@uniforme", trab.Uniforme);
-            modtrab.Parameters.AddWithValue("@@estado_t", trab.Estado_t);
+            modtrab.Parameters.AddWithValue("@estado_t", trab.Estado_t);
             modtrab.Parameters.AddWithValue("@inact", trab.Inact);
             modtrab.Parameters.AddWithValue("@l_trabajo", trab.L_Trabajo);
             modtrab.Parameters.AddWithValue("@est_civ", trab.Est_Civ);

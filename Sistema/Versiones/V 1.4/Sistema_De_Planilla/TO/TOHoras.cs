@@ -13,7 +13,7 @@ namespace TO
         private int h_extra;
         private int h_incap;
         private int h_laboradas;
-        private int subcidio;
+        private int h_subcidio;
 
         public int Trabajador_ID
         {
@@ -45,10 +45,10 @@ namespace TO
             get { return h_laboradas; }
             set { h_laboradas = value; }
         }
-        public int Subcidio
+        public int H_Subcidio
         {
-            get { return subcidio; }
-            set { subcidio = value; }
+            get { return h_subcidio; }
+            set { h_subcidio = value; }
         }
         
     }

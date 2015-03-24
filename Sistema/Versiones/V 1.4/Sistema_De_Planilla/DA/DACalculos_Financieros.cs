@@ -9,37 +9,39 @@ namespace DA
     public class DACalculos_Financieros
     {
 
-        SqlConnection Conexion = new SqlConnection();
+        SqlConnection Conexion = new SqlConnection(DA.Properties.Settings.Default.ConString);
 
         public TO.TOCalculos_Financieros Search(string ced)
         {
             SqlCommand Search = new SqlCommand();
             Search.Connection = Conexion;
-            Search.CommandText = "Select * FROM Cargos_Financieros where Trabajador_Ced = @ced;";
+            Search.CommandText = "Select * FROM dbo.Cargos_Financieros where Trabajador_Ced = @ced;";
 
             Search.Parameters.AddWithValue("@ced", ced);
+
+            Conexion.Open();
 
             SqlDataReader read = Search.ExecuteReader();
             TO.TOCalculos_Financieros temp = new TO.TOCalculos_Financieros();
 
-            if (read.Read())
+            if (read.HasRows)
             {
                 while (read.Read())
                 {
                     temp.Trabajador_ID = (int)read["Trabajador_ID"];
                     temp.Trabajador_Ced = (string)read["Trabajador_Ced"];
-                    temp.Ahorro = (double)read["Ahorros"];
-                    temp.Interes = (double)read["Intereses"];
-                    temp.M_Prestamo = (double)read["M_Prestamo"];
-                    temp.C_Prest = (double)read["C_Prest"];
-                    temp.A_Quincenal = (double)read["A_Quincenal"];
-                    temp.A_Mensual1 = (double)read["A_Mensual1"];
-                    temp.A_Mensual2 = (double)read["A_Mensual2"];
-                    temp.Embar = (double)read["Embar"];
-                    temp.Adelan = (double)read["Adelan"];
-                    temp.Otros = (double)read["Otros"];
-                    temp.M_Subcidio = (double)read["M_Subsidio"];
-                    temp.S_Subcidio = (double)read["S_Subcdio"];
+                    temp.Ahorro = Convert.ToDouble(read["Ahorros"]);
+                    temp.Interes = Convert.ToDouble(read["Intereses"]);
+                    temp.M_Prestamo = Convert.ToDouble(read["M_Prestamo"]);
+                    temp.C_Prest = Convert.ToDouble(read["C_Prest"]);
+                    temp.A_Quincenal = Convert.ToDouble(read["A_Quincenal"]);
+                    temp.A_Mensual1 = Convert.ToDouble(read["A_Mensual1"]);
+                    temp.A_Mensual2 = Convert.ToDouble(read["A_Mensual2"]);
+                    temp.Embar = Convert.ToDouble(read["Embar"]);
+                    temp.Adelan = Convert.ToDouble(read["Adelan"]);
+                    temp.Otros = Convert.ToDouble(read["Otros"]);
+                    temp.M_Subcidio = Convert.ToDouble(read["M_Subsidio"]);
+                    temp.S_Subcidio = Convert.ToDouble(read["S_Subsidio"]);
                 }
             }
             Conexion.Close();

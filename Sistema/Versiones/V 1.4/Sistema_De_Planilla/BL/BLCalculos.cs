@@ -10,7 +10,8 @@ namespace BL
         public int trabajador_id;
         public string trabajador_ced;
         public double imprenta;
-        public int hijos;
+        public int hijos_menor;
+        public int hijos_mayor;
         public int conyugue;
         public double ob_pat_pen;
         public double ob_pat_nopen;
@@ -28,7 +29,8 @@ namespace BL
             this.trabajador_id = sr.Search(ced).Trabajador_ID;
             this.trabajador_ced = sr.Search(ced).Trabajador_Ced;
             this.imprenta = sr.Search(ced).ImpRenta;
-            this.hijos = sr.Search(ced).Hijos;
+            this.hijos_menor = sr.Search(ced).Hijos_Menor;
+            this.hijos_mayor = sr.Search(ced).Hijos_Mayor;
             this.conyugue = sr.Search(ced).Conyugue;
             this.ob_pat_nopen = sr.Search(ced).Ob_Pat_NoPen;
             this.ob_pat_pen = sr.Search(ced).Ob_Pat_Pen;
@@ -65,7 +67,7 @@ namespace BL
             return s_extras;
         }
 
-        public double CalculoImpuestoRenta(string ced)
+       /* public double CalculoImpuestoRenta(string ced)
         {
             double varSB = 0, varH = 0, varC = 0, total = 0;
             if (s_bruto > 1190000)
@@ -91,7 +93,7 @@ namespace BL
             calcimprent.CalculoImpuestoRenta(ced, imprenta);
 
             return total;
-        }
+        }*/
 
         public double CalculoCargasPatronales(string ced) // REVISAR!!!
         {
@@ -118,7 +120,7 @@ namespace BL
             BL.BLCalculos_Financieros cf = new BL.BLCalculos_Financieros();
 
 
-            s_final = s_bruto + CalculoHorasExtra(ced) - CalculoImpuestoRenta(ced) + CalculoIncapacida(ced) - cf.CalculoAdicionalMensual(ced, monto) - cf.CalculoAdicionalQuincenal(ced, monto) - cf.CalculoInetresesPrestamo(ced) + cf.CalculoSubcidio(ced);
+            s_final = s_bruto + CalculoHorasExtra(ced) - /*CalculoImpuestoRenta(ced)*/ + CalculoIncapacida(ced) - cf.CalculoAdicionalMensual(ced, monto) - cf.CalculoAdicionalQuincenal(ced, monto) - cf.CalculoInetresesPrestamo(ced) + cf.CalculoSubcidio(ced);
 
             DA.DACalculos calcsdin = new DA.DACalculos();
             calcsdin.CalculoSalarioFinal(ced, s_final);

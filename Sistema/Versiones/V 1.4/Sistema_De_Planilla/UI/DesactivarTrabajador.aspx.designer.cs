@@ -10,7 +10,7 @@
 namespace UI {
     
     
-    public partial class ConsultarTrabajador {
+    public partial class DesactivarTrabajador {
         
         /// <summary>
         /// txtCed control.
@@ -40,75 +40,57 @@ namespace UI {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegexCed;
         
         /// <summary>
-        /// GrdTrabGeneral control.
+        /// GrdTrab control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GrdTrabGeneral;
+        protected global::System.Web.UI.WebControls.GridView GrdTrab;
         
         /// <summary>
-        /// GrdTrabDetalle control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GrdTrabDetalle;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// GRHoras control.
+        /// DDLRecon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GRHoras;
+        protected global::System.Web.UI.WebControls.DropDownList DDLRecon;
         
         /// <summary>
-        /// GRFechas control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GRFechas;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// GRLicencias control.
+        /// DDLEstado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GRLicencias;
+        protected global::System.Web.UI.WebControls.DropDownList DDLEstado;
         
         /// <summary>
-        /// GRSalario control.
+        /// btnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GRSalario;
-        
-        /// <summary>
-        /// GRCargos control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GRCargos;
-        
-        /// <summary>
-        /// btnNueva control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNueva;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
     }
 }

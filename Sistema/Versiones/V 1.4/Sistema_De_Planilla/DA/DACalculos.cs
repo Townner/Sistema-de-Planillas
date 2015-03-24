@@ -15,31 +15,33 @@ namespace DA
         {
             SqlCommand Search = new SqlCommand();
             Search.Connection = Conexion;
-            Search.CommandText = "Select * FROM Salarios WHERE Trabajador_Ced = @ced;";
-
+            Search.CommandText = "Select * FROM dbo.Salarios WHERE Trabajador_Ced = @ced;";
             Search.Parameters.AddWithValue("@ced", ced);
-
+            
+            Conexion.Open();
             SqlDataReader read = Search.ExecuteReader();
             TO.TOCalculos temp = new TO.TOCalculos();
 
-            if (read.Read())
+            if (read.HasRows)
             {
                 while (read.Read())
                 {
                     temp.Trabajador_ID = (int)read["Trabajador_ID"];
                     temp.Trabajador_Ced = (string)read["Trabajador_Ced"];
-                    temp.ImpRenta = (double)read["S_ImpRenta"];
-                    temp.Hijos = (int)read["Hijos"];
-                    temp.Conyugue = (int)read["Conyugue"];
-                    temp.Ob_Pat_NoPen = (double)read["Ob_Pat_NoPen"];
-                    temp.Ob_Pat_Pen = (double)read["Ob_Pat_Pen"];
-                    temp.S_Cargas = (double)read["S_Ob_Pat"];
-                    temp.S_Extras = (double)read["S_Extra"];
-                    temp.S_Incapacidad = (double)read["S_Incapacidad"];
-                    temp.S_Base = (double)read["S_Base"];
-                    temp.S_Bruto = (double)read["S_Bruto"];
-                    temp.S_Neto = (double)read["S_Neto"];
-                    temp.S_Final = (double)read["S_Final"];
+                    temp.S_Base = Convert.ToDouble(read["S_Base"]);
+                    temp.S_Bruto = Convert.ToDouble(read["S_Bruto"]);
+                    temp.Ob_Pat_NoPen = Convert.ToDouble(read["Ob_Pat_NoPen"]);
+                    temp.Ob_Pat_Pen = Convert.ToDouble(read["Ob_Pat_Pen"]);
+                    temp.S_Cargas = Convert.ToDouble(read["S_Ob_Pat"]);
+                    temp.S_Neto = Convert.ToDouble(read["S_Neto"]);
+                    temp.S_Final = Convert.ToDouble(read["S_Final"]);
+                    temp.ImpRenta = Convert.ToDouble(read["S_ImpRenta"]);
+                    temp.S_Incapacidad = Convert.ToDouble(read["S_Incapacidad"]);
+                    temp.S_Extras = Convert.ToDouble(read["S_Extras"]);
+                    temp.Hijos_Menor = (int)read["Hijos_Menor"];
+                    temp.Hijos_Mayor = (int)read["Hijos_Mayor"];
+                    temp.Conyugue = (int)read["Conyuge"];
+                    
                 }
             }
             Conexion.Close();

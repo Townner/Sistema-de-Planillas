@@ -18,8 +18,6 @@ namespace UI
             btnNueva.Visible = false;
         }
 
-        SqlConnection conexion = new SqlConnection(UI.Properties.Settings.Default.ConString);
-
         DataTable Table = new DataTable();
 
         private void FormatoDataTable()

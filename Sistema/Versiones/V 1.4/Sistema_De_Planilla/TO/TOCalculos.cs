@@ -10,7 +10,8 @@ namespace TO
         private int trabajadr_id;
         private string trabajador_ced;
         private double imprenta;
-        private int hijos;
+        private int hijos_menor; 
+        private int hijos_mayor;
         private int conyugue;
         private double ob_pat_pen;   
         private double ob_pat_nopen;
@@ -21,8 +22,15 @@ namespace TO
         private double s_base;
         private double s_bruto;
         private double s_neto;
+       
 
-    
+
+        public int Hijos_Mayor
+        {
+            get { return hijos_mayor; }
+            set { hijos_mayor = value; }
+        }
+        
 
         public double Ob_Pat_NoPen
         {
@@ -45,10 +53,10 @@ namespace TO
             get { return imprenta; }
             set { imprenta = value; }
         }
-        public int Hijos
+        public int Hijos_Menor
         {
-            get { return hijos; }
-            set { hijos = value; }
+            get { return hijos_menor; }
+            set { hijos_menor = value; }
         }
         public int Conyugue
         {

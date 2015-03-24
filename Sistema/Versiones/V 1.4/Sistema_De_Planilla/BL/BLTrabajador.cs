@@ -93,7 +93,6 @@ namespace BL
         public void ModifcarTrabajador()
         {
             TO.TOTrabajador trab = new TO.TOTrabajador();
-            trab.ID = this.id;
             trab.Ced = this.ced;
             trab.Ven_Ced = this.ven_ced;
             trab.Nombre = this.nombre;

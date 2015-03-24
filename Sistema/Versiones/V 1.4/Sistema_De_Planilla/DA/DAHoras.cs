@@ -9,20 +9,22 @@ namespace DA
     public class DAHoras
     {
 
-        SqlConnection Conexion = new SqlConnection();
+        SqlConnection Conexion = new SqlConnection(DA.Properties.Settings.Default.ConString);
 
         public TO.TOHoras Search(string ced)
         {
             SqlCommand Search = new SqlCommand();
             Search.Connection = Conexion;
-            Search.CommandText = "SELECT * FROM Horas WHERE Trabajador_Ced = @Ced;";
+            Search.CommandText = "SELECT * FROM dbo.Horas WHERE Trabajador_Ced = @Ced;";
 
             Search.Parameters.AddWithValue("@Ced", ced);
+
+            Conexion.Open();
 
             SqlDataReader read = Search.ExecuteReader();
             TO.TOHoras temp = new TO.TOHoras();
 
-            if (read.Read())
+            if (read.HasRows)
             {
                 while (read.Read())
                 {
@@ -32,7 +34,7 @@ namespace DA
                     temp.H_Extra = (int)read["H_Extra"];
                     temp.H_Incap = (int)read["H_Incap"];
                     temp.H_Laboradas = (int)read["H_Laboradas"];
-                    temp.Subcidio = (int)read["H_Subsidio"];
+                    temp.H_Subcidio = (int)read["H_Subsidio"];
                 }
             }
             Conexion.Close();
