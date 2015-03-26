@@ -11,13 +11,13 @@
 namespace UI.Reports {
     using System;
     using System.ComponentModel;
-    using CrystalDecisions.Shared;
-    using CrystalDecisions.ReportSource;
-    using CrystalDecisions.CrystalReports.Engine;
+    //using CrystalDecisions.Shared;
+    //using CrystalDecisions.ReportSource;
+    //using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CRTotalPlanilla : ReportClass {
-        
+    //public class CRTotalPlanilla : ReportClass {
+        /*
         public CRTotalPlanilla() {
         }
         
@@ -148,6 +148,6 @@ namespace UI.Reports {
             //     this.GetType(),
             //     this.ShareDBLogonInfo );
             return key;
-        }
-    }
+        }*/
+    //}
 }

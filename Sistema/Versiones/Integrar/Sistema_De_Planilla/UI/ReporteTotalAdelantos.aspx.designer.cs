@@ -19,7 +19,7 @@ namespace UI {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CrystalDecisions.Web.CrystalReportViewer Reporte_Total_Adelantos;
+        //protected global::CrystalDecisions.Web.CrystalReportViewer Reporte_Total_Adelantos;
         
         /// <summary>
         /// CRTotalAdelantos control.
@@ -28,6 +28,6 @@ namespace UI {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CrystalDecisions.Web.CrystalReportSource CRTotalAdelantos;
+        //protected global::CrystalDecisions.Web.CrystalReportSource CRTotalAdelantos;
     }
 }

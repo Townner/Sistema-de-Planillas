@@ -11,12 +11,12 @@
 namespace UI.Reports {
     using System;
     using System.ComponentModel;
-    using CrystalDecisions.Shared;
-    using CrystalDecisions.ReportSource;
-    using CrystalDecisions.CrystalReports.Engine;
+  //  using CrystalDecisions.Shared;
+   // using CrystalDecisions.ReportSource;
+   // using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CRTotalRenta : ReportClass {
+   /* public class CRTotalRenta : ReportClass {
         
         public CRTotalRenta() {
         }
@@ -165,5 +165,5 @@ namespace UI.Reports {
             //     this.ShareDBLogonInfo );
             return key;
         }
-    }
+    }*/
 }

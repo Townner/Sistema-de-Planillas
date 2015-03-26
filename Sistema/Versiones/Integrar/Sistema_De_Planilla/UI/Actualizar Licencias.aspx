@@ -46,18 +46,19 @@
         <td class="style10">
             <asp:TextBox ID="txtCed" runat="server" style="float: left; margin-left:10px;" 
                 Width="139px"></asp:TextBox>
+                <asp:Button ID="btConsultarLic" runat="server" Text="Cosnultar" 
+                    onclick="btConsultarLic_Click" />
             <br />
             </td>
         <td>
-                <asp:Button ID="btConsultarLic" runat="server" Text="Cosnultar" 
-                    onclick="btConsultarLic_Click" />
-        </td>
+                &nbsp;</td>
     </tr>
     <tr>
         <td class="style9">
                 &nbsp;</td>
         <td class="style10">
-                &nbsp;</td>
+                <asp:Label ID="lblConfirm" runat="server" Text="Label" Visible="False" ForeColor="green"></asp:Label>
+        </td>
         <td class="style8">
                 &nbsp;</td>
     </tr>
@@ -164,8 +165,8 @@
 
             <asp:UpdatePanel ID="UpdatePanel3" runat="server">
              <ContentTemplate>
-             <asp:DropDownList id="DropDownList3" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList>
-             <asp:DropDownList id="DropDownList4" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList> 
+             <asp:DropDownList id="drpCalMonth2" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList>
+             <asp:DropDownList id="drpCalYear2" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList> 
                  <br />
               <asp:Label ID="lblven_ced2" runat="server" Text=""></asp:Label>
             <asp:Calendar ID="calven_ced2" runat="server" BackColor="White" ondayrender="Calendar1_DayRender"
@@ -231,8 +232,8 @@
 
             <asp:UpdatePanel ID="UpdatePanel2" runat="server">
              <ContentTemplate>
-             <asp:DropDownList id="DropDownList1" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList>
-             <asp:DropDownList id="DropDownList2" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList> 
+             <asp:DropDownList id="drpCalMonth3" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList>
+             <asp:DropDownList id="drpCalYear3" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList> 
                  <br />
               <asp:Label ID="lblven_ced3" runat="server" Text=""></asp:Label>
             <asp:Calendar ID="calven_ced3" runat="server" BackColor="White" ondayrender="Calendar1_DayRender"
@@ -267,8 +268,8 @@
         <td class="style14">
                 &nbsp;</td>
         <td class="style5">
-                <asp:Button ID="btnTrab" runat="server" Text="Actualizar" 
-                    style="margin-left:auto; margin-right:auto;" onclick="btnTrab_Click"/>
+                <asp:Button ID="btnAgregar" runat="server" Text="Agregar" 
+                    style="margin-left:auto; margin-right:auto;" onclick="btnAgregar_Click"/>
         </td>
         <td>
                 &nbsp;</td>

@@ -31,6 +31,15 @@ namespace UI {
         protected global::System.Web.UI.WebControls.Button btConsultarLic;
         
         /// <summary>
+        /// lblConfirm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblConfirm;
+        
+        /// <summary>
         /// DropTipo_Lic control.
         /// </summary>
         /// <remarks>
@@ -112,22 +121,22 @@ namespace UI {
         protected global::System.Web.UI.UpdatePanel UpdatePanel3;
         
         /// <summary>
-        /// DropDownList3 control.
+        /// drpCalMonth2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+        protected global::System.Web.UI.WebControls.DropDownList drpCalMonth2;
         
         /// <summary>
-        /// DropDownList4 control.
+        /// drpCalYear2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList4;
+        protected global::System.Web.UI.WebControls.DropDownList drpCalYear2;
         
         /// <summary>
         /// lblven_ced2 control.
@@ -166,22 +175,22 @@ namespace UI {
         protected global::System.Web.UI.UpdatePanel UpdatePanel2;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// drpCalMonth3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList drpCalMonth3;
         
         /// <summary>
-        /// DropDownList2 control.
+        /// drpCalYear3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList drpCalYear3;
         
         /// <summary>
         /// lblven_ced3 control.
@@ -202,12 +211,12 @@ namespace UI {
         protected global::System.Web.UI.WebControls.Calendar calven_ced3;
         
         /// <summary>
-        /// btnTrab control.
+        /// btnAgregar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTrab;
+        protected global::System.Web.UI.WebControls.Button btnAgregar;
     }
 }

@@ -261,32 +261,27 @@
     <Compile Include="Reports\CRReporteCedulas.cs">
       <DependentUpon>CRReporteCedulas.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Reports\CRReporteLicencias.cs">
       <DependentUpon>CRReporteLicencias.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Reports\CRGlobalPlanilla.cs">
       <DependentUpon>CRGlobalPlanilla.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Reports\CRTotalPlanilla.cs">
       <DependentUpon>CRTotalPlanilla.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Reports\CRTotalRenta.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRTotalRenta.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ReporteTotalRenta.aspx.cs">
       <DependentUpon>ReporteTotalRenta.aspx</DependentUpon>
@@ -299,7 +294,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRTotalPrestamos.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ReporteTotalPretamos.aspx.cs">
       <DependentUpon>ReporteTotalPretamos.aspx</DependentUpon>
@@ -312,7 +306,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRTotalSalariosNetos.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ReporteTotalSalariosNetos.aspx.cs">
       <DependentUpon>ReporteTotalSalariosNetos.aspx</DependentUpon>
@@ -325,7 +318,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRTotalSalariosBrutos.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ReporteTotalSalariosBrutos.aspx.cs">
       <DependentUpon>ReporteTotalSalariosBrutos.aspx</DependentUpon>
@@ -338,7 +330,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRReporteUniformes.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ReporteUniformes.aspx.cs">
       <DependentUpon>ReporteUniformes.aspx</DependentUpon>
@@ -351,7 +342,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRTotalAdelantos.rpt</DependentUpon>
-      <SubType>Component</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EliminarUsuario.aspx.cs">

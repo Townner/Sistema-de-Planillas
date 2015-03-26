@@ -48,3 +48,11 @@ Z:\Documents\Sistema-de-Planillas\Sistema\Versiones\1.1\Sistema_De_Planilla\DA\b
 \\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.4\Sistema_De_Planilla\DA\obj\Debug\DA.csprojResolveAssemblyReference.cache
 \\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.4\Sistema_De_Planilla\DA\obj\Debug\DA.dll
 \\psf\Dropbox\Proyectos Visual Studio\Sermules S.A\Versiones\V 1.4\Sistema_De_Planilla\DA\obj\Debug\DA.pdb
+Y:\Desktop\Sistema_De_Planilla\DA\bin\Debug\DA.dll.config
+Y:\Desktop\Sistema_De_Planilla\DA\bin\Debug\DA.dll
+Y:\Desktop\Sistema_De_Planilla\DA\bin\Debug\DA.pdb
+Y:\Desktop\Sistema_De_Planilla\DA\bin\Debug\TO.dll
+Y:\Desktop\Sistema_De_Planilla\DA\bin\Debug\TO.pdb
+Y:\Desktop\Sistema_De_Planilla\DA\obj\Debug\DA.csprojResolveAssemblyReference.cache
+Y:\Desktop\Sistema_De_Planilla\DA\obj\Debug\DA.dll
+Y:\Desktop\Sistema_De_Planilla\DA\obj\Debug\DA.pdb
