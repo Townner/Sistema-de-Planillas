@@ -91,7 +91,7 @@
     </tr>
     <tr>
         <td class="style9">
-               Fecha de Vencimiento de Cedula:
+               Fecha de Vencimiento de Licencia:
                </td>
         <td class="style10">
 
@@ -159,14 +159,14 @@
     </tr>
     <tr>
         <td class="style9">
-               Fecha de Vencimiento de Cedula:
+               Fecha de Vencimiento de Licencia:
                </td>
         <td class="style10">
 
             <asp:UpdatePanel ID="UpdatePanel3" runat="server">
              <ContentTemplate>
-             <asp:DropDownList id="drpCalMonth2" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList>
-             <asp:DropDownList id="drpCalYear2" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList> 
+             <asp:DropDownList id="drpCalMonth2" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen2" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList>
+             <asp:DropDownList id="drpCalYear2" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen2" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList> 
                  <br />
               <asp:Label ID="lblven_ced2" runat="server" Text=""></asp:Label>
             <asp:Calendar ID="calven_ced2" runat="server" BackColor="White" ondayrender="Calendar1_DayRender"
@@ -226,14 +226,14 @@
     </tr>
     <tr>
         <td class="style9">
-               Fecha de Vencimiento de Cedula:
+               Fecha de Vencimiento de Licencia:
                </td>
         <td class="style10">
 
             <asp:UpdatePanel ID="UpdatePanel2" runat="server">
              <ContentTemplate>
-             <asp:DropDownList id="drpCalMonth3" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList>
-             <asp:DropDownList id="drpCalYear3" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList> 
+             <asp:DropDownList id="drpCalMonth3" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen3" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList>
+             <asp:DropDownList id="drpCalYear3" Runat="Server" OnSelectedIndexChanged="Set_CalendarVen3" AutoPostBack="true" style="margin-left:10px; margin-bottom:10px;" Width="143px"></asp:DropDownList> 
                  <br />
               <asp:Label ID="lblven_ced3" runat="server" Text=""></asp:Label>
             <asp:Calendar ID="calven_ced3" runat="server" BackColor="White" ondayrender="Calendar1_DayRender"

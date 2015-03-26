@@ -16,10 +16,12 @@ namespace DA
 
             Search.Parameters.AddWithValue("@ced", ced);
 
+            Conexion.Open();
+
             SqlDataReader read = Search.ExecuteReader();
             TO.TOTrabajador temp = new TO.TOTrabajador();
 
-            if (read.Read())
+            if (read.HasRows)
             {
                 while (read.Read())
                 {

@@ -112,76 +112,27 @@ namespace UI
 
         protected void btConsultarLic_Click(object sender, EventArgs e)
         {
-            string temp = "";
+
+            BL.BLLicencias BL_Lic = new BL.BLLicencias();
+            BL_Lic.Search(txtCed.Text);
+
+            calven_ced.SelectedDate = BL_Lic.v_lic1;
+            calven_ced2.SelectedDate = BL_Lic.v_lic2;
+            calven_ced3.SelectedDate = BL_Lic.v_lic3;
             
-            SqlDataReader dr;
-
-            SqlCommand com = new SqlCommand();
-            com.Connection = Conexion;
-            com.CommandText = "SELECT [Trabajador_ID], [Trabajador_Ced], [Licencia_1], [Licencia_2], [Licencia_3], [F_Vencimiento_1],"+
-                " [F_Vencimiento_2], [F_Vencimiento_3] FROM [DB_Planilla].[dbo].[licencia]  WHERE [Trabajador_Ced] = @Ced;";
-
-            com.Parameters.AddWithValue("@ced", txtCed.Text);
-
-            Conexion.Open();
-            dr = com.ExecuteReader();
-
-            if (dr.HasRows)
+            BL.BLTrabajador BL_Trab = new BL.BLTrabajador();
+            BL_Trab.Search(txtCed.Text);
+            
+            if (BL_Trab.ced != "")
             {
-                while (dr.Read())
-                {
-                    temp = (string)dr["[Trabajador_Ced]"];
-                    calven_ced.SelectedDate = Convert.ToDateTime(dr["[F_Vencimiento_1]"]);
-                    calven_ced2.SelectedDate = Convert.ToDateTime(dr["[F_Vencimiento_2]"]);
-                    calven_ced3.SelectedDate = Convert.ToDateTime(dr["[F_Vencimiento_3]"]);
-                }
-
+                lblConfirm.Text = "Se ha verificado la informacion del trabajador " + BL_Trab.nombre + BL_Trab.apellido1 + BL_Trab.apellido2;
+                lblConfirm.Visible = true;
             }
-            Conexion.Close();
-
-
-
-            lblConfirm.Text = consultarNombre(txtCed.Text)+", cedula" + temp;
-            lblConfirm.Visible = true;
-        }
-
-        protected string consultarNombre(string ced)
-        {
-            string temp = "";
-            string nom = "";
-            string ap1 = "";
-            string ap2 = "";
-
-
-            SqlDataReader dr;
-
-            SqlCommand com = new SqlCommand();
-            com.Connection = Conexion;
-            com.CommandText = "SELECT [Nombre], [Apellido1], [Apellido2] FROM [trabajador] WHERE [Ced] = @Ced;";
-
-            com.Parameters.AddWithValue("@ced", ced);
-
-            Conexion.Open();
-            dr = com.ExecuteReader();
-
-            if (dr.HasRows)
+            else
             {
-                while (dr.Read())
-                {
-                    nom = (string)dr["[Nombre]"];
-                    ap1 = (string)dr["[Apellido1]"];
-                    ap2 = (string)dr["[Apellido2]"];
-                }
-
+                Response.Write("<script language='javascript'>alert('El usuario " + txtCed.Text + " no existe en el sistema');document.location.href='" + "/ActualizarLicencias.aspx" + "'; </script>");
             }
-            Conexion.Close();
-
-            temp = "Se ha verificado la informacion del usuario " + nom + ap1 + ap2;
-
-            return temp;
         }
-
-
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {

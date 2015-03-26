@@ -9,7 +9,8 @@ namespace DA
     public class DALicencias
     {
 
-        SqlConnection Conexion = new SqlConnection();
+        SqlConnection Conexion = new SqlConnection(DA.Properties.Settings.Default.ConString);
+
 
         public TO.TOLicencias Search(string ced)
         {
@@ -19,10 +20,12 @@ namespace DA
 
             Search.Parameters.AddWithValue("@ced", ced);
 
+            Conexion.Open();
+
             SqlDataReader read = Search.ExecuteReader();
             TO.TOLicencias temp = new TO.TOLicencias();
 
-            if (read.Read())
+            if (read.HasRows)
             {
                 while (read.Read())
                 {
