@@ -46,17 +46,16 @@
         </div>
     </div>
  
+  <ul id = "BarraHorizontal">        
 
-  <ul id = "BarraHorizontal">
-         
-         <li><a id="Inicio" runat="server" href="/Inicio.aspx">Inicio</a></li>
+         <li><a id="Inicio" runat="server" href="/InicioAdmin.aspx">Inicio</a></li>
 
          <li id ="Trabajadores" runat="server">Trabajadores
          
             <ul class = "subMenu">
-              <li><a href="/AgregarCliente.aspx">Ingresar Trabajador</a></li>
-              <li><a href="/ConsultarCliente.aspx">Consultar Trabajador</a></li>
-              <li><a href="/EliminarCliente.aspx">Dar de Baja Trabajador</a></li>
+              <li><a href="/AgregarTrabajador.aspx">Ingresar Trabajador</a></li>
+              <li><a href="/ConsultarTrabajador.aspx">Consultar Trabajador</a></li>
+              <li><a href="/DesactivarTrabajador.aspx">Dar de Baja Trabajador</a></li>
             </ul>
          </li>
 
@@ -65,6 +64,8 @@
             <ul class = "subMenu">
               <li><a href="/AgregarCliente.aspx">Actualizacion de Datos Financieros</a></li>
               <li><a href="/ConsultarCliente.aspx">Actualizacion de Datos Personales</a></li>
+              <li><a href="/ConsultarCliente.aspx">Actualizacion de Fechas</a></li>
+              <li><a href="/ConsultarCliente.aspx">Actualizacion de Horas</a></li>
             </ul>
          </li>
 

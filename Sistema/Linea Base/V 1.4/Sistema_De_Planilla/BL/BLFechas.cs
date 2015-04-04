@@ -9,10 +9,10 @@ namespace BL
     {
         public int trabajador_id;
         public string trabajador_ced;
-        public DateTime f_nac;
-        public DateTime f_ingreso;
-        public DateTime f_prueba;
-        public DateTime f_salida;
+        public string f_nac;
+        public string f_ingreso;
+        public string f_prueba;
+        public string f_salida;
 
 
         public void Search(string ced)
@@ -26,17 +26,20 @@ namespace BL
             this.f_salida = sr.Search(ced).F_Salida;
         }
 
-        public void AgregarFechas(int ID, string ced, DateTime f_nac, DateTime f_ingreso, DateTime f_prueba, DateTime f_salida)
+        public void AgregarFechas(BL.BLTrabajador BL_Trab)
         {
-            this.trabajador_id = ID;
-            this.trabajador_ced = ced;
-            this.f_nac = f_nac;
-            this.f_ingreso = f_ingreso;
-            this.f_prueba = f_prueba;
-            this.f_salida = f_salida;
+            TO.TOFechas TO_Fech = new TO.TOFechas();
+            TO.TOTrabajador TO_Trab = new TO.TOTrabajador();
+            TO_Trab.ID = BL_Trab.id;
+            TO_Trab.Ced = BL_Trab.ced;
+
+            TO_Fech.F_Nac = Convert.ToDateTime(this.f_nac).ToLongDateString() ;
+            TO_Fech.F_Ingreso = Convert.ToDateTime(this.f_ingreso).ToLongDateString();
+            TO_Fech.F_Pruba = Convert.ToDateTime(this.f_prueba).ToLongDateString();
+            TO_Fech.F_Salida = Convert.ToDateTime(this.f_salida).ToLongDateString();
 
             DA.DAFechas afecha = new DA.DAFechas();
-            afecha.AgregarFechas(ID, ced, f_nac, f_ingreso, f_prueba, f_salida);
+            afecha.AgregarFechas(TO_Fech,TO_Trab);
 
         }
         public void ModificarFechas(int ID, string ced, DateTime f_nac, DateTime f_ingreso, DateTime f_prueba, DateTime f_salida)

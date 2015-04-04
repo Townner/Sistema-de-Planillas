@@ -58,6 +58,24 @@ namespace UI {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
+        /// drpCalMonth control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drpCalMonth;
+        
+        /// <summary>
+        /// drpCalYear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drpCalYear;
+        
+        /// <summary>
         /// lblVen_Ced control.
         /// </summary>
         /// <remarks>
@@ -301,13 +319,13 @@ namespace UI {
         protected global::System.Web.UI.WebControls.TextBox txtNum_Seguro;
         
         /// <summary>
-        /// RFSeguro control.
+        /// RGXSeguro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFSeguro;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RGXSeguro;
         
         /// <summary>
         /// UpdatePanel2 control.
@@ -317,6 +335,24 @@ namespace UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel UpdatePanel2;
+        
+        /// <summary>
+        /// DPDMonthUniforme control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DPDMonthUniforme;
+        
+        /// <summary>
+        /// DPDYearUniforme control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DPDYearUniforme;
         
         /// <summary>
         /// lblUnif control.

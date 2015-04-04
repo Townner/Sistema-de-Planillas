@@ -57,19 +57,22 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ActualizarFechas.aspx" />
     <Content Include="AgregarDepartamento.aspx" />
     <Content Include="AgregarPuesto.aspx" />
     <Content Include="AgregarTrabajador.aspx" />
     <Content Include="AgregarUsuario.aspx" />
     <Content Include="App_Themes\Theme_Login\Login.css" />
     <Content Include="App_Themes\Theme_Master\Master_Admin.css" />
+    <Content Include="ConsultarTrabajador.aspx" />
+    <Content Include="DesactivarTrabajador.aspx" />
+    <Content Include="ModificarCargasObreras.aspx" />
     <Content Include="ModificarTrabajador.aspx" />
     <Content Include="RevisiónFinalPlanilla.aspx" />
     <Content Include="AumentoSalarioBase.aspx" />
     <Content Include="ConsultarUsuario.aspx" />
     <Content Include="EliminarDepartamento.aspx" />
     <Content Include="InicioModificacionGlobales.aspx" />
-    <Content Include="ModificarCargasObreras.aspx" />
     <Content Include="ModificarDepartamento.aspx" />
     <Content Include="ModificarPuesto.aspx" />
     <Content Include="EliminarPuesto.aspx" />
@@ -109,6 +112,13 @@
     <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualizarFechas.aspx.cs">
+      <DependentUpon>ActualizarFechas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActualizarFechas.aspx.designer.cs">
+      <DependentUpon>ActualizarFechas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AgregarDepartamento.aspx.cs">
       <DependentUpon>AgregarDepartamento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -136,6 +146,27 @@
     </Compile>
     <Compile Include="AgregarUsuario.aspx.designer.cs">
       <DependentUpon>AgregarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarTrabajador.aspx.cs">
+      <DependentUpon>ConsultarTrabajador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarTrabajador.aspx.designer.cs">
+      <DependentUpon>ConsultarTrabajador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DesactivarTrabajador.aspx.cs">
+      <DependentUpon>DesactivarTrabajador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DesactivarTrabajador.aspx.designer.cs">
+      <DependentUpon>DesactivarTrabajador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarCargasObreras.aspx.cs">
+      <DependentUpon>ModificarCargasObreras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarCargasObreras.aspx.designer.cs">
+      <DependentUpon>ModificarCargasObreras.aspx</DependentUpon>
     </Compile>
     <Compile Include="ModificarTrabajador.aspx.cs">
       <DependentUpon>ModificarTrabajador.aspx</DependentUpon>
@@ -185,13 +216,6 @@
     </Compile>
     <Compile Include="MasterVariablesGlobales.master.designer.cs">
       <DependentUpon>MasterVariablesGlobales.master</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarCargasObreras.aspx.cs">
-      <DependentUpon>ModificarCargasObreras.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ModificarCargasObreras.aspx.designer.cs">
-      <DependentUpon>ModificarCargasObreras.aspx</DependentUpon>
     </Compile>
     <Compile Include="ModificarDepartamento.aspx.cs">
       <DependentUpon>ModificarDepartamento.aspx</DependentUpon>
@@ -488,7 +512,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50422</DevelopmentServerPort>
+          <DevelopmentServerPort>51230</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
