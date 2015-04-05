@@ -22,32 +22,215 @@ namespace DA
             SqlDataReader read = Search.ExecuteReader();
             TO.TOCalculos temp = new TO.TOCalculos();
 
+            int fieldCount = read.FieldCount;
+            object[] fieldValues = new object[fieldCount];
+            string[] headers = new string[fieldCount];
+
             if (read.HasRows)
             {
                 while (read.Read())
                 {
+                    read.GetValues(fieldValues);
+                    string value = "";
+
+                    for (int fieldCounter = 0; fieldCounter < fieldCount; fieldCounter++)
+                    {
+                        value = fieldValues[fieldCounter].ToString();
+                        if (value == "")
+                            fieldValues[fieldCounter] = "N/A";
+                    }
                     temp.Trabajador_ID = (int)read["Trabajador_ID"];
                     temp.Trabajador_Ced = (string)read["Trabajador_Ced"];
-                    temp.S_Base = Convert.ToDouble(read["S_Base"]);
-                    temp.S_Bruto = Convert.ToDouble(read["S_Bruto"]);
-                    temp.Ob_Pat_NoPen = Convert.ToDouble(read["Ob_Pat_NoPen"]);
-                    temp.Ob_Pat_Pen = Convert.ToDouble(read["Ob_Pat_Pen"]);
-                    temp.S_Cargas = Convert.ToDouble(read["S_Ob_Pat"]);
-                    temp.S_Neto = Convert.ToDouble(read["S_Neto"]);
-                    temp.S_Final = Convert.ToDouble(read["S_Final"]);
-                    temp.ImpRenta = Convert.ToDouble(read["S_ImpRenta"]);
-                    temp.S_Incapacidad = Convert.ToDouble(read["S_Incapacidad"]);
-                    temp.S_Extras = Convert.ToDouble(read["S_Extras"]);
-                    temp.Hijos_Menor = (int)read["Hijos_Menor"];
-                    temp.Hijos_Mayor = (int)read["Hijos_Mayor"];
-                    temp.Conyugue = (int)read["Conyuge"];
-                    
+
+                    if (fieldValues[2].ToString() != "N/A")
+                    {
+
+                        temp.S_Base = Convert.ToDouble(read["S_Base"]); ;
+                    }
+                    else
+                    {
+                        temp.S_Base =  Convert.ToDouble(fieldValues[2].ToString());
+                    }
+                    //
+                    if (fieldValues[3].ToString() != "N/A")
+                    {
+
+                        temp.S_Bruto = Convert.ToDouble(read["S_Bruto"]); ;
+                    }
+                    else
+                    {
+                        temp.S_Bruto = Convert.ToDouble(fieldValues[3].ToString());
+                    }
+                    //
+                    if (fieldValues[4].ToString() != "N/A")
+                    {
+
+                        temp.Ob_Pat_NoPen = Convert.ToDouble(read["Ob_Pat_NoPen"]); ;
+                    }
+                    else
+                    {
+                        temp.Ob_Pat_NoPen = Convert.ToDouble(fieldValues[4].ToString());
+                    }
+                    //
+                    if (fieldValues[5].ToString() != "N/A")
+                    {
+
+                        temp.Ob_Pat_Pen = Convert.ToDouble(read["Ob_Pat_Pen"]); ;
+                    }
+                    else
+                    {
+                        temp.Ob_Pat_Pen = Convert.ToDouble(fieldValues[5].ToString());
+                    }
+                    //
+                    if (fieldValues[6].ToString() != "N/A")
+                    {
+
+                        temp.S_Cargas = Convert.ToDouble(read["S_Ob_Pat"]); ;
+                    }
+                    else
+                    {
+                        temp.S_Cargas = Convert.ToDouble(fieldValues[6].ToString());
+                    }
+                    //
+                    if (fieldValues[7].ToString() != "N/A")
+                    {
+
+                        temp.S_Neto = Convert.ToDouble(read["S_Neto"]); ;
+                    }
+                    else
+                    {
+                        temp.S_Neto = Convert.ToDouble(fieldValues[7].ToString());
+                    }
+                    //
+                    if (fieldValues[8].ToString() != "N/A")
+                    {
+
+                        temp.S_Final = Convert.ToDouble(read["S_Final"]); ;
+                    }
+                    else
+                    {
+                        temp.S_Final = Convert.ToDouble(fieldValues[8].ToString());
+                    }
+                    //
+                    if (fieldValues[9].ToString() != "N/A")
+                    {
+
+                        temp.ImpRenta = Convert.ToDouble(read["S_ImpRenta"]); ;
+                    }
+                    else
+                    {
+                        temp.ImpRenta = Convert.ToDouble(fieldValues[9].ToString());
+                    }
+                    //
+                    if (fieldValues[10].ToString() != "N/A")
+                    {
+
+                        temp.S_Incapacidad = Convert.ToDouble(read["S_Incapacidad"]); ;
+                    }
+                    else
+                    {
+                        temp.S_Incapacidad = Convert.ToDouble(fieldValues[10].ToString());
+                    }
+                    //
+
+                    if (fieldValues[11].ToString() != "N/A")
+                    {
+
+                        temp.S_Extras = Convert.ToDouble(read["S_Extras"]); ;
+                    }
+                    else
+                    {
+                        temp.S_Extras = Convert.ToDouble(fieldValues[11].ToString());
+                    }
+                    //
+                    if (fieldValues[12].ToString() != "N/A")
+                    {
+
+                        temp.Hijos_Menor = (int)read["Hijos_Menor"]; ;
+                    }
+                    else
+                    {
+                        temp.Hijos_Menor = Convert.ToInt32(fieldValues[12].ToString());
+                    }
+                    //
+                    if (fieldValues[13].ToString() != "N/A")
+                    {
+
+                        temp.Hijos_Mayor = (int)read["Hijos_Mayor"]; ;
+                    }
+                    else
+                    {
+                        temp.Hijos_Mayor = Convert.ToInt32(fieldValues[13].ToString());
+                    }
+                    //
+                    if (fieldValues[14].ToString() != "N/A")
+                    {
+
+                        temp.Conyugue = (int)read["Conyuge"]; ;
+                    }
+                    else
+                    {
+                        temp.Conyugue = Convert.ToInt32(fieldValues[14].ToString());
+                    }
+                    //
                 }
             }
             Conexion.Close();
 
             return temp;
 
+        }
+
+        public void AgregarSalario(TO.TOCalculos TO_Fech, TO.TOTrabajador TO_Trab)
+        {
+            SqlCommand Insert = new SqlCommand();
+            Insert.Connection = Conexion;
+
+            Insert.CommandText = " INSERT INTO Fechas_Trabajador(Trabajador_ID, Trabajador_Ced, F_Nac, F_Ingreso, F_Prueba, F_Salida) " +
+                " VALUES (@ID, @Ced, CONVERT(Datetime, @F_Nac), CONVERT(Datetime, @F_Ingreso), CONVERT(Datetime, @F_Prueba), CONVERT(Datetime, @F_Salida));";
+
+            Insert.Parameters.AddWithValue("@ID", TO_Trab.ID);
+            Insert.Parameters.AddWithValue("@Ced", TO_Trab.Ced);
+
+            if (TO_Fech.F_Nac == "N/A" || TO_Fech.F_Nac == "")
+            {
+                Insert.Parameters.AddWithValue("@F_Nac", DBNull.Value);
+            }
+            else
+            {
+                Insert.Parameters.AddWithValue("@F_Nac", TO_Fech.F_Nac);
+            }
+            //
+            if (TO_Fech.F_Ingreso == "N/A" || TO_Fech.F_Ingreso == "")
+            {
+                Insert.Parameters.AddWithValue("@F_Ingreso", DBNull.Value);
+            }
+            else
+            {
+                Insert.Parameters.AddWithValue("@F_Ingreso", TO_Fech.F_Ingreso);
+            }
+            //
+            if (TO_Fech.F_Pruba == "N/A" || TO_Fech.F_Pruba == "")
+            {
+                Insert.Parameters.AddWithValue("@F_Prueba", DBNull.Value);
+            }
+            else
+            {
+                Insert.Parameters.AddWithValue("@F_Prueba", TO_Fech.F_Pruba);
+            }
+            //
+            if (TO_Fech.F_Salida == "N/A" || TO_Fech.F_Salida == "")
+            {
+                Insert.Parameters.AddWithValue("@F_Salida", DBNull.Value);
+            }
+            else
+            {
+                Insert.Parameters.AddWithValue("@F_Salida", TO_Fech.F_Salida);
+            }
+
+            Conexion.Open();
+            Insert.ExecuteNonQuery();
+            Conexion.Close();
         }
 
         public void CalculoIncapacida(string ced, double s_incapcidad)

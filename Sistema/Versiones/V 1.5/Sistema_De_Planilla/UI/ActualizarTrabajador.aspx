@@ -299,12 +299,6 @@
     <tr>
         <td class="style6">
                 &nbsp;</td>
-        <td class="style4">
-                &nbsp;</td>
-    </tr>
-    <tr>
-        <td class="style6">
-                &nbsp;</td>
         <td class="style7">
                 <asp:Button ID="btnActua" runat="server" Text="Actualizar" 
                     style="float:left; margin-left:180px;"

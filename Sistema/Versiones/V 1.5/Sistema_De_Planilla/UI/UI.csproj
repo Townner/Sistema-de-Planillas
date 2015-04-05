@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="ActualizarLicencias.aspx" />
     <Content Include="ActualizarFechas.aspx" />
+    <Content Include="ActualizarSalarios.aspx" />
     <Content Include="ActualizarTrabajador.aspx" />
     <Content Include="AgregarDepartamento.aspx" />
     <Content Include="AgregarPuesto.aspx" />
@@ -127,6 +128,13 @@
     </Compile>
     <Compile Include="ActualizarFechas.aspx.designer.cs">
       <DependentUpon>ActualizarFechas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActualizarSalarios.aspx.cs">
+      <DependentUpon>ActualizarSalarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActualizarSalarios.aspx.designer.cs">
+      <DependentUpon>ActualizarSalarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="ActualizarTrabajador.aspx.cs">
       <DependentUpon>ActualizarTrabajador.aspx</DependentUpon>

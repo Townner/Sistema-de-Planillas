@@ -246,6 +246,8 @@ namespace UI
             Response.Redirect("/ActualizarTrabajador.aspx");
         }
 
+
+
         protected void btnActua_Click(object sender, EventArgs e)
         {
             int temp1 = Int32.Parse(DropDepartamento.SelectedValue);

@@ -43,6 +43,23 @@ namespace BL
             this.s_final = sr.Search(ced).S_Final;
         }
 
+        public void AgregarSalario(BL.BLTrabajador BL_Trab)
+        {
+
+            TO.TOCalculos TO_Calcu = new TO.TOCalculos();
+            TO.TOTrabajador TO_Trab = new TO.TOTrabajador();
+            TO_Trab.ID = BL_Trab.id;
+            TO_Trab.Ced = BL_Trab.ced;
+
+            /*TO_Calcu.ImpRenta = this.imprenta;
+            TO_Calcu.F_Ingreso = this.f_ingreso;
+            TO_Calcu.F_Pruba = this.f_prueba;
+            TO_Calcu.F_Salida = this.f_salida;*/
+
+            DA.DACalculos afecha = new DA.DACalculos();
+            afecha.AgregarSalario(TO_Calcu, TO_Trab);
+        }
+
         public double CalculoIncapacida(string ced)
         {
             TO.TOHoras h = new TO.TOHoras();
