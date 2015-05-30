@@ -1,0 +1,14 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Master_Page.Master" AutoEventWireup="true" CodeBehind="MasterVariablesGlobales.master.cs" Inherits="UI.MasterVariablesGlobales" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContenidoPrincipalIzquierdo" runat="server">
+    <ul>
+    <h4 style=" color:White; text-align:center;">Gestionar Datos Globales</h4>
+            <li><a href="/ModificarCargasObreras.aspx">Valor Cargas Obreras</a> </li>
+            <li><a href="/AumentoSalarioBase.aspx">Aumentos Salariales</a> </li>
+    </ul>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContenidoPrincipalCentral" runat="server">
+    <asp:ContentPlaceHolder ID="ContenidoPrincipalCentral" runat="server">
+            </asp:ContentPlaceHolder>
+</asp:Content>
